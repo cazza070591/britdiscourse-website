@@ -6,6 +6,11 @@
     <title>BritDiscourse | British Native English Coaching by Daniel Carrington</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Calendly Popup Widget CSS & JS (Option B) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -153,7 +158,8 @@
                     </div>
                 </div>
 
-                <button onclick="openBookingModal('General Booking')" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-bold px-4 py-2 rounded-xl text-sm transition shadow-md flex items-center gap-2 cursor-pointer">
+                <!-- Calendly Popup Trigger -->
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/anondan45'});return false;" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-bold px-4 py-2 rounded-xl text-sm transition shadow-md flex items-center gap-2 cursor-pointer">
                     <span data-en="Book Package" data-pl="Wybierz Pakiet">Book Package</span>
                 </button>
             </div>
@@ -181,7 +187,8 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
-                    <button onclick="openBookingModal('General Booking')" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-7 py-4 rounded-xl text-base transition shadow-lg min-h-[52px] flex items-center justify-center cursor-pointer">
+                    <!-- Calendly Popup Trigger -->
+                    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/anondan45'});return false;" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-7 py-4 rounded-xl text-base transition shadow-lg min-h-[52px] flex items-center justify-center cursor-pointer">
                         <span data-en="📅 Book Package & Schedule Slot" data-pl="📅 Wybierz Pakiet i Termin">📅 Book Package & Schedule Slot</span>
                     </button>
                     <button onclick="openModal('modal-quiz')" class="w-full sm:w-auto glass-card bg-white dark:bg-zinc-800 hover:bg-slate-100 dark:hover:bg-zinc-700 text-slate-900 dark:text-white font-semibold px-7 py-4 rounded-xl text-base transition border border-slate-300 dark:border-zinc-700 min-h-[52px] flex items-center justify-center cursor-pointer">
@@ -265,7 +272,7 @@
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION WITH JPEG PHOTO -->
+    <!-- ABOUT ME SECTION -->
     <section id="about" class="px-4 py-16 md:py-24 max-w-5xl mx-auto space-y-8">
         <div class="grid md:grid-cols-12 gap-10 items-center">
             <div class="md:col-span-5 flex justify-center">
@@ -335,10 +342,12 @@
                         <div id="calc-total" class="text-3xl font-black text-slate-900 dark:text-white mt-1">1008 PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400" data-en="/ month (8 lessons)" data-pl="/ miesiąc (8 lekcji)">/ month (8 lessons)</span></div>
                         <div id="calc-savings" class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1">✓ You save ~112 PLN monthly with the 6-Month Package</div>
                     </div>
-                    <button onclick="openBookingModal('Calculated Custom Package')" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-md whitespace-nowrap cursor-pointer" data-en="Book This Plan" data-pl="Zarezerwuj Ten Pakiet">Book This Plan</button>
+                    <!-- Calendly Popup Trigger -->
+                    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/anondan45'});return false;" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-md whitespace-nowrap cursor-pointer" data-en="Book This Plan" data-pl="Zarezerwuj Ten Pakiet">Book This Plan</button>
                 </div>
             </div>
         </div>
     </section>
+
 </body>
 </html>
