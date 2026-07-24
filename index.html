@@ -182,7 +182,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
-                    <button onclick="openModal('modal-calendar')" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-7 py-4 rounded-xl text-base transition shadow-lg min-h-[52px] flex items-center justify-center cursor-pointer">
+                    <button onclick="openModal('modal-calendar', 'Free 15-Min Intro Call')" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-7 py-4 rounded-xl text-base transition shadow-lg min-h-[52px] flex items-center justify-center cursor-pointer">
                         <span data-en="📅 Book Free 15-Min Intro Call" data-pl="📅 Umów Darmową Rozmowę 15 Min">📅 Book Free 15-Min Intro Call</span>
                     </button>
                     <button onclick="openModal('modal-quiz')" class="w-full sm:w-auto glass-card bg-white dark:bg-zinc-800 hover:bg-slate-100 dark:hover:bg-zinc-700 text-slate-900 dark:text-white font-semibold px-7 py-4 rounded-xl text-base transition border border-slate-300 dark:border-zinc-700 min-h-[52px] flex items-center justify-center cursor-pointer">
@@ -321,7 +321,7 @@
                         <div id="calc-total" class="text-3xl font-black text-slate-900 dark:text-white mt-1">576 PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400" data-en="/ month (8 lessons)" data-pl="/ miesiąc (8 lekcji)">/ month (8 lessons)</span></div>
                         <div id="calc-savings" class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1">✓ You save ~64 PLN monthly with the 6-Month Package</div>
                     </div>
-                    <button onclick="openModal('modal-calendar')" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-md whitespace-nowrap cursor-pointer" data-en="Lock In This Plan" data-pl="Zarezerwuj Ten Plan">
+                    <button onclick="lockInCalculatorPlan()" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-md whitespace-nowrap cursor-pointer" data-en="Lock In This Plan" data-pl="Zarezerwuj Ten Plan">
                         Lock In This Plan
                     </button>
                 </div>
@@ -340,7 +340,7 @@
                 </p>
             </div>
             <div class="pt-2">
-                <button onclick="openModal('modal-calendar')" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-bold px-6 py-3 rounded-xl text-xs transition shadow-md cursor-pointer" data-en="Claim Referral Bonus" data-pl="Zgłoś Znajomego">
+                <button onclick="openModal('modal-calendar', 'Refer a Friend Bonus (10% Off)')" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-bold px-6 py-3 rounded-xl text-xs transition shadow-md cursor-pointer" data-en="Claim Referral Bonus" data-pl="Zgłoś Znajomego">
                     Claim Referral Bonus
                 </button>
             </div>
@@ -423,7 +423,7 @@
                             <li data-en="✓ Google Meet / Teams" data-pl="✓ Google Meet / Teams">✓ Google Meet / Teams</li>
                         </ul>
                     </div>
-                    <button onclick="openModal('modal-calendar')" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Online" data-pl="Wybierz">Book Online</button>
+                    <button onclick="openModal('modal-calendar', '1-on-1 Online (140 PLN / 45 min)')" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Online" data-pl="Wybierz">Book Online</button>
                 </div>
 
                 <!-- Executive Corporate (220 PLN/person/45-min) -->
@@ -435,7 +435,7 @@
                             <li data-en="✓ Business & negotiations" data-pl="✓ Biznes i negocjacje">✓ Business & negotiations</li>
                         </ul>
                     </div>
-                    <button onclick="openModal('modal-calendar')" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Business" data-pl="Wybierz Biznes">Book Business</button>
+                    <button onclick="openModal('modal-calendar', 'Executive Corporate (220 PLN/person/45-min)')" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Business" data-pl="Wybierz Biznes">Book Business</button>
                 </div>
 
                 <!-- Home Visits (250 PLN / hour) -->
@@ -448,7 +448,7 @@
                             <li data-en="✓ Daniel travels to you" data-pl="✓ Dojazd do domu klienta">✓ Daniel travels to you</li>
                         </ul>
                     </div>
-                    <button onclick="openModal('modal-calendar')" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-extrabold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Visit" data-pl="Zamów Dojazd">Book Visit</button>
+                    <button onclick="openModal('modal-calendar', 'Home Visit (250 PLN / hour)')" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-extrabold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Visit" data-pl="Zamów Dojazd">Book Visit</button>
                 </div>
 
                 <!-- Duo -->
@@ -461,7 +461,7 @@
                             <li data-en="✓ Pair work" data-pl="✓ Praca w parach">✓ Pair work</li>
                         </ul>
                     </div>
-                    <button onclick="openModal('modal-calendar')" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Duo" data-pl="Wybierz Parę">Book Duo</button>
+                    <button onclick="openModal('modal-calendar', 'Online Duo (180 PLN total)')" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Book Duo" data-pl="Wybierz Parę">Book Duo</button>
                 </div>
 
                 <!-- Small Group (Full - Max 4) -->
@@ -479,7 +479,7 @@
                             <div class="text-slate-600 dark:text-zinc-300 font-normal" data-en="Sub: 320 PLN" data-pl="Suma: 320 zł">Sub: 320 PLN</div>
                         </div>
                     </div>
-                    <button onclick="openModal('modal-calendar')" class="w-full bg-rose-600 text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Waitlist" data-pl="Zapisz się">Waitlist</button>
+                    <button onclick="openModal('modal-calendar', 'Small Group Waitlist (80 PLN/pers)')" class="w-full bg-rose-600 text-white font-bold py-2 rounded-xl text-[11px] cursor-pointer" data-en="Waitlist" data-pl="Zapisz się">Waitlist</button>
                 </div>
 
                 <!-- Large Group (Open - Live Updating Counter & Subtotal) -->
@@ -513,7 +513,7 @@
                 Contact Daniel Carrington directly to schedule your free 15-minute consultation to discuss standard or custom packages.
             </p>
             <div class="pt-4">
-                <button onclick="openModal('modal-calendar')" class="inline-block bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-8 py-4 rounded-xl text-base md:text-lg transition shadow-xl cursor-pointer">
+                <button onclick="openModal('modal-calendar', 'Free 15-Min Intro Call')" class="inline-block bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-8 py-4 rounded-xl text-base md:text-lg transition shadow-xl cursor-pointer">
                     📩 <span data-en="Schedule Free Intro Call Now" data-pl="Umów Darmową Rozmowę Wstępną">Schedule Free Intro Call Now</span>
                 </button>
             </div>
@@ -614,7 +614,7 @@
                 <div id="quiz-recommendation-box" class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-slate-800 dark:text-zinc-200 font-semibold space-y-2">
                     <!-- Injected dynamically -->
                 </div>
-                <button onclick="closeModal('modal-quiz'); openModal('modal-calendar');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3.5 rounded-xl text-xs transition shadow-md" data-en="Book Free Consultation for This Package" data-pl="Zarezerwuj Darmową Konsultację Dla Tego Pakietu">
+                <button onclick="closeModal('modal-quiz'); bookRecommendedPackage();" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3.5 rounded-xl text-xs transition shadow-md" data-en="Book Free Consultation for This Package" data-pl="Zarezerwuj Darmową Konsultację Dla Tego Pakietu">
                     Book Free Consultation for This Package
                 </button>
             </div>
@@ -625,38 +625,62 @@
     <div id="modal-calendar" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-lg w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
             <button onclick="closeModal('modal-calendar')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <div>
+            <div id="calendar-modal-header">
                 <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase" data-en="15-Minute Free Consultation" data-pl="Bezpłatna Konsultacja (15 min)">15-Minute Free Consultation</div>
                 <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1" data-en="Book Your Free Call with Daniel" data-pl="Zarezerwuj Darmową Rozmowę z Danielem">Book Your Free Call with Daniel</h3>
+                <div id="calendar-selected-package" class="hidden mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-[11px] font-bold text-amber-700 dark:text-accentGold"></div>
             </div>
-            <form onsubmit="handleCalendarSubmit(event)" class="space-y-4 text-xs">
+            <form id="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleCalendarSubmit(event)" class="space-y-4 text-xs">
+                <input type="hidden" name="form-name" value="booking">
+                <input type="hidden" id="booking-package" name="package" value="General Enquiry">
+                <p class="hidden"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
                 <div>
                     <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Full Name" data-pl="Twoje Imię i Nazwisko">Your Full Name</label>
-                    <input type="text" required placeholder="e.g. Jan Kowalski" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
+                    <input type="text" name="name" id="booking-name" required placeholder="e.g. Jan Kowalski" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
                 </div>
                 <div>
                     <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Email Address" data-pl="Adres E-mail">Email Address</label>
-                    <input type="email" required placeholder="e.g. jan@gmail.com" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
+                    <input type="email" name="email" id="booking-email" required placeholder="e.g. jan@gmail.com" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Preferred Date" data-pl="Preferowana Data">Preferred Date</label>
+                    <input type="date" name="date" id="booking-date" required class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
                 </div>
                 <div>
                     <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Select Schedule Slot (09:00 - 19:00)" data-pl="Wybierz Godzinę (09:00 - 19:00)">Select Schedule Slot (09:00 - 19:00)</label>
-                    <select required class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
+                    <select required name="timeslot" id="booking-timeslot" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white">
                         <option value="" data-en="-- Choose a time slot --" data-pl="-- Wybierz godzinę --">-- Choose a time slot --</option>
-                        <option>09:00 - 10:00 AM</option>
-                        <option>10:00 - 11:00 AM</option>
-                        <option>11:00 - 12:00 PM (Midday)</option>
-                        <option>13:00 - 14:00 PM (Early Afternoon)</option>
-                        <option>14:00 - 15:00 PM</option>
-                        <option>15:00 - 16:00 PM</option>
-                        <option>16:00 - 17:00 PM (Late Afternoon)</option>
-                        <option>17:00 - 18:00 PM</option>
-                        <option>18:00 - 19:00 PM (Evening)</option>
+                        <option value="09:00-10:00">09:00 - 10:00 AM</option>
+                        <option value="10:00-11:00">10:00 - 11:00 AM</option>
+                        <option value="11:00-12:00">11:00 - 12:00 PM (Midday)</option>
+                        <option value="13:00-14:00">13:00 - 14:00 PM (Early Afternoon)</option>
+                        <option value="14:00-15:00">14:00 - 15:00 PM</option>
+                        <option value="15:00-16:00">15:00 - 16:00 PM</option>
+                        <option value="16:00-17:00">16:00 - 17:00 PM (Late Afternoon)</option>
+                        <option value="17:00-18:00">17:00 - 18:00 PM</option>
+                        <option value="18:00-19:00">18:00 - 19:00 PM (Evening)</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold py-3.5 rounded-xl text-xs transition shadow-md cursor-pointer" data-en="Confirm Consultation Request" data-pl="Potwierdź Zgłoszenie">
+                <button type="submit" id="booking-submit-btn" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold py-3.5 rounded-xl text-xs transition shadow-md cursor-pointer" data-en="Confirm Consultation Request" data-pl="Potwierdź Zgłoszenie">
                     Confirm Consultation Request
                 </button>
             </form>
+
+            <!-- Post-submit confirmation with calendar links -->
+            <div id="booking-confirmation" class="hidden space-y-4 text-center">
+                <div class="text-4xl">✅</div>
+                <h4 class="text-lg font-bold text-slate-900 dark:text-white" data-en="Request Sent to Daniel!" data-pl="Zgłoszenie Wysłane do Daniela!">Request Sent to Daniel!</h4>
+                <p class="text-xs text-slate-600 dark:text-zinc-400" data-en="Daniel gets an instant email and will confirm shortly. Add this slot to your own calendar now:" data-pl="Daniel otrzymuje natychmiastowy e-mail i wkrótce potwierdzi termin. Dodaj już teraz to spotkanie do swojego kalendarza:">Daniel gets an instant email and will confirm shortly. Add this slot to your own calendar now:</p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a id="booking-google-cal-link" href="#" target="_blank" rel="noopener" class="flex-1 bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-slate-900 dark:text-white font-bold py-3 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                        📅 <span data-en="Add to Google Calendar" data-pl="Dodaj do Google Kalendarz">Add to Google Calendar</span>
+                    </a>
+                    <a id="booking-ics-link" href="#" download="britdiscourse-consultation.ics" class="flex-1 bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-bold py-3 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                        ⬇️ <span data-en="Download .ics (Outlook/Apple)" data-pl="Pobierz .ics (Outlook/Apple)">Download .ics (Outlook/Apple)</span>
+                    </a>
+                </div>
+                <button onclick="closeModal('modal-calendar')" class="w-full glass-card bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 text-slate-700 dark:text-zinc-300 font-semibold py-2.5 rounded-xl text-xs transition cursor-pointer" data-en="Close" data-pl="Zamknij">Close</button>
+            </div>
         </div>
     </div>
 
@@ -673,7 +697,7 @@
             </p>
             <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between text-xs font-bold text-amber-700 dark:text-accentGold">
                 <span data-en="Investment: 690 PLN (Intensive 3-Session Boot Camp + Resource Pack)" data-pl="Inwestycja: 690 zł (Intensywny pakiet 3 sesji + materiały)">Investment: 690 PLN (Intensive 3-Session Boot Camp + Resource Pack)</span>
-                <button onclick="closeModal('modal-interview'); openModal('modal-calendar');" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 px-4 py-2 rounded-lg cursor-pointer" data-en="Book Package" data-pl="Zamów Pakiet">Book Package</button>
+                <button onclick="closeModal('modal-interview'); openModal('modal-calendar', 'Corporate English Interview Mastery (690 PLN)');" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 px-4 py-2 rounded-lg cursor-pointer" data-en="Book Package" data-pl="Zamów Pakiet">Book Package</button>
             </div>
         </div>
     </div>
@@ -684,7 +708,7 @@
             <button onclick="closeModal('modal-kids')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
             <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">🧸 Young Explorers (Children 6–10) - 24 Week Plan</h3>
             <p class="text-xs text-slate-600 dark:text-zinc-300">Complete 6-month curriculum focused on gamified immersion and natural speaking.</p>
-            <button onclick="closeModal('modal-kids'); openModal('modal-calendar');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs" data-en="Enroll Child" data-pl="Zapisz Dziecko">Enroll Child</button>
+            <button onclick="closeModal('modal-kids'); openModal('modal-calendar', 'Young Explorers - Kids 6–10 (24-Week Plan)');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs" data-en="Enroll Child" data-pl="Zapisz Dziecko">Enroll Child</button>
         </div>
     </div>
 
@@ -693,7 +717,7 @@
             <button onclick="closeModal('modal-teens')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
             <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">🎯 Fluent Futures (Teens 11–15) - 24 Week Plan</h3>
             <p class="text-xs text-slate-600 dark:text-zinc-300">Complete 6-month curriculum overcoming hesitation and travel confidence.</p>
-            <button onclick="closeModal('modal-teens'); openModal('modal-calendar');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs" data-en="Enroll Teen" data-pl="Zapisz Nastolatka">Enroll Teen</button>
+            <button onclick="closeModal('modal-teens'); openModal('modal-calendar', 'Fluent Futures - Teens 11–15 (24-Week Plan)');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs" data-en="Enroll Teen" data-pl="Zapisz Nastolatka">Enroll Teen</button>
         </div>
     </div>
 
@@ -702,7 +726,7 @@
             <button onclick="closeModal('modal-adults')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
             <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">✈️ Speak Like a Native (Adults) - 24 Week Plan</h3>
             <p class="text-xs text-slate-600 dark:text-zinc-300">Complete 6-month curriculum removing mental translation and mastering small talk.</p>
-            <button onclick="closeModal('modal-adults'); openModal('modal-calendar');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs" data-en="Book Adult Course" data-pl="Zapisz Się">Book Adult Course</button>
+            <button onclick="closeModal('modal-adults'); openModal('modal-calendar', 'Speak Like a Native - Adults (24-Week Plan)');" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs" data-en="Book Adult Course" data-pl="Zapisz Się">Book Adult Course</button>
         </div>
     </div>
 
@@ -710,6 +734,7 @@
     <script>
         let currentLang = 'en';
         let quizAnswers = {};
+        let lastRecommendedPackage = { en: '1-on-1 Online Sessions (140 PLN / 45-min)', pl: 'Sesje Online 1-na-1 (140 zł / 45 min)' };
 
         function handleQuizAnswer(step, choice) {
             quizAnswers['step' + step] = choice;
@@ -763,26 +788,32 @@
                 case 'interview':
                     recommendationTextEn = "🌟 **Recommended Package:** Corporate English Interview Mastery (Premium Package - 690 PLN). Perfect for rapid interview preparation!";
                     recommendationTextPl = "🌟 **Rekomendowany Pakiet:** Mistrzostwo w Rozmowach Kwalifikacyjnych po Angielsku (Pakiet Premium - 690 zł). Idealny do szybkiego przygotowania do rekrutacji!";
+                    lastRecommendedPackage = { en: 'Corporate English Interview Mastery (690 PLN) - via Quiz', pl: 'Mistrzostwo w Rozmowach Kwalifikacyjnych (690 zł) - z Quizu' };
                     break;
                 case 'family':
                     recommendationTextEn = "🧸 **Recommended Package:** Young Explorers (Kids 6-10) or Fluent Futures (Teens 11-15) 24-week framework.";
                     recommendationTextPl = "🧸 **Rekomendowany Pakiet:** Young Explorers (Dzieci 6-10) lub Fluent Futures (Młodzież 11-15) - program 24-tygodniowy.";
+                    lastRecommendedPackage = { en: 'Young Explorers / Fluent Futures (24-Week Plan) - via Quiz', pl: 'Young Explorers / Fluent Futures (Plan 24 tyg.) - z Quizu' };
                     break;
                 case 'corporate':
                     recommendationTextEn = "💼 **Recommended Package:** Executive Corporate (220 PLN/person/45-min) or 1-on-1 Online with Google Meet/Teams.";
                     recommendationTextPl = "💼 **Rekomendowany Pakiet:** Executive Corporate (220 zł/os./45 min) lub Online 1-na-1 przez Google Meet / Teams.";
+                    lastRecommendedPackage = { en: 'Executive Corporate (220 PLN/person/45-min) - via Quiz', pl: 'Executive Corporate (220 zł/os./45 min) - z Quizu' };
                     break;
                 case 'home':
                     recommendationTextEn = "🏠 **Recommended Package:** Home Visits / 1-on-1 at Yours (250 PLN/h). Daniel travels directly to your home.";
                     recommendationTextPl = "🏠 **Rekomendowany Pakiet:** Dojazd do domu (250 zł/h). Daniel dojeżdża bezpośrednio pod wskazany adres.";
+                    lastRecommendedPackage = { en: 'Home Visit (250 PLN / hour) - via Quiz', pl: 'Dojazd do domu (250 zł/h) - z Quizu' };
                     break;
                 case 'group':
                     recommendationTextEn = "👥 **Recommended Package:** Large Group (6+) at 60 PLN/pers or Small Group (up to 4) at 80 PLN/pers.";
                     recommendationTextPl = "👥 **Rekomendowany Pakiet:** Duża Grupa (6+) w cenie 60 zł/os. lub Mała Grupa (do 4 osób) w cenie 80 zł/os.";
+                    lastRecommendedPackage = { en: 'Group Sessions (Small/Large Group) - via Quiz', pl: 'Zajęcia Grupowe (Mała/Duża Grupa) - z Quizu' };
                     break;
                 default:
                     recommendationTextEn = "💻 **Recommended Package:** 1-on-1 Online Sessions (140 PLN / 45-min) via Google Meet or Microsoft Teams.";
                     recommendationTextPl = "💻 **Rekomendowany Pakiet:** Sesje Online 1-na-1 (140 zł / 45 min) przez Google Meet lub Microsoft Teams.";
+                    lastRecommendedPackage = { en: '1-on-1 Online Sessions (140 PLN / 45-min) - via Quiz', pl: 'Sesje Online 1-na-1 (140 zł / 45 min) - z Quizu' };
             }
 
             box.innerHTML = currentLang === 'pl' ? recommendationTextPl : recommendationTextEn;
@@ -829,7 +860,7 @@
             const monthlySavings = fullMonthlyPrice - finalPrice;
 
             document.getElementById('calc-total').innerText = Math.round(finalPrice) + ' PLN / ' + (currentLang === 'pl' ? 'miesiąc' : 'month') + ' (' + monthlyLessons + ' ' + (currentLang === 'pl' ? 'lekcji' : 'lessons') + ')';
-            
+
             const savingsEl = document.getElementById('calc-savings');
             if (planDiscount > 0) {
                 savingsEl.innerText = currentLang === 'pl' ? '✓ Oszczędzasz ~' + Math.round(monthlySavings) + ' PLN miesięcznie dzięki pakietowi 6-miesięcznemu' : '✓ You save ~' + Math.round(monthlySavings) + ' PLN monthly with the 6-Month Package';
@@ -839,10 +870,95 @@
             }
         }
 
-        function handleCalendarSubmit(e) {
+        function lockInCalculatorPlan() {
+            const typeSelect = document.getElementById('calc-type');
+            const freqSelect = document.getElementById('calc-freq');
+            const planSelect = document.getElementById('calc-plan');
+            const typeLabel = typeSelect.options[typeSelect.selectedIndex].getAttribute('data-' + currentLang) || typeSelect.options[typeSelect.selectedIndex].innerText;
+            const freqLabel = freqSelect.options[freqSelect.selectedIndex].getAttribute('data-' + currentLang) || freqSelect.options[freqSelect.selectedIndex].innerText;
+            const planLabel = planSelect.options[planSelect.selectedIndex].getAttribute('data-' + currentLang) || planSelect.options[planSelect.selectedIndex].innerText;
+            const totalLabel = document.getElementById('calc-total').innerText;
+            openModal('modal-calendar', `Custom Plan: ${typeLabel} · ${freqLabel} · ${planLabel} (${totalLabel})`);
+        }
+
+        function bookRecommendedPackage() {
+            const label = currentLang === 'pl' ? lastRecommendedPackage.pl : lastRecommendedPackage.en;
+            openModal('modal-calendar', label);
+        }
+
+        // Builds a Google Calendar link + downloadable .ics invite from the booking's date/time/package
+        function buildCalendarLinks(booking) {
+            const [startTime, endTime] = booking.timeslot.split('-');
+            const startDate = new Date(`${booking.date}T${startTime}:00`);
+            const endDate = new Date(`${booking.date}T${endTime}:00`);
+
+            const toICSDate = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+            const dtStart = toICSDate(startDate);
+            const dtEnd = toICSDate(endDate);
+            const title = `BritDiscourse: ${booking.package} — ${booking.name}`;
+            const details = `Booking with Daniel Carrington (BritDiscourse).\\nPackage: ${booking.package}\\nClient: ${booking.name} (${booking.email})`;
+
+            const gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+                + '&text=' + encodeURIComponent(title)
+                + '&dates=' + dtStart + '/' + dtEnd
+                + '&details=' + encodeURIComponent(details)
+                + '&sf=true&output=xml';
+
+            const icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//BritDiscourse//Booking//EN',
+                'BEGIN:VEVENT',
+                'UID:' + (Date.now ? Date.now() : startDate.getTime()) + '@britdiscourse',
+                'DTSTAMP:' + dtStart,
+                'DTSTART:' + dtStart,
+                'DTEND:' + dtEnd,
+                'SUMMARY:' + title,
+                'DESCRIPTION:' + details,
+                'ORGANIZER;CN=Daniel Carrington:mailto:anondan45@gmail.com',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const icsDataUrl = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+
+            return { gcalUrl, icsDataUrl };
+        }
+
+        async function handleCalendarSubmit(e) {
             e.preventDefault();
-            alert(currentLang === 'pl' ? 'Dziękujemy! Daniel Carrington wkrótce skontaktuje się w celu potwierdzenia terminu.' : 'Thank you! Daniel Carrington will reach out shortly to confirm your consultation time.');
-            closeModal('modal-calendar');
+            const form = document.getElementById('booking-form');
+            const submitBtn = document.getElementById('booking-submit-btn');
+            const booking = {
+                name: document.getElementById('booking-name').value,
+                email: document.getElementById('booking-email').value,
+                date: document.getElementById('booking-date').value,
+                timeslot: document.getElementById('booking-timeslot').value,
+                package: document.getElementById('booking-package').value
+            };
+
+            submitBtn.disabled = true;
+
+            try {
+                // Submits to Netlify Forms so Daniel gets an instant email notification for every booking
+                await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(form)).toString()
+                });
+            } catch (err) {
+                // Even if the network request fails, still show the customer their calendar links
+                console.error('Booking submission failed', err);
+            }
+
+            submitBtn.disabled = false;
+
+            const { gcalUrl, icsDataUrl } = buildCalendarLinks(booking);
+            document.getElementById('booking-google-cal-link').href = gcalUrl;
+            document.getElementById('booking-ics-link').href = icsDataUrl;
+
+            form.classList.add('hidden');
+            document.getElementById('booking-confirmation').classList.remove('hidden');
         }
 
         function toggleTheme() {
@@ -915,14 +1031,39 @@
             calculatePrice();
         }
 
-        function openModal(id) {
+        function openModal(id, packageName) {
             document.getElementById(id).classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+
+            if (id === 'modal-calendar') {
+                const badge = document.getElementById('calendar-selected-package');
+                const packageField = document.getElementById('booking-package');
+                const dateInput = document.getElementById('booking-date');
+                if (dateInput && !dateInput.value) {
+                    dateInput.min = new Date().toISOString().split('T')[0];
+                }
+                if (packageName) {
+                    packageField.value = packageName;
+                    badge.innerText = '📦 ' + packageName;
+                    badge.classList.remove('hidden');
+                } else {
+                    packageField.value = 'General Enquiry';
+                    badge.classList.add('hidden');
+                }
+            }
         }
 
         function closeModal(id) {
             document.getElementById(id).classList.add('hidden');
             document.body.style.overflow = 'auto';
+
+            if (id === 'modal-calendar') {
+                // Reset booking form state so the next open starts fresh
+                const form = document.getElementById('booking-form');
+                form.reset();
+                form.classList.remove('hidden');
+                document.getElementById('booking-confirmation').classList.add('hidden');
+            }
         }
     </script>
 </body>
