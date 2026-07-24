@@ -190,7 +190,7 @@
                 </div>
             </div>
 
-            <!-- Hero Image & Video Trigger -->
+            <!-- Hero Image & Embedded Video Section -->
             <div class="lg:col-span-5 space-y-4">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-amber-500/30 dark:border-accentGold/30 group">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students in online conversation" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
@@ -200,11 +200,21 @@
                     </div>
                 </div>
 
-                <div onclick="openModal('modal-video')" class="glass-card bg-white dark:bg-cardBgDark p-3 rounded-2xl border border-amber-500/30 dark:border-accentGold/30 flex items-center gap-4 cursor-pointer hover:border-amber-500 transition">
-                    <div class="w-10 h-10 rounded-full bg-amber-500 dark:bg-accentGold text-slate-950 flex items-center justify-center font-bold text-lg shrink-0">▶</div>
-                    <div class="text-xs">
-                        <div class="font-bold text-slate-900 dark:text-white" data-en="Meet Daniel Carrington (Video Intro)" data-pl="Poznaj Daniela Carringtona (Wideo Intro)">Meet Daniel Carrington (Video Intro)</div>
-                        <div class="text-slate-500 dark:text-zinc-400" data-en="Hear authentic British pronunciation" data-pl="Posłuchaj autentycznego brytyjskiego akcentu">Hear authentic British pronunciation</div>
+                <!-- Direct Embedded Video Player Card -->
+                <div class="glass-card bg-white dark:bg-cardBgDark p-4 rounded-2xl border border-amber-500/30 dark:border-accentGold/30 shadow-lg space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-amber-500 dark:bg-accentGold text-slate-950 flex items-center justify-center font-bold text-xs shrink-0">▶</div>
+                        <div>
+                            <div class="font-bold text-xs md:text-sm text-slate-900 dark:text-white" data-en="Meet Daniel Carrington (Video Intro)" data-pl="Poznaj Daniela Carringtona (Wideo Intro)">Meet Daniel Carrington (Video Intro)</div>
+                            <div class="text-[11px] text-slate-500 dark:text-zinc-400" data-en="Hear authentic British pronunciation" data-pl="Posłuchaj autentycznego brytyjskiego akcentu">Hear authentic British pronunciation</div>
+                        </div>
+                    </div>
+
+                    <div class="aspect-video rounded-xl overflow-hidden bg-black border border-slate-700">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -263,7 +273,7 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
                     <span data-en="Welcome to BritDiscourse" data-pl="Witaj w BritDiscourse">Welcome to BritDiscourse</span>
                 </h2>
-                <p class="text-slate-700 dark:text-zinc-300 leading-relaxed text-sm md:text-base font-medium" data-en="My name is Daniel Carrington. Having lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. When it comes to all ages, I am here to help you take your English to the next level." data-pl="Nazywam się Daniel Carrington. Mieszkając w Polsce od ponad 7 lat i posiadając duże doświadczenie w środowisku korporacyjnym, doskonale rozumiem specyficzne bariery komunikacyjne, z jakimi mierzą się polscy profesjonaliści posługujący się językiem angielskim. Obserwując z bliska proces przechodzenia od nadmiernej analizy gramatyki do przełamywania blokady w żywych dyskusjach, założyłem BritDiscourse, aby rozwijać autentyczną, naturalną płynność konwersacyjną i znacząco podnosić pewność siebie w biznesie. Bez względu na wiek, jestem tutaj, aby pomóc Ci wnieść Twój angielski na wyższy poziom.">
+                <p class="text-slate-700 dark:text-zinc-300 leading-relaxed text-sm md:text-base font-medium" data-en="My name is Daniel Carrington. Having lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. When it comes to all ages, I am here to help you take your English to the next level." data-pl="Nazywam się Daniel Carrington. Mieszkając w Polsce od ponad 7 lat i posiadając duże doświadczenie w środowisku korporacyjnym, doskonale rozumiem specyficzne bariery komunikacyjne, z jakimi mierzą się polscy profesjonaliści posługujący się językiem angielskim. Obserwując z bliska proces przechodzenia od nadmiernej analizy gramatyki do przełamywania blokady w żywych dyskusjach, założyłem BritDiscourse, aby rozwijać autentyczną, naturalną płynność konwersacyjną i znacząco podnosić pewność siebie w biznesie. Bez względu na wiek, jestem tutaj, aby pomokuć Ci wnieść Twój angielski na wyższy poziom.">
                     My name is Daniel Carrington. I have lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. When it comes to all ages, I am here to help you take your English to the next level.
                 </p>
                 <div class="p-4 rounded-2xl glass-card border-l-4 border-l-amber-500 text-xs text-slate-600 dark:text-zinc-300 font-normal">
@@ -325,134 +335,5 @@
             </div>
         </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-white dark:bg-obsidian border-t border-slate-200 dark:border-cardBorderDark px-4 py-8 text-center text-xs text-slate-500 dark:text-zinc-500">
-        <p>&copy; 2026 BritDiscourse by Daniel Carrington. All rights reserved.</p>
-    </footer>
-
-    <!-- VIDEO MODAL WITH COMPRESSED FILE -->
-    <div id="modal-video" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-4 max-w-2xl w-full relative">
-            <button onclick="closeModal('modal-video')" class="absolute top-3 right-3 text-white text-xl font-bold bg-slate-800 hover:bg-slate-700 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer">&times;</button>
-            <h3 class="text-white font-bold mb-3 text-center" data-en="Meet Daniel Carrington" data-pl="Poznaj Daniela Carringtona">Meet Daniel Carrington</h3>
-            <div class="aspect-video rounded-xl overflow-hidden bg-black">
-                <video id="intro-video-player" controls class="w-full h-full rounded-xl">
-                    <source src="WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-
-    <!-- BOOKING MODAL -->
-    <div id="modal-booking" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
-        <div class="bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark rounded-2xl p-6 max-w-md w-full relative">
-            <button onclick="closeModal('modal-booking')" class="absolute top-3 right-3 text-slate-500 hover:text-slate-900 dark:hover:text-white text-xl font-bold cursor-pointer">&times;</button>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4" data-en="Book Your Package" data-pl="Zarezerwuj Pakiet">Book Your Package</h3>
-            <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 dark:text-zinc-300 mb-1" data-en="Selected Option" data-pl="Wybrana Opcja">Selected Option</label>
-                    <input type="text" id="booking-package-input" readonly class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs font-bold text-amber-600 dark:text-accentGold">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Name" data-pl="Twoje Imię i Nazwisko">Your Name</label>
-                    <input type="text" required class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs text-slate-900 dark:text-white" placeholder="John Doe">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-700 dark:text-zinc-300 mb-1" data-en="Email Address" data-pl="Adres Email">Email Address</label>
-                    <input type="email" required class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs text-slate-900 dark:text-white" placeholder="john@example.com">
-                </div>
-                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-bold py-3 rounded-xl text-sm transition cursor-pointer" data-en="Confirm Booking Request" data-pl="Potwierdź Rezerwację">Confirm Booking Request</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        let currentLang = 'en';
-
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
-            document.getElementById('theme-label').textContent = isDark ? 
-                (currentLang === 'en' ? 'Light Mode' : 'Tryb Jasny') : 
-                (currentLang === 'en' ? 'Dark Mode' : 'Tryb Ciemny');
-        }
-
-        function toggleDropdown() {
-            document.getElementById('lang-dropdown-menu').classList.toggle('hidden');
-        }
-
-        function selectLanguage(lang) {
-            currentLang = lang;
-            document.getElementById('current-lang-text').textContent = lang.toUpperCase();
-            document.getElementById('selected-uk-flag').classList.toggle('hidden', lang !== 'en');
-            document.getElementById('selected-pl-flag').classList.toggle('hidden', lang !== 'pl');
-            document.getElementById('check-en').classList.toggle('hidden', lang !== 'en');
-            document.getElementById('check-pl').classList.toggle('hidden', lang !== 'pl');
-            document.getElementById('lang-dropdown-menu').classList.add('hidden');
-
-            document.querySelectorAll('[data-en]').forEach(el => {
-                if (el.getAttribute(`data-${lang}`)) {
-                    el.textContent = el.getAttribute(`data-${lang}`);
-                }
-            });
-
-            calculatePrice();
-        }
-
-        function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-            document.getElementById(id).classList.add('flex');
-            if (id === 'modal-video') {
-                document.getElementById('intro-video-player').play();
-            }
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-            document.getElementById(id).classList.remove('flex');
-            if (id === 'modal-video') {
-                const video = document.getElementById('intro-video-player');
-                video.pause();
-                video.currentTime = 0;
-            }
-        }
-
-        function openBookingModal(pkg) {
-            document.getElementById('booking-package-input').value = pkg;
-            openModal('modal-booking');
-        }
-
-        function handleBookingSubmit(e) {
-            e.preventDefault();
-            alert(currentLang === 'en' ? 'Thank you! Daniel will contact you shortly.' : 'Dziękujemy! Daniel skontaktuje się z Tobą wkrótce.');
-            closeModal('modal-booking');
-        }
-
-        function calculatePrice() {
-            const basePrice = parseFloat(document.getElementById('calc-type').value);
-            const freq = parseInt(document.getElementById('calc-freq').value);
-            const discount = parseFloat(document.getElementById('calc-plan').value);
-
-            const lessonsPerMonth = freq * 4;
-            const fullPrice = basePrice * lessonsPerMonth;
-            const finalPrice = Math.round(fullPrice * (1 - discount));
-            const savings = fullPrice - finalPrice;
-
-            const totalEl = document.getElementById('calc-total');
-            const savingsEl = document.getElementById('calc-savings');
-
-            if (currentLang === 'en') {
-                totalEl.innerHTML = `${finalPrice} PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400">/ month (${lessonsPerMonth} lessons)</span>`;
-                savingsEl.textContent = discount > 0 ? `✓ You save ~${savings} PLN monthly with the 6-Month Package` : '💡 Select a 6-Month Package to save 10%';
-            } else {
-                totalEl.innerHTML = `${finalPrice} PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400">/ miesiąc (${lessonsPerMonth} lekcji)</span>`;
-                savingsEl.textContent = discount > 0 ? `✓ Oszczędzasz ~${savings} zł miesięcznie z Pakietem 6-Miesięcznym` : '💡 Wybierz Pakiet 6-Miesięczny, aby zaoszczędzić 10%';
-            }
-        }
-    </script>
 </body>
 </html>
