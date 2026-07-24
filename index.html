@@ -190,7 +190,7 @@
                 </div>
             </div>
 
-            <!-- Hero Image & Embedded Video Section -->
+            <!-- Hero Image & Embedded Streamable Video Section -->
             <div class="lg:col-span-5 space-y-4">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-amber-500/30 dark:border-accentGold/30 group">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students in online conversation" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
@@ -200,7 +200,7 @@
                     </div>
                 </div>
 
-                <!-- Direct Embedded Video Player Card (Solution B Applied) -->
+                <!-- Direct Streamable iFrame Container -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-4 rounded-2xl border border-amber-500/30 dark:border-accentGold/30 shadow-lg space-y-3">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-full bg-amber-500 dark:bg-accentGold text-slate-950 flex items-center justify-center font-bold text-xs shrink-0">▶</div>
@@ -211,10 +211,15 @@
                     </div>
 
                     <div class="aspect-video rounded-xl overflow-hidden bg-black border border-slate-700">
-                        <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-                            <source src="./WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe 
+                            src="https://streamable.com/e/55vb2u" 
+                            class="w-full h-full" 
+                            frameborder="0" 
+                            width="100%" 
+                            height="100%" 
+                            allowfullscreen 
+                            allow="autoplay">
+                        </iframe>
                     </div>
                 </div>
             </div>
