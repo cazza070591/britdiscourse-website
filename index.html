@@ -212,11 +212,11 @@
                 </div>
             </div>
 
-            <!-- Hero Video Box with WIN_20260723_19_30_38_Pro.mp4 and caption "Meet your native speaker Daniel" -->
+            <!-- Hero Video Box with WIN_20260724_19_10_23_Pro.mp4 and caption "Meet your native speaker Daniel" -->
             <div class="lg:col-span-5 space-y-4">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-500/40 dark:border-accentGold/40 bg-slate-950 aspect-video flex items-center justify-center">
                     <video class="w-full h-full object-cover" controls>
-                        <source src="WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
+                        <source src="WIN_20260724_19_10_23_Pro.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -684,19 +684,6 @@
         </div>
     </div>
 
-    <!-- VIDEO INTRO MODAL -->
-    <div id="modal-video" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-3xl w-full rounded-3xl p-4 relative text-left">
-            <button onclick="closeModal('modal-video')" class="absolute -top-3 -right-3 text-slate-950 text-sm font-bold bg-amber-500 dark:bg-accentGold w-8 h-8 rounded-full flex items-center justify-center shadow-lg cursor-pointer z-10">✕</button>
-            <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black shadow-inner">
-                <video class="w-full h-full object-cover" controls autoplay>
-                    <source src="WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-
     <!-- 5-STEP FLUENCY QUIZ MODAL -->
     <div id="modal-quiz" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
@@ -1021,6 +1008,7 @@
         function openModal(id) {
             const modalEl = document.getElementById(id);
             if(modalEl) {
+                modalEl.classList.0 = modalEl.classList.remove('hidden'); // standard clean
                 modalEl.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
