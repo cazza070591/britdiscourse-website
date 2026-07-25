@@ -212,7 +212,7 @@
                 </div>
             </div>
 
-            <!-- Hero Video Box with correct WIN_20260724_19_10_23_Pro.mp4 and caption "Meet your native speaker Daniel" -->
+            <!-- Hero Video Box (WIN_20260724_19_10_23_Pro.mp4 integrated properly) -->
             <div class="lg:col-span-5 space-y-4">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-500/40 dark:border-accentGold/40 bg-slate-950 aspect-video flex items-center justify-center">
                     <video class="w-full h-full object-cover" controls>
@@ -993,7 +993,7 @@
             document.getElementById('lang-dropdown-menu').classList.add('hidden');
 
             const translatableElements = document.querySelectorAll('[data-en][data-pl]');
-            translatableElements.file = translatableElements.forEach(el => {
+            translatableElements.forEach(el => {
                 if (currentLang === 'pl') {
                     el.innerText = el.getAttribute('data-pl');
                 } else {
