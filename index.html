@@ -63,22 +63,22 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .nav-link-glow {
-            position: relative;
+        /* All navigation boxed items styled in gold as requested */
+        .nav-boxed-item-gold {
+            border: 1px solid #D4AF37;
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: rgba(212, 175, 55, 0.15);
+            color: #D4AF37;
         }
-        .nav-link-glow::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #D4AF37;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
+        .dark .nav-boxed-item-gold {
+            border: 1px solid #D4AF37;
+            background: rgba(212, 175, 55, 0.15);
+            color: #D4AF37;
         }
-        .nav-link-glow:hover::after {
-            width: 80%;
+        .nav-boxed-item-gold:hover {
+            background: rgba(212, 175, 55, 0.25);
+            border-color: #B89628;
         }
     </style>
 </head>
@@ -103,15 +103,15 @@
                 BRIT<span class="gold-gradient-text drop-shadow-sm">DISCOURSE</span>
             </a>
             
-            <!-- Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2 text-xs font-bold tracking-wide">
-                <a href="#about" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="About Me" data-pl="O mnie">About Me</a>
-                <a href="#proof" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="Natural Immersion" data-pl="Naturalna Immersja">Natural Immersion</a>
-                <a href="#hot-topics" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="Weekly Topics" data-pl="Tematy Tygodnia">Weekly Topics</a>
-                <a href="#courses" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="Courses" data-pl="Kursy">Courses</a>
-                <a href="#calculator" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="Calculator" data-pl="Kalkulator">Calculator</a>
-                <a href="#referral" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="Refer a Friend" data-pl="Poleć Znajomego">Refer a Friend</a>
-                <a href="#pricing" class="nav-link-glow px-3 py-2 text-slate-700 dark:text-zinc-200 hover:text-amber-600 dark:hover:text-accentGold transition" data-en="Pricing" data-pl="Cennik">Pricing</a>
+            <!-- Navigation Links - All Styled in Gold -->
+            <nav class="hidden lg:flex items-center gap-2 text-xs font-bold tracking-wide">
+                <a href="#about" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="About Me" data-pl="O mnie">About Me</a>
+                <a href="#proof" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Natural Immersion" data-pl="Naturalna Immersja">Natural Immersion</a>
+                <a href="#hot-topics" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Weekly Topics" data-pl="Tematy Tygodnia">Weekly Topics</a>
+                <a href="#courses" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Courses" data-pl="Kursy">Courses</a>
+                <a href="#calculator" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Calculator" data-pl="Kalkulator">Calculator</a>
+                <a href="#referral" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Refer a Friend" data-pl="Poleć Znajomego">Refer a Friend</a>
+                <a href="#pricing" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Pricing" data-pl="Cennik">Pricing</a>
             </nav>
 
             <!-- Actions -->
@@ -500,6 +500,7 @@
                 <p class="text-slate-600 dark:text-zinc-400 font-medium" data-en="Transparent pricing for sessions (45-min virtual/corporate, 1-hour home visits), home visits, and group live trackers." data-pl="Przejrzysty cennik zajęć (45 min online/biznes, 1 godzina dojazdy do domu) oraz aktywny licznik grup.">Transparent pricing for sessions (45-min virtual, 1-hour home visits), home visits, and group live trackers.</p>
             </div>
 
+            <!-- PRICING CARDS FIRST -->
             <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-6 pt-4">
                 <!-- 1-on-1 Online -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-4 rounded-3xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
@@ -589,8 +590,8 @@
                 </div>
             </div>
 
-            <!-- INTEGRATED SKIP CONSULTATION BANNER PLACED UNDER PRICING SECTION -->
-            <div class="max-w-4xl mx-auto p-6 rounded-3xl glass-card bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/40 text-center space-y-4 shadow-xl">
+            <!-- SKIP CONSULTATION BANNER PLACED UNDERNEATH PRICING CARDS -->
+            <div class="max-w-4xl mx-auto p-6 rounded-3xl glass-card bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/40 text-center space-y-5 shadow-xl">
                 <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white" data-en="Ready to secure your lessons with Daniel Carrington?" data-pl="Gotowy, aby zarezerwować lekcje z Danielem Carringtonem?">Ready to secure your lessons with Daniel Carrington?</h3>
                 <p class="text-xs md:text-sm text-slate-600 dark:text-zinc-300 max-w-xl mx-auto" data-en="If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly." data-pl="Jeśli podoba Ci się to, co widzisz, i chcesz pominąć proces konsultacji, kliknij poniżej, aby wybrać pakiet i bezpośrednio wskazać preferowane daty i godziny zajęć przez Calendly.">
                     If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly.
@@ -604,7 +605,7 @@
         </div>
     </section>
 
-    <!-- FOOTER (UNIFIED WITH SINGLE STATEMENT TO PREVENT REPETITION) -->
+    <!-- FOOTER -->
     <footer id="contact" class="px-4 py-16 bg-slate-100 dark:bg-cardBgDark border-t border-slate-200 dark:border-cardBorderDark text-center">
         <div class="max-w-3xl mx-auto space-y-6">
             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white" data-en="Ready to Start Your Sessions?" data-pl="Gotowy Na Lekcje Online?">Ready to Start Your Sessions?</h2>
