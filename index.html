@@ -72,7 +72,7 @@
             border-radius: 8px;
             background: rgba(212, 175, 55, 0.15);
             color: #D4AF37;
-            width: 100px;
+            width: 90px;
             height: 32px;
             font-size: 10px;
             display: inline-flex;
@@ -126,7 +126,8 @@
                 <a href="#hot-topics" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Topics" data-pl="Tematy">Topics</a>
                 <a href="#courses" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Courses" data-pl="Kursy">Courses</a>
                 <a href="#calculator" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Calculator" data-pl="Kalkulator">Calculator</a>
-                <a href="#referral" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Referral" data-pl="Poleć">Referral</a>
+                <a href="#payments" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Payments" data-pl="Płatności">Payments</a>
+                <a href="#contact" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Contact" data-pl="Kontakt">Contact</a>
                 <a href="#pricing" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Pricing" data-pl="Cennik">Pricing</a>
             </nav>
 
@@ -199,7 +200,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION WITH CORRECT VIDEO FILE WIN_20260723_19_30_38_Pro.mp4 -->
     <section class="relative px-4 pt-10 pb-12 md:pt-16 md:pb-20 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-7 text-center lg:text-left">
@@ -232,7 +233,7 @@
             <!-- Hero Video Box -->
             <div class="lg:col-span-5 space-y-3">
                 <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500/40 dark:border-accentGold/40 bg-slate-950 aspect-video flex items-center justify-center max-w-md mx-auto lg:max-w-none">
-                    <video class="w-full h-full object-cover" controls autoplay muted loop playsinline webkit-playsinline>
+                    <video class="w-full h-full object-cover" controls playsinline webkit-playsinline>
                         <source src="WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
                         Your browser does not support the video tag. <a href="WIN_20260723_19_30_38_Pro.mp4" target="_blank" class="text-amber-400 underline">Click here to watch the video</a>
                     </video>
@@ -366,7 +367,7 @@
             </div>
 
             <div class="glass-card bg-white dark:bg-cardBgDark p-5 md:p-6 rounded-2xl border border-slate-200 dark:border-cardBorderDark shadow-xl space-y-4">
-                <div class="grid md:grid-cols-3 gap-4">
+                <div class="grid md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[11px] font-bold text-slate-700 dark:text-zinc-300 uppercase mb-1.5" data-en="1. Lesson Type" data-pl="1. Rodzaj Zajęć">1. Lesson Type</label>
                         <select id="calc-type" onchange="calculatePrice()" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs font-semibold text-slate-900 dark:text-white">
@@ -387,27 +388,61 @@
                             <option value="3" data-en="3 Lessons / Week (Intensive)" data-pl="3 lekcje / tydzień (Intensywnie)">3 Lessons / Week (Intensive)</option>
                         </select>
                     </div>
-
-                    <div>
-                        <label class="block text-[11px] font-bold text-slate-700 dark:text-zinc-300 uppercase mb-1.5" data-en="3. Commitment" data-pl="3. Pakiety i Umowy">3. Commitment</label>
-                        <select id="calc-plan" onchange="calculatePrice()" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs font-semibold text-slate-900 dark:text-white">
-                            <option value="0" data-en="Pay Month-to-Month" data-pl="Płatność miesięczna">Pay Month-to-Month</option>
-                            <option value="0.1" selected data-en="6-Month Package (10% OFF)" data-pl="Pakiet 6-miesięczny (10% RABATU)">6-Month Package (10% OFF)</option>
-                        </select>
-                    </div>
                 </div>
 
                 <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl flex flex-col md:flex-row justify-between items-center gap-3">
                     <div>
                         <div class="text-[11px] text-amber-700 dark:text-accentGold font-bold uppercase" data-en="Estimated Monthly Rate:" data-pl="Szacowany Koszt Miesięczny:">Estimated Monthly Rate:</div>
-                        <div id="calc-total" class="text-2xl font-black text-slate-900 dark:text-white mt-0.5">576 PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400" data-en="/ month (8 lessons)" data-pl="/ miesiąc (8 lekcji)">/ month (8 lessons)</span></div>
-                        <div id="calc-savings" class="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">✓ You save ~64 PLN monthly with the 6-Month Package</div>
+                        <div id="calc-total" class="text-2xl font-black text-slate-900 dark:text-white mt-0.5">1,120 PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400" data-en="/ month (8 lessons)" data-pl="/ miesiąc (8 lekcji)">/ month (8 lessons)</span></div>
                     </div>
                     <a href="https://calendly.com/anondan45" target="_blank" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs transition shadow-md whitespace-nowrap cursor-pointer text-center">
                         <span data-en="Book This Plan" data-pl="Zarezerwuj Ten Plan">Book This Plan</span>
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- PAYMENTS & GATEWAYS SECTION -->
+    <section id="payments" class="px-4 py-12 max-w-4xl mx-auto">
+        <div class="glass-card bg-white dark:bg-cardBgDark p-6 md:p-8 rounded-2xl border border-amber-500/40 dark:border-accentGold/40 shadow-xl space-y-6 text-center">
+            <div class="space-y-2">
+                <div class="text-amber-700 dark:text-accentGold text-xs font-extrabold uppercase tracking-widest" data-en="Secure Transactions" data-pl="Bezpieczne Transakcje">Secure Transactions</div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-en="Accepted Payment Methods & Gateways" data-pl="Akceptowane Metody Płatności i Bramki">Accepted Payment Methods & Gateways</h2>
+                <p class="text-slate-600 dark:text-zinc-400 text-xs max-w-xl mx-auto" data-en="Fast, safe, and automated checkout via trusted regional and international payment platforms." data-pl="Szybkie, bezpieczne i zautomatyzowane rozliczenia za pośrednictwem zaufanych platform płatniczych.">Fast, safe, and automated checkout via trusted regional and international payment platforms.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+                <!-- PayU / Blik -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
+                    <span class="text-2xl">⚡</span>
+                    <div class="font-bold text-xs text-slate-900 dark:text-white">PayU / BLIK</div>
+                    <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Instant Polish online banking & BLIK" data-pl="Szybkie przelewy i BLIK">Instant Polish online banking & BLIK</div>
+                </div>
+
+                <!-- Google Pay -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
+                    <span class="text-2xl">🌐</span>
+                    <div class="font-bold text-xs text-slate-900 dark:text-white">Google Pay</div>
+                    <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="One-tap secure mobile checkout" data-pl="Bezpieczne płatności jednym dotknięciem">One-tap secure mobile checkout</div>
+                </div>
+
+                <!-- Apple Pay -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
+                    <span class="text-2xl"></span>
+                    <div class="font-bold text-xs text-slate-900 dark:text-white">Apple Pay</div>
+                    <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Seamless payment for iOS users" data-pl="Wygodne płatności dla użytkowników iOS">Seamless payment for iOS users</div>
+                </div>
+
+                <!-- Credit Cards / Stripe -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
+                    <span class="text-2xl">💳</span>
+                    <div class="font-bold text-xs text-slate-900 dark:text-white">Cards (Stripe)</div>
+                    <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Global Visa & Mastercard support" data-pl="Obsługa kart Visa i Mastercard">Global Visa & Mastercard support</div>
+                </div>
+            </div>
+
+            <p class="text-[11px] text-slate-500 dark:text-zinc-400" data-en="* Invoices / rachunki are issued automatically upon successful checkout." data-pl="* Faktury / rachunki wystawiane są automatycznie po pomyślnym opłaceniu zamówienia.">* Invoices / rachunki are issued automatically upon successful checkout.</p>
         </div>
     </section>
 
@@ -445,9 +480,8 @@
                     <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Gamified immersion, storytelling, songs, and role-playing in 45-min blocks." data-pl="Nauka przez zabawę, bajki, piosenki i odgrywanie ról w blokach 45 min.">Gamified immersion, storytelling, songs, and role-playing in 45-min blocks.</p>
                     
                     <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="6-Month Package Pricing:" data-pl="Cena Pakietu 6-Miesięcznego:">6-Month Package Pricing:</div>
-                        <div data-en="• 1,008 PLN / month (8 lessons)" data-pl="• 1 008 zł / miesiąc (8 lekcji)">• 1,008 PLN / month (8 lessons)</div>
-                        <div class="text-slate-500 dark:text-zinc-400 text-[9px]" data-en="Total for 6 months: 6,048 PLN" data-pl="Łącznie za 6 miesięcy: 6 048 zł">Total for 6 months: 6,048 PLN</div>
+                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
+                        <div data-en="• 1,120 PLN / month (8 lessons)" data-pl="• 1 120 zł / miesiąc (8 lekcji)">• 1,120 PLN / month (8 lessons)</div>
                     </div>
                 </div>
                 <div class="space-y-1.5">
@@ -468,9 +502,8 @@
                     <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Eliminating hesitation, travel readiness, school support, and social confidence." data-pl="Przełamywanie bariery, przygotowanie do podróży i pewność siebie.">Eliminating hesitation, travel readiness, school support, and social confidence.</p>
                     
                     <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="6-Month Package Pricing:" data-pl="Cena Pakietu 6-Miesięcznego:">6-Month Package Pricing:</div>
-                        <div data-en="• 1,008 PLN / month (8 lessons)" data-pl="• 1 008 zł / miesiąc (8 lekcji)">• 1,008 PLN / month (8 lessons)</div>
-                        <div class="text-slate-500 dark:text-zinc-400 text-[9px]" data-en="Total for 6 months: 6,048 PLN" data-pl="Łącznie za 6 miesięcy: 6 048 zł">Total for 6 months: 6,048 PLN</div>
+                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
+                        <div data-en="• 1,120 PLN / month (8 lessons)" data-pl="• 1 120 zł / miesiąc (8 lekcji)">• 1,120 PLN / month (8 lessons)</div>
                     </div>
                 </div>
                 <div class="space-y-1.5">
@@ -491,9 +524,8 @@
                     <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Removing mental translation, travel survival, small talk, sports, shows, and real-life banter." data-pl="Usuwanie tłumaczenia w głowie, angielski w podróży, rozmowy o serialach i sporcie.">Removing mental translation, travel survival, small talk, sports, shows, and real-life banter.</p>
                     
                     <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="6-Month Package Pricing:" data-pl="Cena Pakietu 6-Miesięcznego:">6-Month Package Pricing:</div>
-                        <div data-en="• 1,008 PLN / month (8 lessons)" data-pl="• 1 008 zł / miesiąc (8 lekcji)">• 1,008 PLN / month (8 lessons)</div>
-                        <div class="text-slate-500 dark:text-zinc-400 text-[9px]" data-en="Total for 6 months: 6,048 PLN" data-pl="Łącznie za 6 miesięcy: 6 048 zł">Total for 6 months: 6,048 PLN</div>
+                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
+                        <div data-en="• 1,120 PLN / month (8 lessons)" data-pl="• 1 120 zł / miesiąc (8 lekcji)">• 1,120 PLN / month (8 lessons)</div>
                     </div>
                 </div>
                 <div class="space-y-1.5">
@@ -515,9 +547,8 @@
                     <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Mock interviews, STAR method breakdown, executive body language, and high-stakes Q&A training." data-pl="Symulacje rozmów, metoda STAR, mowa ciała i trening pytań rekrutacyjnych w korporacjach.">Mock interviews, STAR method breakdown, executive body language, and high-stakes Q&A training.</p>
                     
                     <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="6-Month Package Pricing:" data-pl="Cena Pakietu 6-Miesięcznego:">6-Month Package Pricing:</div>
-                        <div data-en="• 1,584 PLN / month (8 lessons)" data-pl="• 1 584 zł / miesiąc (8 lekcji)">• 1,584 PLN / month (8 lessons)</div>
-                        <div class="text-slate-500 dark:text-zinc-400 text-[9px]" data-en="Total for 6 months: 9,504 PLN" data-pl="Łącznie za 6 miesięcy: 9 504 zł">Total for 6 months: 9,504 PLN</div>
+                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
+                        <div data-en="• 1,760 PLN / month (8 lessons)" data-pl="• 1 760 zł / miesiąc (8 lekcji)">• 1,760 PLN / month (8 lessons)</div>
                     </div>
                 </div>
                 <div class="space-y-1.5">
@@ -645,22 +676,53 @@
         </div>
     </section>
 
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="px-4 py-16 max-w-3xl mx-auto">
+        <div class="glass-card bg-white dark:bg-cardBgDark p-8 rounded-3xl border border-amber-500/40 dark:border-accentGold/40 shadow-xl space-y-6">
+            <div class="text-center space-y-2">
+                <div class="text-amber-700 dark:text-accentGold text-xs font-extrabold uppercase tracking-widest" data-en="Get in Touch" data-pl="Skontaktuj się">Get in Touch</div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-en="Send Daniel a Message" data-pl="Wyślij Wiadomość do Daniela">Send Daniel a Message</h2>
+                <p class="text-slate-600 dark:text-zinc-400 text-xs" data-en="Fill out the form below and it will be sent directly to my inbox." data-pl="Wypełnij poniższy formularz, a wiadomość zostanie przesłana bezpośrednio na moją skrzynkę e-mail.">Fill out the form below and it will be sent directly to my inbox.</p>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-xs">
+                <input type="hidden" name="access_key" value="3d892859-60de-49d3-8642-60a2f6e587e2">
+                <input type="hidden" name="form_type" value="Direct Contact Form">
+
+                <div>
+                    <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Full Name" data-pl="Twoje Imię i Nazwisko">Your Full Name</label>
+                    <input type="text" name="name" required placeholder="e.g. John Smith" class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white text-xs">
+                </div>
+
+                <div>
+                    <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Email Address" data-pl="Twój Adres E-mail">Your Email Address</label>
+                    <input type="email" name="email" required placeholder="e.g. john@gmail.com" class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white text-xs">
+                </div>
+
+                <div>
+                    <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Message" data-pl="Twoja Wiadomość">Your Message</label>
+                    <textarea name="message" rows="4" required placeholder="Write your inquiry here..." class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-3 text-slate-900 dark:text-white text-xs"></textarea>
+                </div>
+
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold py-3.5 rounded-xl text-xs transition shadow-md cursor-pointer" data-en="Send Message" data-pl="Wyślij Wiadomość">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer id="contact" class="px-4 py-12 bg-slate-100 dark:bg-cardBgDark border-t border-slate-200 dark:border-cardBorderDark text-center">
+    <footer class="px-4 py-8 bg-slate-100 dark:bg-cardBgDark border-t border-slate-200 dark:border-cardBorderDark text-center">
         <div class="max-w-3xl mx-auto space-y-4">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-en="Ready to Start Your Sessions?" data-pl="Gotowy Na Lekcje Online?">Ready to Start Your Sessions?</h2>
-            <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium" 
-               data-en="Contact Daniel Carrington directly at anondan45@gmail.com or book instantly via Calendly."
-               data-pl="Napisz bezpośrednio na anondan45@gmail.com lub zarezerwuj termin w Calendly.">
-                Contact Daniel Carrington directly at anondan45@gmail.com or book instantly via Calendly.
-            </p>
             <div class="pt-2 flex flex-col sm:flex-row gap-3 justify-center items-center">
                 <a href="https://calendly.com/anondan45" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-xl cursor-pointer">
                     📅 <span data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</span>
                 </a>
             </div>
-            <div class="text-[11px] text-slate-500 dark:text-zinc-500 pt-6">
-                © 2026 BritDiscourse English Coaching by Daniel Carrington (anondan45@gmail.com). All rights reserved.
+            <div class="text-[11px] text-slate-500 dark:text-zinc-500 pt-4">
+                © 2026 BritDiscourse English Coaching by Daniel Carrington. All rights reserved.
             </div>
         </div>
     </footer>
@@ -669,7 +731,7 @@
     <div class="md:hidden fixed bottom-0 left-0 right-0 glass-card bg-white/95 dark:bg-cardBgDark/95 p-2.5 border-t border-slate-200 dark:border-cardBorderDark z-50 flex items-center justify-between">
         <div class="text-[11px] text-slate-700 dark:text-zinc-300">
             <div class="font-bold text-slate-900 dark:text-white">Daniel Carrington</div>
-            <div class="text-amber-700 dark:text-accentGold">anondan45@gmail.com</div>
+            <div class="text-amber-700 dark:text-accentGold">BritDiscourse Coaching</div>
         </div>
         <a href="https://calendly.com/anondan45" target="_blank" class="bg-amber-500 dark:bg-accentGold text-slate-950 font-extrabold px-3 py-2 rounded-lg text-xs shadow-md block text-center">
             <span data-en="Book Now" data-pl="Zarezerwuj">Book Now</span>
@@ -933,7 +995,7 @@
             if (largeGroupCount < maxLargeGroup) {
                 largeGroupCount++;
                 updateGroupUI();
-                alert(currentLang === 'pl' ? 'Sukces! Powiadomienie wysłano do anondan45@gmail.com. Pomyślnie zapisano do grupy.' : 'Success! Notification sent to anondan45@gmail.com. You have successfully applied to the group.');
+                alert(currentLang === 'pl' ? 'Sukces! Powiadomienie wysłano. Pomyślnie zapisano do grupy.' : 'Success! Notification sent. You have successfully applied to the group.');
             } else {
                 alert(currentLang === 'pl' ? 'Ta grupa jest już pełna!' : 'This group is already full!');
             }
@@ -958,22 +1020,11 @@
         function calculatePrice() {
             const baseType = parseFloat(document.getElementById('calc-type').value);
             const freq = parseInt(document.getElementById('calc-freq').value);
-            const planDiscount = parseFloat(document.getElementById('calc-plan').value);
 
             const monthlyLessons = freq * 4;
             const fullMonthlyPrice = baseType * monthlyLessons;
-            const finalPrice = fullMonthlyPrice * (1 - planDiscount);
-            const monthlySavings = fullMonthlyPrice - finalPrice;
 
-            document.getElementById('calc-total').innerText = Math.round(finalPrice) + ' PLN / ' + (currentLang === 'pl' ? 'miesiąc' : 'month') + ' (' + monthlyLessons + ' ' + (currentLang === 'pl' ? 'lekcji' : 'lessons') + ')';
-            
-            const savingsEl = document.getElementById('calc-savings');
-            if (planDiscount > 0) {
-                savingsEl.innerText = currentLang === 'pl' ? '✓ Oszczędzasz ~' + Math.round(monthlySavings) + ' PLN miesięcznie dzięki pakietowi 6-miesięcznemu' : '✓ You save ~' + Math.round(monthlySavings) + ' PLN monthly with the 6-Month Package';
-                savingsEl.classList.remove('hidden');
-            } else {
-                savingsEl.classList.add('hidden');
-            }
+            document.getElementById('calc-total').innerText = Math.round(fullMonthlyPrice) + ' PLN / ' + (currentLang === 'pl' ? 'miesiąc' : 'month') + ' (' + monthlyLessons + ' ' + (currentLang === 'pl' ? 'lekcji' : 'lessons') + ')';
         }
 
         function toggleTheme() {
@@ -1025,7 +1076,6 @@
                 checkPl.classList.remove('hidden');
             } else {
                 plFlagBtn.classList.add('hidden');
-                ukFlagBtn.classList.add('hidden'); // Wait, make sure uk flag displays
                 ukFlagBtn.classList.remove('hidden');
                 currentLangText.innerText = 'EN';
                 checkPl.classList.add('hidden');
