@@ -729,7 +729,7 @@
             <div class="text-[11px] text-slate-500 dark:text-zinc-500 pt-4 space-y-1">
                 <p>© 2026 BritDiscourse English Coaching by Daniel Carrington. All rights reserved.</p>
                 <p>
-                    <a href="#privacy" class="hover:text-amber-600 dark:hover:text-accentGold underline transition" data-en="Privacy Policy" data-pl="Polityka Prywatności">Privacy Policy</a>
+                    <button onclick="openModal('modal-privacy')" class="hover:text-amber-600 dark:hover:text-accentGold underline transition cursor-pointer bg-transparent border-none text-[11px] text-slate-500 dark:text-zinc-500" data-en="Privacy Policy & Terms" data-pl="Polityka Prywatności i Regulamin">Privacy Policy & Terms</button>
                 </p>
             </div>
         </div>
@@ -747,6 +747,95 @@
     </div>
 
     <!-- MODALS -->
+
+    <!-- PRIVACY POLICY & TERMS MODAL -->
+    <div id="modal-privacy" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal('modal-privacy')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
+            
+            <!-- ENGLISH VERSION -->
+            <div class="space-y-4" id="privacy-content-en">
+                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase">Legal Documentation</div>
+                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Privacy Policy & Terms of Service</h3>
+                
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">1. Terms of Service - General Provisions</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        These Terms of Service define the rules for using the services provided by Daniel Carrington (hereinafter: the "Service Provider"). Contact with the Service Provider is possible via e-mail at the following address: [Your Email Address]. Using the website and booking appointments constitute acceptance of the provisions of these Terms of Service. This is established pursuant to Article 8 of the Polish Act on Rendering Electronic Services (Ustawa o świadczeniu usług drogą elektroniczną) and Articles 384 et seq. of the Polish Civil Code (Kodeks cywilny).
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">2. Appointments via Calendly</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Booking consultations and English language lessons takes place via the external booking platform Calendly. During the appointment booking process, the user provides their personal data directly within the Calendly system. Liability for Booking Data: The Calendly platform is an independent service provider and bears sole responsibility for the storage, security, and processing of personal data provided during the calendar booking process, acting in accordance with Article 4 and Article 28 of the GDPR (RODO). The Service Provider is not liable for data processing operations carried out directly by the Calendly system. Users are encouraged to review Calendly's privacy policy before making a booking.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">3. Payment Terms & Stripe</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Payments for services can be made via traditional bank transfer to the Service Provider's bank account or through integrated electronic payment systems (such as Stripe) operating under the contractual freedoms outlined in Article 353[1] of the Polish Civil Code. The payment provider bears sole responsibility for the collection, storage, security, and processing of all sensitive financial and card data under certified industry standards.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">4. Privacy Policy & Email Confidentiality</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        The controller of personal data collected electronically is Daniel Carrington pursuant to Article 4(7) of the GDPR (RODO). Scope and Purpose: Personal data (such as email addresses and message content) is collected solely when voluntarily submitted via email to handle inquiries or manage the referral program pursuant to Article 6(1)(a) and (b) of the GDPR. No Sharing with Third Parties: Your data collected via email is fully secure, treated as confidential, protected under Article 32 of the GDPR, and will never be shared with third parties.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">5. User Rights</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        In accordance with Articles 15 through 22 of the GDPR (RODO), you have the right to access your data, rectify them, delete them, or restrict their processing. To exercise your rights, please contact the Controller via email.
+                    </p>
+                </div>
+            </div>
+
+            <!-- POLISH VERSION -->
+            <div class="space-y-4 pt-4 border-t border-slate-200 dark:border-zinc-800" id="privacy-content-pl">
+                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase">Dokumentacja Prawna</div>
+                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Polityka Prywatności i Regulamin</h3>
+                
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">1. Regulamin - Postanowienia ogólne</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Niniejszy Regulamin określa zasady korzystania z usług świadczonych przez Daniela Carringtona (dalej: „Usługodawca”). Kontakt z Usługodawcą jest możliwy pod adresem e-mail: [Twój Adres E-mail]. Korzystanie ze strony oraz rezerwacja terminów oznaczają akceptację regulaminu. Regulamin oparty jest na art. 8 Ustawy o świadczeniu usług drogą elektroniczną oraz art. 384 i nast. Kodeksu cywilnego.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">2. Rezerwacja terminów i Calendly</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Rezerwacja konsultacji oraz lekcji języka angielskiego odbywa się za pośrednictwem zewnętrznej platformy rezerwacyjnej Calendly. W procesie rezerwacji użytkownik podaje dane bezpośrednio w systemie Calendly. Odpowiedzialność za dane rezerwacyjne: Platforma Calendly jest osobnym dostawcą i ponosi wyłączną odpowiedzialność za przechowywanie, bezpieczeństwo oraz przetwarzanie danych w zgodzie z art. 4 i art. 28 RODO. Usługodawca nie ponosi odpowiedzialności za operacje przetwarzania danych realizowane bezpośrednio przez Calendly.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">3. Przetwarzanie płatności i Stripe</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Płatności za usługi mogą być realizowane przelewem lub poprzez elektroniczne systemy płatności (np. Stripe) na zasadach swobody umów (art. 353[1] Kodeksu cywilnego). Dostawca płatności ponosi wyłączną odpowiedzialność za pobieranie, przechowywanie, bezpieczeństwo oraz przetwarzanie wrażliwych danych finansowych i kart płatniczych.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">4. Polityka Prywatności i Poufność E-mail</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Administratorem danych osobowych zbieranych drogą elektroniczną jest Daniel Carrington zgodnie z art. 4 pkt 7 RODO. Zakres i cel: Dane (takie jak e-mail i treść wiadomości) są gromadzone wyłącznie w przypadku ich dobrowolnego przesłania w celu obsługi zapytania lub programu poleceń (art. 6 ust. 1 lit. a i b RODO). Brak udostępniania osobom trzecim: Dane są w pełni bezpieczne, traktowane jako poufne, chronione zgodnie z art. 32 RODO i nigdy nie będą udostępniane osobom trzecim.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">5. Prawa użytkownika</h4>
+                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
+                        Zgodnie z przepisami art. 15-22 RODO przysługuje Ci prawo dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania. Skontaktuj się z Administratorem drogą mailową w celu realizacji swoich praw.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- REFER A FRIEND SUBMISSION MODAL -->
     <div id="modal-referral" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
@@ -1080,6 +1169,8 @@
             const currentLangText = document.getElementById('current-lang-text');
             const checkEn = document.getElementById('check-en');
             const checkPl = document.getElementById('check-pl');
+            const privacyEn = document.getElementById('privacy-content-en');
+            const privacyPl = document.getElementById('privacy-content-pl');
 
             if (lang === 'pl') {
                 ukFlagBtn.classList.add('hidden');
@@ -1087,12 +1178,16 @@
                 currentLangText.innerText = 'PL';
                 checkEn.classList.add('hidden');
                 checkPl.classList.remove('hidden');
+                if(privacyEn) privacyEn.classList.add('hidden');
+                if(privacyPl) privacyPl.classList.remove('hidden');
             } else {
                 plFlagBtn.classList.add('hidden');
                 ukFlagBtn.classList.remove('hidden');
                 currentLangText.innerText = 'EN';
                 checkPl.classList.add('hidden');
                 checkEn.classList.remove('hidden');
+                if(privacyEn) privacyEn.classList.remove('hidden');
+                if(privacyPl) privacyPl.classList.add('hidden');
             }
 
             document.getElementById('lang-dropdown-menu').classList.add('hidden');
