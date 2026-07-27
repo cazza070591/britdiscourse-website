@@ -207,8 +207,8 @@
                 </div>
 
                 <button id="theme-toggle" onclick="toggleTheme()" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2.5 py-1.5 rounded-xl text-xs transition flex items-center gap-1 cursor-pointer shadow-sm">
-                    <span id="theme-icon">☀️</span>
-                    <span id="theme-label" class="hidden sm:inline" data-en="Light" data-pl="Jasny">Light</span>
+                    <span id="theme-icon">🌙</span>
+                    <span id="theme-label" data-en="Dark" data-pl="Ciemny">Dark</span>
                 </button>
 
                 <a href="https://calendly.com/anondan45" target="_blank" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 dark:from-accentGold dark:to-accentGoldHover text-slate-950 font-extrabold px-3 py-2 rounded-xl text-xs tracking-wide transition shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1 cursor-pointer">
@@ -922,13 +922,22 @@
         function toggleTheme() {
             const htmlEl = document.documentElement;
             const themeIcon = document.getElementById('theme-icon');
+            const themeLabel = document.getElementById('theme-label');
 
             if (htmlEl.classList.contains('dark')) {
+                // Currently in dark mode, switch to light mode
                 htmlEl.classList.remove('dark');
-                themeIcon.innerText = '🌙';
-            } else {
-                htmlEl.classList.add('dark');
                 themeIcon.innerText = '☀️';
+                themeLabel.setAttribute('data-en', 'Light');
+                themeLabel.setAttribute('data-pl', 'Jasny');
+                themeLabel.innerText = currentLang === 'pl' ? 'Jasny' : 'Light';
+            } else {
+                // Currently in light mode, switch to dark mode
+                htmlEl.classList.add('dark');
+                themeIcon.innerText = '🌙';
+                themeLabel.setAttribute('data-en', 'Dark');
+                themeLabel.setAttribute('data-pl', 'Ciemny');
+                themeLabel.innerText = currentLang === 'pl' ? 'Ciemny' : 'Dark';
             }
         }
 
@@ -957,6 +966,20 @@
             document.querySelectorAll('[data-en][data-pl]').forEach(el => {
                 el.innerText = el.getAttribute('data-' + lang);
             });
+
+            // Update theme label text according to current active theme and selected language
+            const htmlEl = document.documentElement;
+            const themeLabel = document.getElementById('theme-label');
+            if (htmlEl.classList.contains('dark')) {
+                themeLabel.setAttribute('data-en', 'Dark');
+                themeLabel.setAttribute('data-pl', 'Ciemny');
+                themeLabel.innerText = lang === 'pl' ? 'Ciemny' : 'Dark';
+            } else {
+                themeLabel.setAttribute('data-en', 'Light');
+                themeLabel.setAttribute('data-pl', 'Jasny');
+                themeLabel.innerText = lang === 'pl' ? 'Jasny' : 'Light';
+            }
+
             calculatePrice();
         }
 
