@@ -34,6 +34,7 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(0, 0, 0, 0.12);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .dark .glass-card {
             background: rgba(19, 21, 28, 0.85);
@@ -41,6 +42,10 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: none;
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
         }
 
         .gold-gradient-text {
@@ -65,7 +70,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Fixed compact styling for top navigation pills to fit nicely without excessive scrolling */
         .nav-boxed-item-gold {
             border: 1px solid #D4AF37;
             padding: 4px 8px;
@@ -100,10 +104,15 @@
 </head>
 <body class="bg-slate-50 dark:bg-obsidian text-slate-800 dark:text-zinc-100 font-sans antialiased selection:bg-accentGold selection:text-obsidian pb-20 md:pb-0">
 
+    <!-- FLOATING QUICK BOOK BUTTON -->
+    <a href="https://calendly.com/anondan45" target="_blank" class="fixed bottom-16 md:bottom-6 right-4 z-40 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-extrabold px-4 py-3 rounded-2xl text-xs shadow-2xl flex items-center gap-2 transform hover:scale-105 transition duration-300 border border-amber-300/40 cursor-pointer">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-700 animate-ping inline-block"></span>
+        📅 <span data-en="Book 15-Min Free Call" data-pl="Darmowa Konsultacja">Book 15-Min Free Call</span>
+    </a>
+
     <!-- NAVIGATION BAR -->
     <header class="sticky top-0 z-50 glass-card bg-white/95 dark:bg-cardBgDark/90 border-b border-amber-500/20 dark:border-amber-500/30 px-3 py-2.5 md:px-6 shadow-xl">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-            <!-- Brand Logo -->
             <a href="#" class="text-base md:text-lg font-black tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5 uppercase shrink-0 group">
                 <svg class="w-5 h-3.5 rounded shadow-sm inline-block transform group-hover:scale-105 transition duration-300" viewBox="0 0 60 30">
                     <clipPath id="nav_s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
@@ -119,7 +128,6 @@
                 BRIT<span class="gold-gradient-text drop-shadow-sm">DISCOURSE</span>
             </a>
             
-            <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center gap-1.5 text-[10px] font-bold tracking-wide">
                 <a href="#about" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="About Me" data-pl="O mnie">About Me</a>
                 <a href="#proof" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Immersion" data-pl="Immersja">Immersion</a>
@@ -127,11 +135,11 @@
                 <a href="#courses" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Courses" data-pl="Kursy">Courses</a>
                 <a href="#calculator" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Calculator" data-pl="Kalkulator">Calculator</a>
                 <a href="#payments" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Payments" data-pl="Płatności">Payments</a>
+                <a href="#faq" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="FAQ" data-pl="FAQ">FAQ</a>
                 <a href="#contact" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Contact" data-pl="Kontakt">Contact</a>
                 <a href="#pricing" class="nav-boxed-item-gold transition text-center font-extrabold" data-en="Pricing" data-pl="Cennik">Pricing</a>
             </nav>
 
-            <!-- Actions -->
             <div class="flex items-center gap-2 shrink-0">
                 <div class="relative">
                     <button id="lang-dropdown-btn" onclick="toggleDropdown()" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2 py-1.5 rounded-xl text-xs transition flex items-center gap-1.5 cursor-pointer shadow-sm">
@@ -200,57 +208,42 @@
         </div>
     </header>
 
-    <!-- HERO SECTION WITH CORRECT VIDEO FILE WIN_20260723_19_30_38_Pro.mp4 -->
+    <!-- LIVE AVAILABILITY BANNER -->
+    <div class="bg-amber-500/10 border-b border-amber-500/30 py-2 px-4 text-center text-xs font-bold text-amber-700 dark:text-accentGold flex items-center justify-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span data-en="🟢 Limited Availability: 3 coaching slots open for this month's cohort" data-pl="🟢 Ograniczona dostępność: 3 wolne miejsca na lekcje w tym miesiącu">🟢 Limited Availability: 3 coaching slots open for this month's cohort</span>
+    </div>
+
+    <!-- HERO SECTION -->
     <section class="relative px-4 pt-10 pb-12 md:pt-16 md:pb-20 max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-7 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card bg-white/80 dark:bg-cardBgDark/80 border border-amber-500/40 dark:border-accentGold/40 text-xs text-amber-700 dark:text-accentGold font-semibold mb-4 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span data-en="💻 Interactive 45-Min Lessons via Google Meet / Teams" data-pl="💻 Interaktywne Lekcje Online przez Google Meet / Teams">💻 Interactive 45-Min Lessons via Google Meet / Teams</span>
-                </div>
-
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight hero-title-gradient mb-4 leading-tight">
-                    <span data-en="Stop Studying Rules." data-pl="Przestań Uczyć Się Reguł.">Stop Studying Rules.</span><br/>
-                    <span class="gold-gradient-text" data-en="Master High-Impact British Conversation." data-pl="Opanuj Swobodną Rozmowę Po Angielsku.">Master High-Impact British Conversation.</span>
-                </h1>
-
-                <p class="text-slate-600 dark:text-zinc-400 text-sm md:text-base mb-6 leading-relaxed font-medium" 
-                   data-en="High-impact 45-minute coaching tailored to children, teens, adults, and business executives. Online sessions require Google Meet or Microsoft Teams." 
-                   data-pl="Efektywne 45-minutowe zajęcia dla dzieci, młodzieży, dorosłych i kadry menedżerskiej. Sesje online wymagają platformy Google Meet lub Microsoft Teams.">
-                    High-impact 45-minute coaching tailored to children, teens, adults, and business executives. Online sessions require Google Meet or Microsoft Teams.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center mb-6">
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-5 py-3 rounded-xl text-sm transition shadow-lg flex items-center justify-center cursor-pointer text-center">
-                        <span data-en="📅 Book 15-Min Free Consultation" data-pl="📅 Zarezerwuj 15-min bezpłatną konsultację">📅 Book 15-Min Free Consultation</span>
-                    </a>
-                    <button onclick="openModal('modal-quiz')" class="w-full sm:w-auto glass-card bg-white dark:bg-zinc-800 hover:bg-slate-100 dark:hover:bg-zinc-700 text-slate-900 dark:text-white font-semibold px-5 py-3 rounded-xl text-sm transition border border-slate-300 dark:border-zinc-700 flex items-center justify-center cursor-pointer">
-                        <span data-en="🎯 Take 5-Step Fluency Quiz" data-pl="🎯 Wypełnij Quiz Płynności (5 kroków)">🎯 Take 5-Step Fluency Quiz</span>
-                    </button>
-                </div>
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card bg-white/80 dark:bg-cardBgDark/80 border border-amber-500/40 dark:border-accentGold/40 text-xs text-amber-700 dark:text-accentGold font-semibold shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span data-en="💻 Interactive 45-Min Lessons via Google Meet / Teams" data-pl="💻 Interaktywne Lekcje Online przez Google Meet / Teams">💻 Interactive 45-Min Lessons via Google Meet / Teams</span>
             </div>
 
-            <!-- Hero Video Box -->
-            <div class="lg:col-span-5 space-y-3">
-                <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-amber-500/40 dark:border-accentGold/40 bg-slate-950 aspect-video flex items-center justify-center max-w-md mx-auto lg:max-w-none">
-                    <video class="w-full h-full object-cover" controls playsinline webkit-playsinline>
-                        <source src="WIN_20260723_19_30_38_Pro.mp4" type="video/mp4">
-                        Your browser does not support the video tag. <a href="WIN_20260723_19_30_38_Pro.mp4" target="_blank" class="text-amber-400 underline">Click here to watch the video</a>
-                    </video>
-                </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight hero-title-gradient leading-tight">
+                <span data-en="Stop Studying Rules." data-pl="Przestań Uczyć Się Reguł.">Stop Studying Rules.</span><br/>
+                <span class="gold-gradient-text" data-en="Master High-Impact British Conversation." data-pl="Opanuj Swobodną Rozmowę Po Angielsku.">Master High-Impact British Conversation.</span>
+            </h1>
 
-                <div class="glass-card bg-white dark:bg-cardBgDark p-3 rounded-xl border border-amber-500/30 dark:border-accentGold/30 flex items-center gap-3 shadow-sm max-w-md mx-auto lg:max-w-none">
-                    <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm shrink-0">✓</div>
-                    <div class="text-xs">
-                        <div class="font-bold text-slate-900 dark:text-white" data-en="Meet your native speaker Daniel" data-pl="Poznaj swojego native speakera Daniela">Meet your native speaker Daniel</div>
-                        <div class="text-slate-500 dark:text-zinc-400" data-en="Direct booking synced via Calendly" data-pl="Bezpośrednia rezerwacja zsynchronizowana przez Calendly">Direct booking synced via Calendly</div>
-                    </div>
-                </div>
+            <p class="text-slate-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed font-medium" 
+               data-en="High-impact 45-minute coaching tailored to children, teens, adults, and business executives. Online sessions require Google Meet or Microsoft Teams." 
+               data-pl="Efektywne 45-minutowe zajęcia dla dzieci, młodzieży, dorosłych i kadry menedżerskiej. Sesje online wymagają platformy Google Meet lub Microsoft Teams.">
+                High-impact 45-minute coaching tailored to children, teens, adults, and business executives. Online sessions require Google Meet or Microsoft Teams.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2">
+                <a href="https://calendly.com/anondan45" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-6 py-3.5 rounded-xl text-sm transition shadow-lg flex items-center justify-center cursor-pointer text-center">
+                    <span data-en="📅 Book 15-Min Free Consultation" data-pl="📅 Zarezerwuj 15-min bezpłatną konsultację">📅 Book 15-Min Free Consultation</span>
+                </a>
+                <button onclick="openModal('modal-quiz')" class="w-full sm:w-auto glass-card bg-white dark:bg-zinc-800 hover:bg-slate-100 dark:hover:bg-zinc-700 text-slate-900 dark:text-white font-semibold px-6 py-3.5 rounded-xl text-sm transition border border-slate-300 dark:border-zinc-700 flex items-center justify-center cursor-pointer">
+                    <span data-en="🎯 Take 5-Step Fluency Quiz" data-pl="🎯 Wypełnij Quiz Płynności (5 kroków)">🎯 Take 5-Step Fluency Quiz</span>
+                </button>
             </div>
         </div>
 
-        <!-- Trust Features Grid -->
-        <div class="pt-8 mt-8 border-t border-slate-200 dark:border-cardBorderDark/60 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs md:text-sm font-bold">
+        <div class="pt-12 mt-12 border-t border-slate-200 dark:border-cardBorderDark/60 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs md:text-sm font-bold">
             <div class="p-3 glass-card rounded-xl flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500/10 to-transparent border-amber-500/40 text-slate-900 dark:text-white shadow-sm">
                 <svg class="w-5 h-3.5 rounded-sm shadow-sm shrink-0 inline-block" viewBox="0 0 60 30">
                     <clipPath id="grid_uk"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
@@ -284,6 +277,16 @@
         </div>
     </section>
 
+    <!-- TRUST BADGES TICKER -->
+    <section class="py-6 bg-slate-100/50 dark:bg-cardBgDark/30 border-y border-slate-200 dark:border-cardBorderDark overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-75 text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-zinc-400">
+            <span>🛡️ Verified Native Speaker</span>
+            <span>💼 Corporate Frameworks</span>
+            <span>🎯 Tailored Fluency Syllabi</span>
+            <span>⚡ Automated Invoicing</span>
+        </div>
+    </section>
+
     <!-- WEEKLY HOT TOPIC SPOTLIGHT -->
     <section id="hot-topics" class="px-4 py-12 bg-slate-100 dark:bg-cardBgDark/60 border-y border-slate-200 dark:border-cardBorderDark">
         <div class="max-w-6xl mx-auto space-y-6">
@@ -295,19 +298,25 @@
 
             <div class="grid md:grid-cols-3 gap-4">
                 <div class="glass-card bg-white dark:bg-cardBgDark p-5 rounded-2xl border-l-4 border-l-rose-500">
-                    <div class="text-[11px] font-bold text-rose-500 uppercase mb-1" data-en="TV & Pop Culture" data-pl="Seriale i Popkultura">TV & Pop Culture</div>
+                    <div class="text-[11px] font-bold text-rose-500 uppercase mb-1 flex items-center gap-1.5">
+                        <span>🎬</span> <span data-en="TV & Pop Culture" data-pl="Seriale i Popkultura">TV & Pop Culture</span>
+                    </div>
                     <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="Trending Shows & Cinema" data-pl="Najnowsze Hitowe Seriale">Trending Shows & Cinema</h3>
                     <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed" data-en="Analyzing character motivations, plot twists, and British humour in the latest Netflix releases." data-pl="Analiza motywacji postaci, zwrotów akcji i brytyjskiego humoru w serialach online.">Analyzing character motivations, plot twists, and British humour in the latest Netflix releases.</p>
                 </div>
 
                 <div class="glass-card bg-white dark:bg-cardBgDark p-5 rounded-2xl border-l-4 border-l-blue-500">
-                    <div class="text-[11px] font-bold text-blue-500 uppercase mb-1" data-en="Sports & Fitness Banter" data-pl="Sport i Fitness">Sports & Fitness Banter</div>
+                    <div class="text-[11px] font-bold text-blue-500 uppercase mb-1 flex items-center gap-1.5">
+                        <span>⚽</span> <span data-en="Sports & Fitness Banter" data-pl="Sport i Fitness">Sports & Fitness Banter</span>
+                    </div>
                     <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="Premier League & Global Events" data-pl="Premier League i Sport">Premier League & Global Events</h3>
                     <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed" data-en="Football tactical shifts, championship debates, and fitness culture conversations." data-pl="Taktyka piłkarska, mecze, mistrzostwa świata oraz rozmowy o sporcie i siłowni.">Football tactical shifts, championship debates, and fitness culture conversations.</p>
                 </div>
 
                 <div class="glass-card bg-white dark:bg-cardBgDark p-5 rounded-2xl border-l-4 border-l-amber-500">
-                    <div class="text-[11px] font-bold text-amber-600 uppercase mb-1" data-en="Corporate News" data-pl="Biznes i Technologia">Corporate News</div>
+                    <div class="text-[11px] font-bold text-amber-600 uppercase mb-1 flex items-center gap-1.5">
+                        <span>📈</span> <span data-en="Corporate News" data-pl="Biznes i Technologia">Corporate News</span>
+                    </div>
                     <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="AI & Remote Work Trends" data-pl="Sztuczna Inteligencja i Rynek">AI & Remote Work Trends</h3>
                     <p class="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed" data-en="How global companies are adapting to AI, virtual team management, and market shifts." data-pl="Wpływ AI na międzynarodowe firmy, praca zdalna i zmiany na rynku pracy.">How global companies are adapting to AI, virtual team management, and market shifts.</p>
                 </div>
@@ -315,7 +324,7 @@
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION WITH daniel-photo.JPG ON THE LEFT -->
+    <!-- ABOUT ME SECTION -->
     <section id="about" class="px-4 py-12 md:py-16 max-w-5xl mx-auto space-y-6">
         <div class="grid md:grid-cols-12 gap-8 items-center">
             <div class="md:col-span-5 flex justify-center">
@@ -327,8 +336,8 @@
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">
                     <span data-en="Welcome to BritDiscourse" data-pl="Witaj w BritDiscourse">Welcome to BritDiscourse</span>
                 </h2>
-                <p class="text-slate-700 dark:text-zinc-300 leading-relaxed text-xs md:text-sm font-medium" data-en="My name is Daniel Carrington. Having lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. When it comes to all ages, I am here to help you take your English to the next level." data-pl="Nazywam się Daniel Carrington. Mieszkając w Polsce od ponad 7 lat i posiadając duże doświadczenie w środowisku korporacyjnym, doskonale rozumiem specyficzne bariery komunikacyjne, z jakimi mierzą się polscy profesjonaliści posługujący się językiem angielskim. Obserwując z bliska proces przechodzenia od nadmiernej analizy gramatyki do przełamywania blokady w żywych dyskusjach, założyłem BritDiscourse, aby rozwijać autentyczną, naturalną płynność konwersacyjną i znacząco podnosić pewność siebie w biznesie. Bez względu na wiek, jestem tutaj, aby pomóc Ci wnieść Twój angielski na wyższy poziom.">
-                    My name is Daniel Carrington. Having lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. When it comes to all ages, I am here to help you take your English to the next level.
+                <p class="text-slate-700 dark:text-zinc-300 leading-relaxed text-xs md:text-sm font-medium" data-en="My name is Daniel Carrington. I have lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. I will help people of all ages from kids, teenagers, and adults, as I am here to help you take your English to the next level." data-pl="Nazywam się Daniel Carrington. Mieszkam w Polsce od ponad 7 lat i posiadając duże doświadczenie w środowisku korporacyjnym, doskonale rozumiem specyficzne bariery komunikacyjne, z jakimi mierzą się polscy profesjonaliści posługujący się językiem angielskim. Obserwując z bliska proces przechodzenia od nadmiernej analizy gramatyki do przełamywania blokady w żywych dyskusjach, założyłem BritDiscourse, aby rozwijać autentyczną, naturalną płynność konwersacyjną i znacząco podnosić pewność siebie w biznesie. Pomagam osobom w każdym wieku: dzieciom, nastolatkom i dorosłym. Jestem tutaj, aby pomóc Ci wnieść Twój angielski na wyższy poziom.">
+                    My name is Daniel Carrington. I have lived in Poland for over 7 years and bringing extensive experience from corporate backgrounds, I possess a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English. By witnessing firsthand the transition from overanalyzing grammatical structures to experiencing hesitation in live discussions, I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. I will help people of all ages from kids, teenagers, and adults, as I am here to help you take your English to the next level.
                 </p>
                 <div class="p-3 rounded-xl glass-card border-l-4 border-l-amber-500 text-xs text-slate-600 dark:text-zinc-300 font-normal">
                     <strong class="text-slate-900 dark:text-white" data-en="💡 Note on Online Sessions:" data-pl="💡 Uwaga dotycząca sesji online:">💡 Note on Online Sessions:</strong> <span data-en="All virtual lessons are conducted smoothly via Google Meet or Microsoft Teams, allowing screen sharing, digital notes, and instant feedback." data-pl="Wszystkie lekcje online odbywają się płynnie poprzez platformę Google Meet lub Microsoft Teams z udostępnianiem ekranu i notatkami.">All virtual lessons are conducted smoothly via Google Meet or Microsoft Teams, allowing screen sharing, digital notes, and instant feedback.</span>
@@ -372,6 +381,8 @@
                         <label class="block text-[11px] font-bold text-slate-700 dark:text-zinc-300 uppercase mb-1.5" data-en="1. Lesson Type" data-pl="1. Rodzaj Zajęć">1. Lesson Type</label>
                         <select id="calc-type" onchange="calculatePrice()" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs font-semibold text-slate-900 dark:text-white">
                             <option value="140" data-en="1-on-1 Online (140 PLN / 45-min)" data-pl="Online 1-na-1 (140 zł / 45 min)">1-on-1 Online (140 PLN / 45-min)</option>
+                            <option value="150" data-en="Speak Like a Native (Adults) (150 PLN / 45-min)" data-pl="Mów Jak Native (Dorośli) (150 zł / 45 min)">Speak Like a Native (Adults) (150 PLN / 45-min)</option>
+                            <option value="160" data-en="Corporate Communication & Fluency / Interview Prep (160 PLN / 45-min)" data-pl="Komunikacja Korporacyjna / Rozmowy Kwalifikacyjne (160 zł / 45 min)">Corporate Communication & Fluency / Interview Prep (160 PLN / 45-min)</option>
                             <option value="250" data-en="Home Visit / 1-on-1 at Yours (250 PLN / 1 hour)" data-pl="Dojazd do domu (250 zł / 1 godzina)">Home Visit / 1-on-1 at Yours (250 PLN / 1 hour)</option>
                             <option value="180" data-en="Online Duo / Pair (180 PLN total / 45-min)" data-pl="Online w Parze (180 zł łącznie / 45 min)">Online Duo / Pair (180 PLN total / 45-min)</option>
                             <option value="80" data-en="Small Group (Max 4 pers.) (80 PLN/pers / 45-min)" data-pl="Mała Grupa (Max 4 os.) (80 zł/os. / 45 min)">Small Group (Max 4 pers.) (80 PLN/pers / 45-min)</option>
@@ -385,15 +396,15 @@
                         <select id="calc-freq" onchange="calculatePrice()" class="w-full bg-slate-100 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-xs font-semibold text-slate-900 dark:text-white">
                             <option value="1" data-en="1 Lesson / Week" data-pl="1 lekcja / tydzień">1 Lesson / Week</option>
                             <option value="2" selected data-en="2 Lessons / Week (Popular)" data-pl="2 lekcje / tydzień (Popularne)">2 Lessons / Week (Popular)</option>
-                            <option value="3" data-en="3 Lessons / Week (Intensive)" data-pl="3 lekcje / tydzień (Intensywnie)">3 Lessons / Week (Intensive)</option>
+                            <option value="3" data-en="3 Lessons / Week (Intensive / Corporate)" data-pl="3 lekcje / tydzień (Intensywne / Korporacyjne)">3 Lessons / Week (Intensive / Corporate)</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl flex flex-col md:flex-row justify-between items-center gap-3">
                     <div>
-                        <div class="text-[11px] text-amber-700 dark:text-accentGold font-bold uppercase" data-en="Estimated Monthly Rate:" data-pl="Szacowany Koszt Miesięczny:">Estimated Monthly Rate:</div>
-                        <div id="calc-total" class="text-2xl font-black text-slate-900 dark:text-white mt-0.5">1,120 PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400" data-en="/ month (8 lessons)" data-pl="/ miesiąc (8 lekcji)">/ month (8 lessons)</span></div>
+                        <div class="text-[11px] text-amber-700 dark:text-accentGold font-bold uppercase" data-en="Monthly Rate" data-pl="Stawka Miesięczna">Monthly Rate</div>
+                        <div id="calc-total" class="text-2xl font-black text-amber-600 dark:text-accentGold mt-0.5">1,200 PLN <span class="text-xs font-normal text-slate-500 dark:text-zinc-400" data-en="/ month (8 lessons)" data-pl="/ miesiąc (8 lekcji)">/ month (8 lessons)</span></div>
                     </div>
                     <a href="https://calendly.com/anondan45" target="_blank" class="bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold px-5 py-2.5 rounded-xl text-xs transition shadow-md whitespace-nowrap cursor-pointer text-center">
                         <span data-en="Book This Plan" data-pl="Zarezerwuj Ten Plan">Book This Plan</span>
@@ -413,28 +424,24 @@
             </div>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-                <!-- PayU / Blik -->
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
                     <span class="text-2xl">⚡</span>
                     <div class="font-bold text-xs text-slate-900 dark:text-white">PayU / BLIK</div>
                     <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Instant Polish online banking & BLIK" data-pl="Szybkie przelewy i BLIK">Instant Polish online banking & BLIK</div>
                 </div>
 
-                <!-- Google Pay -->
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
                     <span class="text-2xl">🌐</span>
                     <div class="font-bold text-xs text-slate-900 dark:text-white">Google Pay</div>
                     <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="One-tap secure mobile checkout" data-pl="Bezpieczne płatności jednym dotknięciem">One-tap secure mobile checkout</div>
                 </div>
 
-                <!-- Apple Pay -->
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
                     <span class="text-2xl"></span>
                     <div class="font-bold text-xs text-slate-900 dark:text-white">Apple Pay</div>
                     <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Seamless payment for iOS users" data-pl="Wygodne płatności dla użytkowników iOS">Seamless payment for iOS users</div>
                 </div>
 
-                <!-- Credit Cards / Stripe -->
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
                     <span class="text-2xl">💳</span>
                     <div class="font-bold text-xs text-slate-900 dark:text-white">Cards (Stripe)</div>
@@ -465,105 +472,135 @@
     </section>
 
     <!-- COURSES SHOWCASE -->
-    <section id="courses" class="px-4 py-12 max-w-6xl mx-auto space-y-6">
+    <section id="courses" class="px-4 py-12 max-w-7xl mx-auto space-y-6">
         <div class="text-center max-w-3xl mx-auto">
             <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white mb-2" data-en="Structured & Custom Online Syllabi" data-pl="Programy Kursów i Pakiety Indywidualne">Structured & Custom Online Syllabi</h2>
-            <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium" data-en="Choose a standard framework or our new premium corporate interview coaching package." data-pl="Wybierz standardowy program lub nasz nowy, ekskluzywny pakiet przygotowania do rozmów rekrutacyjnych w korporacjach.">Choose a standard framework or our new premium corporate interview coaching package.</p>
+            <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium" data-en="Choose a standard framework or our new intensive corporate communication & interview packages." data-pl="Wybierz standardowy program lub nasze nowe intensywne pakiety komunikacji korporacyjnej i rozmów kwalifikacyjnych.">Choose a standard framework or our new intensive corporate communication & interview packages.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-            <!-- Course 1 (5-10) -->
-            <div class="glass-card bg-white dark:bg-cardBgDark p-5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 dark:hover:border-accentGold/40 transition">
-                <div>
-                    <div class="text-amber-700 dark:text-accentGold text-[10px] font-bold mb-1" data-en="24-WEEK STRUCTURED PLAN (MONTHLY BILLING)" data-pl="PROGRAM 24-TYGODNIOWY (ROZLICZENIE MIESIĘCZNE)">24-WEEK STRUCTURED PLAN (MONTHLY BILLING)</div>
-                    <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="Young Explorers (Kids 5–10)" data-pl="Young Explorers (Dzieci 5–10)">Young Explorers (Kids 5–10)</h4>
-                    <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Gamified immersion, storytelling, songs, and role-playing in 45-min blocks." data-pl="Nauka przez zabawę, bajki, piosenki i odgrywanie ról w blokach 45 min.">Gamified immersion, storytelling, songs, and role-playing in 45-min blocks.</p>
-                    
-                    <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
-                        <div data-en="• 1,120 PLN / month (8 lessons)" data-pl="• 1 120 zł / miesiąc (8 lekcji)">• 1,120 PLN / month (8 lessons)</div>
-                    </div>
-                </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-4 pt-2">
+            <!-- Course 1 (Kids 5-10) -->
+            <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 transition">
                 <div class="space-y-1.5">
-                    <button onclick="openModal('modal-kids')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-amber-700 dark:text-accentGold border border-amber-500/30 dark:border-accentGold/30 font-semibold py-1.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1">
-                        <span data-en="✨ View Details" data-pl="✨ Szczegóły">✨ View Details</span>
-                    </button>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 font-bold py-1.5 rounded-xl text-xs cursor-pointer shadow-sm text-center block">
-                        <span data-en="Book This Package (45-Min)" data-pl="Wybierz ten pakiet (45 min)">Book This Package (45-Min)</span>
-                    </a>
+                    <div class="text-amber-700 dark:text-accentGold text-[9px] font-bold" data-en="24-WEEK PLAN (140 PLN/LESSON)" data-pl="PLAN 24-TYG. (140 ZŁ/LEKCJA)">24-WEEK PLAN (140 PLN/LESSON)</div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Young Explorers (5–10)" data-pl="Young Explorers (5–10)">Young Explorers (5–10)</h4>
+                    <p class="text-slate-600 dark:text-zinc-400 text-[10px] leading-snug" data-en="Gamified immersion, storytelling, and songs." data-pl="Nauka przez zabawę, bajki i piosenki.">Gamified immersion, storytelling, and songs.</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <div class="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-slate-900 dark:text-white space-y-0 text-center">
+                        <div class="text-amber-600 dark:text-accentGold uppercase tracking-wider text-[8px]" data-en="Monthly Rate" data-pl="Stawka Miesięczna">Monthly Rate</div>
+                        <div class="text-xs text-amber-600 dark:text-accentGold font-black">1,120 PLN <span class="text-[8px] font-normal text-slate-500" data-en="(8 lessons)" data-pl="(8 lekcji)">(8 lessons)</span></div>
+                        <div class="text-[8px] text-slate-500 font-normal" data-en="3-Mo Total: 3,360 PLN" data-pl="3 mies.: 3 360 zł">3-Mo Total: 3,360 PLN</div>
+                    </div>
+                    <div class="space-y-1">
+                        <button onclick="openModal('modal-kids')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 text-amber-700 dark:text-accentGold border border-amber-500/30 font-semibold py-1 rounded-lg text-[10px] transition cursor-pointer" data-en="Details" data-pl="Szczegóły">Details</button>
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer shadow-md text-center block" data-en="Book Young Explorers" data-pl="Zarezerwuj Young Explorers">Book Young Explorers</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Course 2 (11-18) -->
-            <div class="glass-card bg-white dark:bg-cardBgDark p-5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 dark:hover:border-accentGold/40 transition">
-                <div>
-                    <div class="text-amber-700 dark:text-accentGold text-[10px] font-bold mb-1" data-en="24-WEEK STRUCTURED PLAN (MONTHLY BILLING)" data-pl="PROGRAM 24-TYGODNIOWY (ROZLICZENIE MIESIĘCZNE)">24-WEEK STRUCTURED PLAN (MONTHLY BILLING)</div>
-                    <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="Fluent Futures (Teens 11–18)" data-pl="Fluent Futures (Młodzież 11–18)">Fluent Futures (Teens 11–18)</h4>
-                    <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Eliminating hesitation, travel readiness, school support, and social confidence." data-pl="Przełamywanie bariery, przygotowanie do podróży i pewność siebie.">Eliminating hesitation, travel readiness, school support, and social confidence.</p>
-                    
-                    <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
-                        <div data-en="• 1,120 PLN / month (8 lessons)" data-pl="• 1 120 zł / miesiąc (8 lekcji)">• 1,120 PLN / month (8 lessons)</div>
-                    </div>
-                </div>
+            <!-- Course 2 (Teens 11-18) -->
+            <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 transition">
                 <div class="space-y-1.5">
-                    <button onclick="openModal('modal-teens')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-amber-700 dark:text-accentGold border border-amber-500/30 dark:border-accentGold/30 font-semibold py-1.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1">
-                        <span data-en="✨ View Details" data-pl="✨ Szczegóły">✨ View Details</span>
-                    </button>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 font-bold py-1.5 rounded-xl text-xs cursor-pointer shadow-sm text-center block">
-                        <span data-en="Book This Package (45-Min)" data-pl="Wybierz ten pakiet (45 min)">Book This Package (45-Min)</span>
-                    </a>
+                    <div class="text-amber-700 dark:text-accentGold text-[9px] font-bold" data-en="24-WEEK PLAN (140 PLN/LESSON)" data-pl="PLAN 24-TYG. (140 ZŁ/LEKCJA)">24-WEEK PLAN (140 PLN/LESSON)</div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Fluent Futures (11–18)" data-pl="Fluent Futures (11–18)">Fluent Futures (11–18)</h4>
+                    <p class="text-slate-600 dark:text-zinc-400 text-[10px] leading-snug" data-en="Eliminating hesitation & school support." data-pl="Przełamywanie bariery i wsparcie szkolne.">Eliminating hesitation & school support.</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <div class="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-slate-900 dark:text-white space-y-0 text-center">
+                        <div class="text-amber-600 dark:text-accentGold uppercase tracking-wider text-[8px]" data-en="Monthly Rate" data-pl="Stawka Miesięczna">Monthly Rate</div>
+                        <div class="text-xs text-amber-600 dark:text-accentGold font-black">1,120 PLN <span class="text-[8px] font-normal text-slate-500" data-en="(8 lessons)" data-pl="(8 lekcji)">(8 lessons)</span></div>
+                        <div class="text-[8px] text-slate-500 font-normal" data-en="3-Mo Total: 3,360 PLN" data-pl="3 mies.: 3 360 zł">3-Mo Total: 3,360 PLN</div>
+                    </div>
+                    <div class="space-y-1">
+                        <button onclick="openModal('modal-teens')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 text-amber-700 dark:text-accentGold border border-amber-500/30 font-semibold py-1 rounded-lg text-[10px] transition cursor-pointer" data-en="Details" data-pl="Szczegóły">Details</button>
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer shadow-md text-center block" data-en="Book Fluent Futures" data-pl="Zarezerwuj Fluent Futures">Book Fluent Futures</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Course 3 -->
-            <div class="glass-card bg-white dark:bg-cardBgDark p-5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 dark:hover:border-accentGold/40 transition">
-                <div>
-                    <div class="text-amber-700 dark:text-accentGold text-[10px] font-bold mb-1" data-en="24-WEEK STRUCTURED PLAN (MONTHLY BILLING)" data-pl="PROGRAM 24-TYGODNIOWY (ROZLICZENIE MIESIĘCZNE)">24-WEEK STRUCTURED PLAN (MONTHLY BILLING)</div>
-                    <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="Speak Like a Native (Adults)" data-pl="Mów Jak Native (Dorośli)">Speak Like a Native (Adults)</h4>
-                    <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Removing mental translation, travel survival, small talk, sports, shows, and real-life banter." data-pl="Usuwanie tłumaczenia w głowie, angielski w podróży, rozmowy o serialach i sporcie.">Removing mental translation, travel survival, small talk, sports, shows, and real-life banter.</p>
-                    
-                    <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
-                        <div data-en="• 1,120 PLN / month (8 lessons)" data-pl="• 1 120 zł / miesiąc (8 lekcji)">• 1,120 PLN / month (8 lessons)</div>
-                    </div>
-                </div>
+            <!-- Course 3 (Adults) -->
+            <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 transition">
                 <div class="space-y-1.5">
-                    <button onclick="openModal('modal-adults')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-amber-700 dark:text-accentGold border border-amber-500/30 dark:border-accentGold/30 font-semibold py-1.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1">
-                        <span data-en="✨ View Details" data-pl="✨ Szczegóły">✨ View Details</span>
-                    </button>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 font-bold py-1.5 rounded-xl text-xs cursor-pointer shadow-sm text-center block">
-                        <span data-en="Book This Package (45-Min)" data-pl="Wybierz ten pakiet (45 min)">Book This Package (45-Min)</span>
-                    </a>
+                    <div class="text-amber-700 dark:text-accentGold text-[9px] font-bold" data-en="24-WEEK PLAN (150 PLN/LESSON)" data-pl="PLAN 24-TYG. (150 ZŁ/LEKCJA)">24-WEEK PLAN (150 PLN/LESSON)</div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Speak Like a Native" data-pl="Mów Jak Native">Speak Like a Native</h4>
+                    <p class="text-slate-600 dark:text-zinc-400 text-[10px] leading-snug" data-en="Removing mental translation & small talk." data-pl="Usuwanie tłumaczenia w głowie i small talk.">Removing mental translation & small talk.</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <div class="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-slate-900 dark:text-white space-y-0 text-center">
+                        <div class="text-amber-600 dark:text-accentGold uppercase tracking-wider text-[8px]" data-en="Monthly Rate" data-pl="Stawka Miesięczna">Monthly Rate</div>
+                        <div class="text-xs text-amber-600 dark:text-accentGold font-black">1,200 PLN <span class="text-[8px] font-normal text-slate-500" data-en="(8 lessons)" data-pl="(8 lekcji)">(8 lessons)</span></div>
+                        <div class="text-[8px] text-slate-500 font-normal" data-en="3-Mo Total: 3,600 PLN" data-pl="3 mies.: 3 600 zł">3-Mo Total: 3,600 PLN</div>
+                    </div>
+                    <div class="space-y-1">
+                        <button onclick="openModal('modal-adults')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 text-amber-700 dark:text-accentGold border border-amber-500/30 font-semibold py-1 rounded-lg text-[10px] transition cursor-pointer" data-en="Details" data-pl="Szczegóły">Details</button>
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer shadow-md text-center block" data-en="Book Speak Like a Native" data-pl="Zarezerwuj Speak Like a Native">Book Speak Like a Native</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- PREMIUM INTERVIEW PREP PACKAGE -->
-            <div class="glass-card bg-white/95 dark:bg-cardBgDark/90 p-5 rounded-2xl flex flex-col justify-between border-2 border-amber-500 dark:border-accentGold relative shadow-xl">
-                <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 dark:bg-accentGold text-slate-950 text-[8px] font-black px-2.5 py-0.5 rounded-full uppercase" data-en="PREMIUM PACKAGE" data-pl="PAKIET PREMIUM">PREMIUM PACKAGE</div>
-                <div>
-                    <div class="text-amber-700 dark:text-accentGold text-[10px] font-bold mb-1" data-en="INTENSIVE CAREER BOOST (MONTHLY BILLING)" data-pl="INTENSYWNY AWANS ZAWODOWY (ROZLICZENIE MIESIĘCZNE)">INTENSIVE CAREER BOOST (MONTHLY BILLING)</div>
-                    <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1.5" data-en="Corporate English Interview Prep" data-pl="Przygotowanie do Rozmów Kwalifikacyjnych">Corporate English Interview Prep</h4>
-                    <p class="text-slate-600 dark:text-zinc-400 text-[11px] leading-relaxed mb-3" data-en="Mock interviews, STAR method breakdown, executive body language, and high-stakes Q&A training." data-pl="Symulacje rozmów, metoda STAR, mowa ciała i trening pytań rekrutacyjnych w korporacjach.">Mock interviews, STAR method breakdown, executive body language, and high-stakes Q&A training.</p>
-                    
-                    <div class="mb-3 p-2 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-slate-900 dark:text-white space-y-0.5">
-                        <div class="text-amber-600 dark:text-accentGold" data-en="Monthly Investment:" data-pl="Inwestycja Miesięczna:">Monthly Investment:</div>
-                        <div data-en="• 1,760 PLN / month (8 lessons)" data-pl="• 1 760 zł / miesiąc (8 lekcji)">• 1,760 PLN / month (8 lessons)</div>
+            <!-- NEW PACKAGE 1: Corporate Communication & Fluency Booster -->
+            <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border-2 border-amber-500/70 hover:border-amber-500 transition relative">
+                <div class="absolute -top-2 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[7px] font-black px-2 py-0.5 rounded-full uppercase" data-en="3x / WEEK (160 PLN/LESSON)" data-pl="3x / TYDZIEŃ (160 ZŁ/LEKCJA)">3x / WEEK (160 PLN/LESSON)</div>
+                <div class="space-y-1.5">
+                    <div class="text-amber-700 dark:text-accentGold text-[9px] font-bold" data-en="INTENSIVE BOOST" data-pl="INTENSYWNY ROZWÓJ">INTENSIVE BOOST</div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Corporate Comm. & Fluency" data-pl="Komunikacja Korporacyjna">Corporate Comm. & Fluency</h4>
+                    <p class="text-slate-600 dark:text-zinc-400 text-[10px] leading-snug" data-en="Pronunciation, stakeholder engagement, and breaking hesitation." data-pl="Wymowa, kontakt ze stakeholderami i przełamywanie barier.">Pronunciation, stakeholder engagement, and breaking hesitation.</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <div class="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-slate-900 dark:text-white space-y-0 text-center">
+                        <div class="text-amber-600 dark:text-accentGold uppercase tracking-wider text-[8px]" data-en="Monthly Rate" data-pl="Stawka Miesięczna">Monthly Rate</div>
+                        <div class="text-xs text-amber-600 dark:text-accentGold font-black">1,920 PLN <span class="text-[8px] font-normal text-slate-500" data-en="(12 lessons)" data-pl="(12 lekcji)">(12 lessons)</span></div>
+                        <div class="text-[8px] text-slate-500 font-normal" data-en="3-Mo Total: 5,760 PLN" data-pl="3 mies.: 5 760 zł">3-Mo Total: 5,760 PLN</div>
+                    </div>
+                    <div class="space-y-1">
+                        <button onclick="openModal('modal-comm')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 text-amber-700 dark:text-accentGold border border-amber-500/30 font-semibold py-1 rounded-lg text-[10px] transition cursor-pointer" data-en="Details" data-pl="Szczegóły">Details</button>
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer shadow-md text-center block" data-en="Book Corporate Comm." data-pl="Zarezerwuj Corporate Comm.">Book Corporate Comm.</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- PREMIUM PACKAGE 2: Corporate English Interview Prep -->
+            <div class="glass-card bg-white/95 dark:bg-cardBgDark/90 p-3.5 rounded-2xl flex flex-col justify-between border-2 border-amber-500 dark:border-accentGold relative shadow-lg">
+                <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 dark:bg-accentGold text-slate-950 text-[7px] font-black px-2.5 py-0.5 rounded-full uppercase" data-en="PREMIUM 3x/WK (160 PLN/LESSON)" data-pl="PREMIUM 3x/TYD (160 ZŁ/LEKCJA)">PREMIUM 3x/WK (160 PLN/LESSON)</div>
                 <div class="space-y-1.5">
-                    <button onclick="openModal('modal-interview')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 text-amber-700 dark:text-accentGold border border-amber-500/30 dark:border-accentGold/30 font-semibold py-1.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1">
-                        <span data-en="✨ View Details" data-pl="✨ Szczegóły">✨ View Details</span>
-                    </button>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 font-extrabold py-1.5 rounded-xl text-xs transition cursor-pointer shadow-md text-center block">
-                        <span data-en="Book Interview Package (45-Min)" data-pl="Zamów Pakiet (45 min)">Book Interview Package (45-Min)</span>
-                    </a>
+                    <div class="text-amber-700 dark:text-accentGold text-[9px] font-bold" data-en="CAREER BOOST" data-pl="AWANS ZAWODOWY">CAREER BOOST</div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Interview Prep (Intensive)" data-pl="Rozmowy Kwalifikacyjne">Interview Prep (Intensive)</h4>
+                    <p class="text-slate-600 dark:text-zinc-400 text-[10px] leading-snug" data-en="Mock interviews, STAR method, body language." data-pl="Symulacje, metoda STAR, mowa ciała.">Mock interviews, STAR method, body language.</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <div class="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-slate-900 dark:text-white space-y-0 text-center">
+                        <div class="text-amber-600 dark:text-accentGold uppercase tracking-wider text-[8px]" data-en="Monthly Rate" data-pl="Stawka Miesięczna">Monthly Rate</div>
+                        <div class="text-xs text-amber-600 dark:text-accentGold font-black">1,920 PLN <span class="text-[8px] font-normal text-slate-500" data-en="(12 lessons)" data-pl="(12 lekcji)">(12 lessons)</span></div>
+                        <div class="text-[8px] text-slate-500 font-normal" data-en="3-Mo Total: 5,760 PLN" data-pl="3 mies.: 5 760 zł">3-Mo Total: 5,760 PLN</div>
+                    </div>
+                    <div class="space-y-1">
+                        <button onclick="openModal('modal-interview')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 text-amber-700 dark:text-accentGold border border-amber-500/30 font-semibold py-1 rounded-lg text-[10px] transition cursor-pointer" data-en="Details" data-pl="Szczegóły">Details</button>
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer shadow-md text-center block" data-en="Book Interview Prep" data-pl="Zarezerwuj Interview Prep">Book Interview Prep</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generic placeholder card -->
+            <div class="glass-card bg-slate-50 dark:bg-cardBgDark/40 p-3.5 rounded-2xl flex flex-col justify-between border border-dashed border-slate-300 dark:border-zinc-700 text-center">
+                <div class="space-y-1.5">
+                    <span class="text-xl mb-1 inline-block">✨</span>
+                    <div class="text-xs font-bold text-slate-700 dark:text-zinc-300" data-en="Custom Curriculum" data-pl="Program Indywidualny">Custom Curriculum</div>
+                    <p class="text-[10px] text-slate-500 dark:text-zinc-400 mt-1" data-en="Tailored goals built with Daniel." data-pl="Cele dopasowane z Danielem.">Tailored goals built with Daniel.</p>
+                </div>
+                <div class="pt-2">
+                    <a href="#contact" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer text-center block shadow-md" data-en="Inquire Now" data-pl="Zapytaj teraz">Inquire Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING SECTION -->
+    <!-- PRICING SECTION (HOME VISIT HIGHLIGHTED & UNIFORM) -->
     <section id="pricing" class="px-4 py-12 md:py-16 bg-slate-100 dark:bg-cardBgDark/50 border-y border-slate-200 dark:border-cardBorderDark">
         <div class="max-w-6xl mx-auto space-y-8">
             <div class="text-center max-w-3xl mx-auto">
@@ -571,85 +608,86 @@
                 <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium" data-en="Transparent pricing for sessions (45-min virtual, 1-hour home visits), home visits, and group live trackers." data-pl="Przejrzysty cennik zajęć (45 min online, 1 godzina dojazdy do domu) oraz aktywny licznik grup.">Transparent pricing for sessions (45-min virtual, 1-hour home visits), home visits, and group live trackers.</p>
             </div>
 
-            <!-- PRICING CARDS FIRST -->
             <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-4 pt-2">
-                <!-- 1-on-1 Online -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
-                    <div>
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-1" data-en="1-on-1 Online" data-pl="Online 1-na-1">1-on-1 Online</h3>
-                        <div class="text-base font-black text-amber-600 dark:text-accentGold mb-2">140 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ 45 min" data-pl="/ 45 min">/ 45 min</span></div>
-                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 mb-3 font-medium">
-                            <li data-en="✓ Private coaching (45m)" data-pl="✓ Prywatne lekcje (45 min)">✓ Private coaching (45m)</li>
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="1-on-1 Online (Kids, Teens & Adults)" data-pl="Online 1-na-1 (Dzieci, Młodzież i Dorośli)">1-on-1 Online (Kids, Teens & Adults)</h3>
+                        <div class="text-base font-black text-amber-600 dark:text-accentGold">140 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ 45 min" data-pl="/ 45 min">/ 45 min</span></div>
+                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 font-medium">
+                            <li data-en="✓ Private coaching for kids, teens & adults (45m)" data-pl="✓ Prywatne lekcje dla dzieci, młodzieży i dorosłych (45 min)">✓ Private coaching for kids, teens & adults (45m)</li>
                             <li data-en="✓ Google Meet / Teams" data-pl="✓ Google Meet / Teams">✓ Google Meet / Teams</li>
                         </ul>
                     </div>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-1.5 rounded-xl text-[10px] cursor-pointer text-center block" data-en="Book Online (45m)" data-pl="Wybierz (45 min)">Book Online (45m)</a>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1.5 rounded-xl text-[10px] cursor-pointer text-center block shadow-md" data-en="Book 1-on-1 Online" data-pl="Zarezerwuj Online">Book 1-on-1 Online</a>
+                    </div>
                 </div>
 
-                <!-- Executive Corporate (B2B) -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
-                    <div>
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-1" data-en="Executive Corporate (B2B)" data-pl="Biznes (B2B)">Executive Corporate (B2B)</h3>
-                        <div class="text-base font-black text-amber-600 dark:text-accentGold mb-2">220 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ pers / 45m" data-pl="/ os. / 45m">/ pers / 45m</span></div>
-                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 mb-3 font-medium">
-                            <li data-en="✓ Business to Business (B2B) (45m)" data-pl="✓ Biznes do biznesu (B2B) (45 min)">✓ Business to Business (B2B) (45m)</li>
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Speak Like a Native" data-pl="Mów Jak Native">Speak Like a Native</h3>
+                        <div class="text-base font-black text-amber-600 dark:text-accentGold">150 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ 45 min" data-pl="/ 45 min">/ 45 min</span></div>
+                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 font-medium">
+                            <li data-en="✓ Adults program (45m)" data-pl="✓ Program dla dorosłych (45 min)">✓ Adults program (45m)</li>
                         </ul>
                     </div>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-1.5 rounded-xl text-[10px] cursor-pointer text-center block" data-en="Book Business (45m)" data-pl="Wybierz Biznes (45 min)">Book Business (45m)</a>
-                </div>
-
-                <!-- Home Visits -->
-                <div class="glass-card bg-white/95 dark:bg-cardBgDark/90 p-3.5 rounded-2xl flex flex-col justify-between border-2 border-amber-500 dark:border-accentGold relative shadow-md">
-                    <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 dark:bg-accentGold text-slate-950 text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="Home Visit" data-pl="U Siebie">Home Visit</div>
-                    <div>
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-1 mt-0.5" data-en="Home Visits" data-pl="Lekcje w Domu">Home Visits</h3>
-                        <div class="text-base font-black text-slate-900 dark:text-white mb-2">250 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ 1 hour" data-pl="/ 1 godzina">/ 1 hour</span></div>
-                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 mb-3 font-medium">
-                            <li data-en="✓ Daniel travels to you (1 hour)" data-pl="✓ Dojazd do domu klienta (1 godzina)">✓ Daniel travels to you (1 hour)</li>
-                        </ul>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1.5 rounded-xl text-[10px] cursor-pointer text-center block shadow-md" data-en="Book Speak Like a Native" data-pl="Zarezerwuj Speak Like a Native">Book Speak Like a Native</a>
                     </div>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-extrabold py-1.5 rounded-xl text-[10px] cursor-pointer text-center block" data-en="Book Visit (1 Hour)" data-pl="Zamów Dojazd (1 godz.)">Book Visit (1 Hour)</a>
                 </div>
 
-                <!-- Duo -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
-                    <div>
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-1" data-en="Online Duo" data-pl="Para (2 os.)">Online Duo</h3>
-                        <div class="text-base font-black text-amber-600 dark:text-accentGold mb-0.5">180 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="total / 45m" data-pl="łącznie / 45m">total / 45m</span></div>
-                        <div class="text-[9px] text-slate-500 dark:text-zinc-400 mb-2">(90 PLN <span data-en="each" data-pl="na osobę">each</span>)</div>
-                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 mb-3 font-medium">
-                            <li data-en="✓ Pair work (45m)" data-pl="✓ Praca w parach (45 min)">✓ Pair work (45m)</li>
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Corporate Comm. / Interview" data-pl="Komunikacja / Rozmowy">Corporate Comm. / Interview</h3>
+                        <div class="text-base font-black text-amber-600 dark:text-accentGold">160 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ 45 min" data-pl="/ 45 min">/ 45 min</span></div>
+                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 font-medium">
+                            <li data-en="✓ Specialized 3x/wk focus (45m)" data-pl="✓ Specjalizacja 3x/tydz. (45 min)">✓ Specialized 3x/wk focus (45m)</li>
                         </ul>
                     </div>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-slate-200 dark:bg-zinc-800 text-slate-900 dark:text-white font-bold py-1.5 rounded-xl text-[10px] cursor-pointer text-center block" data-en="Book Duo (45m)" data-pl="Wybierz Parę (45 min)">Book Duo (45m)</a>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1.5 rounded-xl text-[10px] cursor-pointer text-center block shadow-md" data-en="Book Corporate Comm." data-pl="Zarezerwuj Corporate Comm.">Book Corporate Comm.</a>
+                    </div>
                 </div>
 
-                <!-- Small Group -->
-                <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark relative">
-                    <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="4 People" data-pl="4 Osoby">4 People</div>
-                    <div>
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-1 mt-0.5" data-en="Small Group (4)" data-pl="Mała Grupa (4 os.)">Small Group (4)</h3>
-                        <div class="text-base font-black text-slate-900 dark:text-white mb-1">80 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ pers / 45m" data-pl="/ osoba / 45m">/ pers / 45m</span></div>
-                        
-                        <div class="my-1 p-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-amber-700 dark:text-amber-400 space-y-0.5">
-                            <div class="flex items-center justify-between">
-                                <span data-en="🟢 4/4" data-pl="🟢 4/4">🟢 4/4</span>
-                                <span class="text-rose-600 font-extrabold" data-en="FULL" data-pl="PEŁNA">FULL</span>
-                            </div>
-                            <div class="text-slate-600 dark:text-zinc-300 font-normal" data-en="Sub: 320 PLN (4 pers.)" data-pl="Suma: 320 zł (4 os.)">Sub: 320 PLN (4 pers.)</div>
+                <!-- HIGHLIGHTED HOME VISIT PACKAGE (ULTRA PREMIUM WITH PULSING VIP EFFECT) -->
+                <div class="glass-card vip-card-effect p-3.5 rounded-2xl flex flex-col justify-between border-4 border-amber-500 dark:border-accentGold relative shadow-2xl transform md:-translate-y-3">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 text-[9px] font-black px-3.5 py-1 rounded-full uppercase shadow-xl tracking-wider animate-bounce" data-en="👑 VIP Home Visit" data-pl="👑 VIP Dojazd do Domu">👑 VIP Home Visit</div>
+                    <div class="space-y-2 mt-1">
+                        <h3 class="text-xs font-extrabold text-slate-900 dark:text-white tracking-wide" data-en="Home Visits" data-pl="Lekcje w Domu">Home Visits</h3>
+                        <div class="text-lg font-black text-amber-600 dark:text-accentGold">250 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ 1 hour" data-pl="/ 1 godzina">/ 1 hour</span></div>
+                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1.5 font-medium">
+                            <li data-en="👑 Daniel travels to you (1 hour)" data-pl="👑 Daniel przyjeżdża do Ciebie (1 godzina)">👑 Daniel travels to you (1 hour)</li>
+                            <li data-en="✨ Ultimate premium face-to-face immersion" data-pl="✨ Najwyższa immersja twarzą w twarz">✨ Ultimate premium face-to-face immersion</li>
+                        </ul>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-2.5 rounded-xl text-[10px] cursor-pointer shadow-xl text-center block transform hover:scale-105 transition duration-300" data-en="Book VIP Home Visit" data-pl="Zarezerwuj VIP Dojazd">Book VIP Home Visit</a>
+                    </div>
+                </div>
+
+                <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
+                    <div class="space-y-2">
+                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Online Duo (Kids, Teens & Adults)" data-pl="Online w Parze (Dzieci, Młodzież i Dorośli)">Online Duo (Kids, Teens & Adults)</h3>
+                        <div>
+                            <div class="text-base font-black text-amber-600 dark:text-accentGold">180 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="total / 45m" data-pl="łącznie / 45m">total / 45m</span></div>
+                            <div class="text-[9px] text-slate-500 dark:text-zinc-400">(90 PLN <span data-en="each" data-pl="na osobę">each</span>)</div>
                         </div>
+                        <ul class="text-[10px] text-slate-700 dark:text-zinc-300 space-y-1 font-medium">
+                            <li data-en="✓ Pair work for kids, teens & adults (45m)" data-pl="✓ Praca w parach dla dzieci, młodzieży i dorosłych (45 min)">✓ Pair work for kids, teens & adults (45m)</li>
+                        </ul>
                     </div>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-rose-600 text-white font-bold py-1.5 rounded-xl text-[10px] cursor-pointer text-center block" data-en="Waitlist (45m)" data-pl="Zapisz się (45 min)">Waitlist (45m)</a>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1.5 rounded-xl text-[10px] cursor-pointer text-center block shadow-md" data-en="Book Online Duo" data-pl="Zarezerwuj Online Duo">Book Online Duo</a>
+                    </div>
                 </div>
 
-                <!-- Large Group -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark relative">
                     <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="5+ People" data-pl="5+ Osób">5+ People</div>
-                    <div>
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-1 mt-0.5" data-en="Large Group (5+)" data-pl="Duża Grupa (5+)">Large Group (5+)</h3>
-                        <div class="text-base font-black text-amber-600 dark:text-accentGold mb-1">60 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ pers / 45m" data-pl="/ osoba / 45m">/ pers / 45m</span></div>
+                    <div class="space-y-2 mt-1">
+                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Large Group (5+)" data-pl="Duża Grupa (5+)">Large Group (5+)</h3>
+                        <div class="text-base font-black text-amber-600 dark:text-accentGold">60 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ pers / 45m" data-pl="/ osoba / 45m">/ pers / 45m</span></div>
                         
-                        <div class="my-1 p-1 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-[9px] font-bold text-emerald-700 dark:text-emerald-400 space-y-0.5">
+                        <div class="p-1 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-[9px] font-bold text-emerald-700 dark:text-emerald-400 space-y-0.5">
                             <div class="flex items-center justify-between">
                                 <span id="pricing-group-count" data-en="🟢 3/10" data-pl="🟢 3/10">🟢 3/10</span>
                                 <span class="text-emerald-600 font-extrabold" data-en="OPEN" data-pl="WOLNE">OPEN</span>
@@ -657,11 +695,12 @@
                             <div id="pricing-group-sub" class="text-slate-600 dark:text-zinc-300 font-normal" data-en="Sub: 180 PLN (3 applied)" data-pl="Suma: 180 zł (3 os.)">Sub: 180 PLN (3 applied)</div>
                         </div>
                     </div>
-                    <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 dark:bg-accentGold text-slate-950 font-bold py-1.5 rounded-xl text-[10px] cursor-pointer shadow-sm text-center block" data-en="Book Group (45m)" data-pl="Zapisz się (45 min)">Book Group (45m)</a>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1.5 rounded-xl text-[10px] cursor-pointer text-center block shadow-md" data-en="Book Large Group" data-pl="Zarezerwuj Large Group">Book Large Group</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- SKIP CONSULTATION BANNER PLACED UNDERNEATH PRICING CARDS -->
             <div class="max-w-4xl mx-auto p-5 rounded-2xl glass-card bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/40 text-center space-y-3 shadow-xl">
                 <h3 class="text-lg md:text-xl font-extrabold text-slate-900 dark:text-white" data-en="Ready to secure your lessons with Daniel Carrington?" data-pl="Gotowy, aby zarezerwować lekcje z Danielem Carringtonem?">Ready to secure your lessons with Daniel Carrington?</h3>
                 <p class="text-xs text-slate-600 dark:text-zinc-300 max-w-xl mx-auto" data-en="If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly." data-pl="Jeśli podoba Ci się to, co widzisz, i chcesz pominąć proces konsultacji, kliknij poniżej, aby wybrać pakiet i bezpośrednio wskazać preferowane daty i godziny zajęć przez Calendly.">
@@ -673,6 +712,32 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq" class="px-4 py-12 max-w-4xl mx-auto space-y-6">
+        <div class="text-center space-y-2">
+            <div class="text-amber-700 dark:text-accentGold text-xs font-extrabold uppercase tracking-widest" data-en="Got Questions?" data-pl="Masz Pytania?">Got Questions?</div>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-en="Frequently Asked Questions" data-pl="Często Zadawane Pytania">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-3">
+            <details class="glass-card p-4 rounded-xl cursor-pointer group">
+                <summary class="font-bold text-xs md:text-sm text-slate-900 dark:text-white flex justify-between items-center">
+                    <span data-en="How do online sessions work?" data-pl="Jak odbywają się lekcje online?">How do online sessions work?</span>
+                    <span class="text-amber-600 group-open:rotate-180 transition">▼</span>
+                </summary>
+                <p class="text-xs text-amber-600 dark:text-accentGold font-semibold mt-2 leading-relaxed" data-en="All sessions are conducted virtually via Google Meet or Microsoft Teams. You will receive a direct link upon booking through Calendly." data-pl="Wszystkie sesje odbywają się online przez Google Meet lub Microsoft Teams. Link otrzymasz bezpośrednio po rezerwacji przez Calendly.">All sessions are conducted virtually via Google Meet or Microsoft Teams. You will receive a direct link upon booking through Calendly.</p>
+            </details>
+
+            <details class="glass-card p-4 rounded-xl cursor-pointer group">
+                <summary class="font-bold text-xs md:text-sm text-slate-900 dark:text-white flex justify-between items-center">
+                    <span data-en="Can I reschedule or adjust my lesson times?" data-pl="Czy mogę zmienić termin lub godziny lekcji?">Can I reschedule or adjust my lesson times?</span>
+                    <span class="text-amber-600 group-open:rotate-180 transition">▼</span>
+                </summary>
+                <p class="text-xs text-amber-600 dark:text-accentGold font-semibold mt-2 leading-relaxed" data-en="Yes, scheduling is fully flexible as long as it is done at least 24 hours before the scheduled visit or session and agreed with your lesson provider." data-pl="Tak, harmonogram jest w pełni elastyczny, o ile zmiana nastąpi co najmniej 24 godziny przed zaplanowaną wizytą lub sesją oraz zostanie uzgodniona z dostawcą lekcji.">Yes, scheduling is fully flexible as long as it is done at least 24 hours before the scheduled visit or session and agreed with your lesson provider.</p>
+            </details>
         </div>
     </section>
 
@@ -710,7 +775,6 @@
                     Send Message
                 </button>
 
-                <!-- GDPR Privacy Disclaimer -->
                 <p class="text-[11px] text-slate-500 dark:text-zinc-400 text-center leading-relaxed px-2 mt-3" data-en="By submitting this form, you agree that your details will be used by Daniel Carrington solely to respond to your inquiry. Your data is secure and will never be shared with third parties." data-pl="Wysyłając ten formularz, wyrażasz zgodę na przetwarzanie Twoich danych przez Daniela Carringtona wyłącznie w celu obsługi zapytania. Twoje dane są bezpieczne i nigdy nie będą udostępniane osobom trzecim.">
                     By submitting this form, you agree that your details will be used by Daniel Carrington solely to respond to your inquiry. Your data is secure and will never be shared with third parties.
                 </p>
@@ -747,382 +811,93 @@
     </div>
 
     <!-- MODALS -->
-
-    <!-- PRIVACY POLICY & TERMS MODAL -->
     <div id="modal-privacy" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left max-h-[85vh] overflow-y-auto">
-            <button onclick="closeModal('modal-privacy')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            
-            <!-- ENGLISH VERSION -->
+            <button onclick="closeModal('modal-privacy')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 text-xl font-bold bg-slate-200 dark:bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
             <div class="space-y-4" id="privacy-content-en">
-                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase">Legal Documentation</div>
                 <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Privacy Policy & Terms of Service</h3>
-                
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">1. Terms of Service - General Provisions</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        These Terms of Service define the rules for using the services provided by Daniel Carrington (hereinafter: the "Service Provider"). Contact with the Service Provider and the exercise of user data rights are conducted exclusively through the secure interactive contact form available on the website. Using the website and booking appointments constitute acceptance of the provisions of these Terms of Service. This is established pursuant to Article 8 of the Polish Act on Rendering Electronic Services (Ustawa o świadczeniu usług drogą elektroniczną) and Articles 384 et seq. of the Polish Civil Code (Kodeks cywilny).
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">2. Appointments via Calendly</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Booking consultations and English language lessons takes place via the external booking platform Calendly. During the appointment booking process, the user provides their personal data directly within the Calendly system. Liability for Booking Data: The Calendly platform is an independent service provider and bears sole responsibility for the storage, security, and processing of personal data provided during the calendar booking process, acting in accordance with Article 4 and Article 28 of the GDPR (RODO). The Service Provider is not liable for data processing operations carried out directly by the Calendly system. Users are encouraged to review Calendly's privacy policy before making a booking.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">3. Payment Terms & Stripe</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Payments for services can be made via traditional bank transfer to the Service Provider's bank account or through integrated electronic payment systems (such as Stripe) operating under the contractual freedoms outlined in Article 353[1] of the Polish Civil Code. The payment provider bears sole responsibility for the collection, storage, security, and processing of all sensitive financial and card data under certified industry standards.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">4. Privacy Policy, Email Confidentiality & Web3Forms</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        The controller of personal data collected electronically is Daniel Carrington pursuant to Article 4(7) of the GDPR (RODO). Scope and Purpose: Personal data (such as names, email addresses, and message content) is collected solely when voluntarily submitted via our secure contact form to handle inquiries or manage the referral program pursuant to Article 6(1)(a) and (b) of the GDPR. Contact form submissions are securely processed via the external service <strong>Web3Forms</strong>, which acts as a data processor solely for transmitting your message to the Controller's inbox. No Sharing with Third Parties: Your data is fully secure, treated as confidential, protected under Article 32 of the GDPR, and will never be shared with third parties.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">5. User Rights</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        In accordance with Articles 15 through 22 of the GDPR (RODO), you have the right to access your data, rectify them, delete them, or restrict their processing. To exercise your rights, please submit your request via the website's contact form.
-                    </p>
-                </div>
-            </div>
-
-            <!-- POLISH VERSION -->
-            <div class="space-y-4 pt-4 border-t border-slate-200 dark:border-zinc-800" id="privacy-content-pl">
-                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase">Dokumentacja Prawna</div>
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Polityka Prywatności i Regulamin</h3>
-                
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">1. Regulamin - Postanowienia ogólne</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Niniejszy Regulamin określa zasady korzystania z usług świadczonych przez Daniela Carringtona (dalej: „Usługodawca”). Kontakt z Usługodawcą oraz realizacja praw użytkowników odbywają się wyłącznie za pośrednictwem bezpiecznego, interaktywnego formularza kontaktowego dostępnego na stronie. Korzystanie ze strony oraz rezerwacja terminów oznaczają akceptację regulaminu. Regulamin oparty jest na art. 8 Ustawy o świadczeniu usług drogą elektroniczną oraz art. 384 i nast. Kodeksu cywilnego.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">2. Rezerwacja terminów i Calendly</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Rezerwacja konsultacji oraz lekcji języka angielskiego odbywa się za pośrednictwem zewnętrznej platformy rezerwacyjnej Calendly. W procesie rezerwacji użytkownik podaje dane bezpośrednio w systemie Calendly. Odpowiedzialność za dane rezerwacyjne: Platforma Calendly jest osobnym dostawcą i ponosi wyłączną odpowiedzialność za przechowywanie, bezpieczeństwo oraz przetwarzanie danych w zgodzie z art. 4 i art. 28 RODO. Usługodawca nie ponosi odpowiedzialności za operacje przetwarzania danych realizowane bezpośrednio przez Calendly.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">3. Przetwarzanie płatności i Stripe</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Płatności za usługi mogą być realizowane przelewem lub poprzez elektroniczne systemy płatności (np. Stripe) na zasadach swobody umów (art. 353[1] Kodeksu cywilnego). Dostawca płatności ponosi wyłączną odpowiedzialność za pobieranie, przechowywanie, bezpieczeństwo oraz przetwarzanie wrażliwych danych finansowych i kart płatniczych.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">4. Polityka Prywatności, Poufność E-mail i Web3Forms</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Administratorem danych osobowych zbieranych drogą elektroniczną jest Daniel Carrington zgodnie z art. 4 pkt 7 RODO. Zakres i cel: Dane (takie jak imię, e-mail i treść wiadomości) są gromadzone wyłącznie w przypadku ich dobrowolnego przesłania przez formularz w celu obsługi zapytania lub programu poleceń (art. 6 ust. 1 lit. a i b RODO). Wiadomości z formularza kontaktowego są bezpiecznie przetwarzane przez zewnętrzny serwis <strong>Web3Forms</strong>, który działa jako podmiot przetwarzający wyłącznie w celu przekazania wiadomości na skrzynkę Administratora. Brak udostępniania osobom trzecim: Dane są w pełni bezpieczne, traktowane jako poufne, chronione zgodnie z art. 32 RODO i nigdy nie będą udostępniane osobom trzecim.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white mt-3 mb-1">5. Prawa użytkownika</h4>
-                    <p class="text-xs text-slate-600 dark:text-zinc-300 leading-relaxed">
-                        Zgodnie z przepisami art. 15-22 RODO przysługuje Ci prawo dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania. Skontaktuj się z Administratorem, przesyłając zgłoszenie przez formularz kontaktowy na stronie.
-                    </p>
-                </div>
             </div>
         </div>
     </div>
 
-    <!-- REFER A FRIEND SUBMISSION MODAL WITH EXIT/CANCEL BUTTON -->
-    <div id="modal-referral" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-lg w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
-            <button onclick="closeModal('modal-referral')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <div>
-                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase" data-en="Referral Program" data-pl="Program Poleceń">Referral Program</div>
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1" data-en="Submit a Friend's Details" data-pl="Przekaż Dane Znajomego">Submit a Friend's Details</h3>
-                <p class="text-[11px] text-slate-500 dark:text-zinc-400 mt-1" data-en="Provide your details and your friend's details so you can claim your 10% discount when they join." data-pl="Podaj swoje dane oraz dane znajomego, aby odebrać 10% zniżki, gdy dołączy.">Provide your details and your friend's details so you can claim your 10% discount when they join.</p>
-            </div>
-            
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-xs">
-                <input type="hidden" name="access_key" value="3d892859-60de-49d3-8642-60a2f6e587e2">
-                <input type="hidden" name="form_type" value="Referral Submission">
-
-                <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-3">
-                    <div class="font-bold text-amber-700 dark:text-accentGold uppercase text-[10px]" data-en="Your Details (The Referrer):" data-pl="Twoje Dane (Osoba Polecająca):">Your Details (The Referrer):</div>
-                    <div>
-                        <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Full Name" data-pl="Twoje Imię i Nazwisko">Your Full Name</label>
-                        <input type="text" name="referrer_name" required placeholder="e.g. Anna Nowak" class="w-full bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-slate-900 dark:text-white">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Your Email Address" data-pl="Twój Adres E-mail">Your Email Address</label>
-                        <input type="email" name="referrer_email" required placeholder="e.g. anna@gmail.com" class="w-full bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-slate-900 dark:text-white">
-                    </div>
-                </div>
-
-                <div class="p-3 rounded-xl bg-slate-100 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 space-y-3">
-                    <div class="font-bold text-slate-900 dark:text-white uppercase text-[10px]" data-en="Your Friend's Details:" data-pl="Dane Twojego Znajomego:">Your Friend's Details:</div>
-                    <div>
-                        <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Friend's Full Name" data-pl="Imię i Nazwisko Znajomego">Friend's Full Name</label>
-                        <input type="text" name="friend_name" required placeholder="e.g. Tomasz Kowalski" class="w-full bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-slate-900 dark:text-white">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-slate-700 dark:text-zinc-300 mb-1" data-en="Friend's Email or Phone" data-pl="E-mail lub Telefon Znajomego">Friend's Email or Phone</label>
-                        <input type="text" name="friend_contact" required placeholder="e.g. tomasz@gmail.com / +48..." class="w-full bg-white dark:bg-zinc-800 border border-slate-300 dark:border-zinc-700 rounded-xl p-2.5 text-slate-900 dark:text-white">
-                    </div>
-                </div>
-
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                <div class="flex gap-2 pt-1">
-                    <button type="submit" class="flex-1 bg-amber-500 hover:bg-amber-600 dark:bg-accentGold dark:hover:bg-accentGoldHover text-slate-950 font-extrabold py-3 rounded-xl text-xs transition shadow-md cursor-pointer" data-en="Submit Referral Information" data-pl="Wyślij Informacje o Poleceniu">
-                        Submit Referral Information
-                    </button>
-                    <button type="button" onclick="closeModal('modal-referral')" class="px-4 py-3 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-zinc-300 hover:bg-slate-300 dark:hover:bg-zinc-700 transition cursor-pointer" data-en="Cancel" data-pl="Anuluj">
-                        Cancel
-                    </button>
-                </div>
-
-                <!-- GDPR Privacy Disclaimer -->
-                <p class="text-[11px] text-slate-500 dark:text-zinc-400 text-center leading-relaxed px-2 mt-2" data-en="By submitting this form, you agree that your details will be used by Daniel Carrington solely to manage this referral. Your data is secure and will never be shared with third parties." data-pl="Wysyłając ten formularz, wyrażasz zgodę na przetwarzanie Twoich danych przez Daniela Carringtona wyłącznie w celu obsługi programu poleceń. Twoje dane są bezpieczne i nigdy nie będą udostępniane osobom trzecim.">
-                    By submitting this form, you agree that your details will be used by Daniel Carrington solely to manage this referral. Your data is secure and will never be shared with third parties.
-                </p>
-            </form>
-        </div>
-    </div>
-
-    <!-- 5-STEP FLUENCY QUIZ MODAL -->
+    <!-- QUIZ MODAL -->
     <div id="modal-quiz" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
-            <button onclick="closeModal('modal-quiz')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <div>
-                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase" data-en="5-Step Fluency Diagnostic" data-pl="Quiz Płynności (5 kroków)">5-Step Fluency Diagnostic</div>
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1" id="quiz-header-title">Find Your Ideal Coaching Package</h3>
+        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-lg w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
+            <button onclick="closeModal('modal-quiz')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 text-xl font-bold bg-slate-200 dark:bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
+            <div class="space-y-2">
+                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase">Interactive Diagnostic</div>
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">5-Step Fluency Goal Quiz</h3>
+                <p class="text-xs text-slate-600 dark:text-zinc-300">What is your main hurdle when speaking English?</p>
             </div>
-
-            <!-- Quiz Step 1 -->
-            <div id="q-step-1" class="space-y-4">
-                <p class="text-sm font-semibold text-slate-800 dark:text-zinc-200" data-en="1. What is your primary goal for improving your English?" data-pl="1. Jaki jest Twój główny cel nauki angielskiego?">1. What is your primary goal for improving your English?</p>
-                <div class="space-y-2 text-xs">
-                    <button onclick="handleQuizAnswer(1, 'corporate')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="A) Corporate career, international Zoom meetings, or job interviews." data-pl="A) Kariera w korporacji, międzynarodowe spotkania lub rozmowy o pracę.">A) Corporate career, international Zoom meetings, or job interviews.</button>
-                    <button onclick="handleQuizAnswer(1, 'interview')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="B) Preparing specifically for an upcoming job interview in English." data-pl="B) Przygotowanie do nadchodzącej rozmowy kwalifikacyjnej po angielsku.">B) Preparing specifically for an upcoming job interview in English.</button>
-                    <button onclick="handleQuizAnswer(1, 'social')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="C) Travel, casual small talk, hobbies, and social confidence." data-pl="C) Podróże, small talk, hobby i pewność w życiu codziennym.">C) Travel, casual small talk, hobbies, and social confidence.</button>
-                    <button onclick="handleQuizAnswer(1, 'family')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="D) English coaching for my children (5-10) or teenagers (11-18)." data-pl="D) Lekcje angielskiego dla moich dzieci (5-10 lat) lub nastolatków (11-18 lat).">D) English coaching for my children (5-10) or teenagers (11-18).</button>
-                </div>
-            </div>
-
-            <!-- Quiz Step 2 -->
-            <div id="q-step-2" class="hidden space-y-4">
-                <p class="text-sm font-semibold text-slate-800 dark:text-zinc-200" data-en="2. When asked an unexpected question in English, what happens?" data-pl="2. Kiedy ktoś zadaje Ci niespodziewane pytanie po angielsku, co się dzieje?">2. When asked an unexpected question in English, what happens?</p>
-                <div class="space-y-2 text-xs">
-                    <button onclick="handleQuizAnswer(2, 'translation')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="A) I translate word-for-word in my head first (3-second delay)." data-pl="A) Tłumaczę słowo po słowie w głowie (3-sekundowe opóźnienie).">A) I translate word-for-word in my head first (3-second delay).</button>
-                    <button onclick="handleQuizAnswer(2, 'freeze')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="B) I freeze up because I worry about grammar mistakes." data-pl="B) Blokuję się, bo obawiam się błędów gramatycznych.">B) I freeze up because I worry about grammar mistakes.</button>
-                    <button onclick="handleQuizAnswer(2, 'vocab')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="C) I reply simply, but lack advanced British vocabulary." data-pl="C) Odpowiadam prosto, ale brakuje mi zaawansowanego słownictwa.">C) I reply simply, but lack advanced British vocabulary.</button>
-                </div>
-            </div>
-
-            <!-- Quiz Step 3 -->
-            <div id="q-step-3" class="hidden space-y-4">
-                <p class="text-sm font-semibold text-slate-800 dark:text-zinc-200" data-en="3. What lesson format fits your lifestyle best?" data-pl="3. Jaki format zajęć najbardziej odpowiada Twojemu stylowi życia?">3. What lesson format fits your lifestyle best?</p>
-                <div class="space-y-2 text-xs">
-                    <button onclick="handleQuizAnswer(3, 'online')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="A) Private online sessions via Google Meet or Microsoft Teams." data-pl="A) Prywatne sesje online przez Google Meet lub Microsoft Teams.">A) Private online sessions via Google Meet or Microsoft Teams.</button>
-                    <button onclick="handleQuizAnswer(3, 'home')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="B) In-person home visits (Daniel travels to my home - 250 PLN/h)." data-pl="B) Dojazd trenera do mojego domu (250 zł/h).">B) In-person home visits (Daniel travels to my home - 250 PLN/h).</button>
-                    <button onclick="handleQuizAnswer(3, 'group')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="C) Interactive group sessions with peers." data-pl="C) Interaktywne sesje grupowe z innymi uczestnikami.">C) Interactive group sessions with peers.</button>
-                </div>
-            </div>
-
-            <!-- Quiz Step 4 -->
-            <div id="q-step-4" class="hidden space-y-4">
-                <p class="text-sm font-semibold text-slate-800 dark:text-zinc-200" data-en="4. How quickly do you need results?" data-pl="4. Jak szybko potrzebujesz rezultatów?">4. How quickly do you need results?</p>
-                <div class="space-y-2 text-xs">
-                    <button onclick="handleQuizAnswer(4, 'fast')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="A) Immediately / As soon as possible for an upcoming milestone." data-pl="A) Natychmiast / Jak najszybciej przed ważnym wydarzeniem.">A) Immediately / As soon as possible for an upcoming milestone.</button>
-                    <button onclick="handleQuizAnswer(4, 'steady')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="B) Consistent long-term progress over a 6-month framework." data-pl="B) Stabilny postęp długoterminowy w ramach 6-miesięcznego programu.">B) Consistent long-term progress over a 6-month framework.</button>
-                </div>
-            </div>
-
-            <!-- Quiz Step 5 -->
-            <div id="q-step-5" class="hidden space-y-4">
-                <p class="text-sm font-semibold text-slate-800 dark:text-zinc-200" data-en="5. What is your preferred group/class setting?" data-pl="5. Jaki preferujesz tryb nauki grupowej lub indywidualnej?">5. What is your preferred group/class setting?</p>
-                <div class="space-y-2 text-xs">
-                    <button onclick="finishQuiz('solo')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="A) 1-on-1 Individual coaching." data-pl="A) Coaching indywidualny 1-na-1.">A) 1-on-1 Individual coaching.</button>
-                    <button onclick="finishQuiz('group')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 hover:border-amber-500 font-medium" data-en="B) Group classes (Small Group 4 people or Large Group 5+)." data-pl="B) Zajęcia grupowe (Mała grupa 4 osoby lub Duża grupa 5+).">B) Group classes (Small Group 4 people or Large Group 5+).</button>
-                </div>
-            </div>
-
-            <!-- Quiz Result Container -->
-            <div id="quiz-result" class="hidden space-y-4 text-center">
-                <div class="text-4xl">🎉</div>
-                <h4 class="text-xl font-bold text-slate-900 dark:text-white" data-en="Your Personalized Recommendation" data-pl="Twoja Rekomendacja Pakietu">Your Personalized Recommendation</h4>
-                <div id="quiz-recommendation-box" class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-slate-800 dark:text-zinc-200 font-semibold space-y-2">
-                    <!-- Injected dynamically -->
-                </div>
-                <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3.5 rounded-xl text-xs transition shadow-md cursor-pointer block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">
-                    Book via Calendly
-                </a>
+            <div class="space-y-2 text-xs font-semibold">
+                <button onclick="alert('Based on your answer, the Corporate/Adult Fluent track is ideal for you!')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition">1. Hesitation & translating in my head</button>
+                <button onclick="alert('Based on your answer, the Corporate Comm. package is recommended!')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition">2. Stakeholder meetings & pronunciation</button>
+                <button onclick="alert('Based on your answer, the Interview Prep package is recommended!')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition">3. Upcoming job interviews in English</button>
             </div>
         </div>
     </div>
 
-    <!-- DETAILED SYLLABUS MODALS -->
+    <!-- DETAILED MODALS FOR ALL PACKAGES -->
     <div id="modal-kids" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
-            <button onclick="closeModal('modal-kids')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">🧸 Young Explorers (Kids 5–10)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Structured Plan • Monthly Billing Available • 45-Min Sessions</p>
-            <p class="text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
-                This 24-week program builds foundational British English naturally through gamified immersion, storytelling, interactive songs, and engaging role-playing activities.
-            </p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs block text-center shadow-md">Book This Package via Calendly</a>
+        <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
+            <button onclick="closeModal('modal-kids')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
+            <h3 class="text-2xl font-extrabold">Young Explorers (Kids 5–10)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Gamified immersion, storytelling, songs, and role-playing in 45-min blocks tailored specifically for children aged 5 to 10 to learn English naturally without pressure.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-teens" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
-            <button onclick="closeModal('modal-teens')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">🎯 Fluent Futures (Teens 11–18)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Structured Plan • Monthly Billing Available • 45-Min Sessions</p>
-            <p class="text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
-                This 24-week program eliminates speaking hesitation and builds complete social and travel confidence through dynamic real-world conversations and school support.
-            </p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs block text-center shadow-md">Book This Package via Calendly</a>
+        <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
+            <button onclick="closeModal('modal-teens')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
+            <h3 class="text-2xl font-extrabold">Fluent Futures (Teens 11–18)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Eliminating hesitation, building travel readiness, school support, and social confidence for teenagers through engaging conversational practice.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-adults" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
-            <button onclick="closeModal('modal-adults')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">✈️ Speak Like a Native (Adults)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Structured Plan • Monthly Billing Available • 45-Min Sessions</p>
-            <p class="text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
-                This 24-week program permanently removes mental translation and teaches authentic small talk, idioms, and natural banter for seamless social and travel interactions.
-            </p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs block text-center shadow-md">Book This Package via Calendly</a>
+        <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
+            <button onclick="closeModal('modal-adults')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
+            <h3 class="text-2xl font-extrabold">Speak Like a Native (Adults)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Plan (150 PLN/lesson) • Monthly Rate: 1,200 PLN (8 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Removing mental translation and mastering conversational small talk, sports, shows, and real-life banter to help adults speak naturally and fluently.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
+        </div>
+    </div>
+
+    <div id="modal-comm" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+        <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 relative text-left">
+            <button onclick="closeModal('modal-comm')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
+            <h3 class="text-2xl font-extrabold">✨ Corporate Communication & Fluency Booster</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">3x / Week (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Focuses heavily on mastering difficult pronunciation phrases, building effective communication strategies for clients and stakeholders, and breaking the ice to eliminate the hesitation of using English in professional settings.</p>
+            <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-slate-900 dark:text-white space-y-1">
+                <div>• Total for 1 Month (12 lessons): 1,920 PLN</div>
+                <div>• Total for 3 Months (36 lessons): 5,760 PLN</div>
+            </div>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-interview" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-        <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
-            <button onclick="closeModal('modal-interview')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white text-xl font-bold bg-slate-200 dark:bg-zinc-800/80 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">✨ Corporate English Interview Prep</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">Intensive Career Boost • Monthly Billing Available • 45-Min Sessions</p>
-            <p class="text-sm text-slate-700 dark:text-zinc-300 leading-relaxed font-medium">
-                This intensive career boot camp features rigorous mock interviews, STAR method breakdowns, and high-stakes Q&A training to secure your dream corporate role.
-            </p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 dark:bg-accentGold text-slate-950 font-bold py-3 rounded-xl text-xs block text-center shadow-md">Book Interview Package via Calendly</a>
+        <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 relative text-left">
+            <button onclick="closeModal('modal-interview')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
+            <h3 class="text-2xl font-extrabold">✨ Corporate English Interview Prep (Intensive)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">Premium 3x/wk (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Rigorous mock interviews, STAR method breakdowns, executive body language, and high-stakes Q&A training tailored at 3 sessions per week to secure your dream role fast.</p>
+            <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-slate-900 dark:text-white space-y-1">
+                <div>• Total for 1 Month (12 lessons): 1,920 PLN</div>
+                <div>• Total for 3 Months (36 lessons): 5,760 PLN</div>
+            </div>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
         let currentLang = 'en';
-        let quizAnswers = {};
-
-        function handleQuizAnswer(step, choice) {
-            quizAnswers['step' + step] = choice;
-
-            if (step === 1 && choice === 'interview') {
-                showQuizResultPackage('interview');
-                return;
-            }
-            if (step === 1 && choice === 'family') {
-                showQuizResultPackage('family');
-                return;
-            }
-
-            document.getElementById('q-step-' + step).classList.add('hidden');
-            const nextStep = step + 1;
-            if (document.getElementById('q-step-' + nextStep)) {
-                document.getElementById('q-step-' + nextStep).classList.remove('hidden');
-            } else {
-                showQuizResultPackage('general');
-            }
-        }
-
-        function finishQuiz(setting) {
-            quizAnswers['setting'] = setting;
-            if (quizAnswers['step1'] === 'corporate') {
-                showQuizResultPackage('corporate');
-            } else if (quizAnswers['step3'] === 'home') {
-                showQuizResultPackage('home');
-            } else if (setting === 'group') {
-                showQuizResultPackage('group');
-            } else {
-                showQuizResultPackage('standard');
-            }
-        }
-
-        function showQuizResultPackage(pkgType) {
-            for(let i=1; i<=5; i++) {
-                const el = document.getElementById('q-step-' + i);
-                if(el) el.classList.add('hidden');
-            }
-            document.getElementById('quiz-result').classList.remove('hidden');
-
-            const box = document.getElementById('quiz-recommendation-box');
-            let recommendationTextEn = "";
-            let recommendationTextPl = "";
-
-            switch(pkgType) {
-                case 'interview':
-                    recommendationTextEn = "🌟 **Recommended Package:** Corporate English Interview Mastery (Premium Package - 690 PLN). Perfect for rapid interview preparation!";
-                    recommendationTextPl = "🌟 **Rekomendowany Pakiet:** Mistrzostwo w Rozmowach Kwalifikacyjnych po Angielsku (Pakiet Premium - 690 zł). Idealny do szybkiego przygotowania do rekrutacji!";
-                    break;
-                case 'family':
-                    recommendationTextEn = "🧸 **Recommended Package:** Young Explorers (Kids 5-10) or Fluent Futures (Teens 11-18) 24-week framework.";
-                    recommendationTextPl = "🧸 **Rekomendowany Pakiet:** Young Explorers (Dzieci 5-10) lub Fluent Futures (Młodzież 11-18) - program 24-tygodniowy.";
-                    break;
-                case 'corporate':
-                    recommendationTextEn = "💼 **Recommended Package:** Executive Corporate (B2B) (220 PLN/person/45-min) or 1-on-1 Online with Google Meet/Teams.";
-                    recommendationTextPl = "💼 **Rekomendowany Pakiet:** Executive Corporate (B2B) (220 zł/os./45 min) lub Online 1-na-1 przez Google Meet / Teams.";
-                    break;
-                case 'home':
-                    recommendationTextEn = "🏠 **Recommended Package:** Home Visits / 1-on-1 at Yours (250 PLN/h). Daniel travels directly to your home.";
-                    recommendationTextPl = "🏠 **Rekomendowany Pakiet:** Dojazd do domu (250 zł/h). Daniel dojeżdża bezpośrednio pod wskazany adres.";
-                    break;
-                case 'group':
-                    recommendationTextEn = "👥 **Recommended Package:** Large Group (5+) at 60 PLN/pers or Small Group (4 people) at 80 PLN/pers.";
-                    recommendationTextPl = "👥 **Rekomendowany Pakiet:** Duża Grupa (5+) w cenie 60 zł/os. lub Mała Grupa (4 osoby) w cenie 80 zł/os.";
-                    break;
-                default:
-                    recommendationTextEn = "💻 **Recommended Package:** 1-on-1 Online Sessions (140 PLN / 45-min) via Google Meet or Microsoft Teams.";
-                    recommendationTextPl = "💻 **Rekomendowany Pakiet:** Sesje Online 1-na-1 (140 zł / 45 min) przez Google Meet lub Microsoft Teams.";
-            }
-
-            box.innerHTML = currentLang === 'pl' ? recommendationTextPl : recommendationTextEn;
-        }
-
-        // REAL-TIME DYNAMIC GROUP APPLICATION COUNTER SYSTEM
-        let largeGroupCount = 3;
-        const maxLargeGroup = 10;
-
-        function applyToLargeGroup() {
-            if (largeGroupCount < maxLargeGroup) {
-                largeGroupCount++;
-                updateGroupUI();
-                alert(currentLang === 'pl' ? 'Sukces! Powiadomienie wysłano. Pomyślnie zapisano do grupy.' : 'Success! Notification sent. You have successfully applied to the group.');
-            } else {
-                alert(currentLang === 'pl' ? 'Ta grupa jest już pełna!' : 'This group is already full!');
-            }
-        }
-
-        function updateGroupUI() {
-            const countEl = document.getElementById('pricing-group-count');
-            const subtotalEl = document.getElementById('pricing-group-sub');
-            
-            if (countEl && subtotalEl) {
-                const subtotal = largeGroupCount * 60;
-                if (currentLang === 'pl') {
-                    countEl.innerText = `🟢 ${largeGroupCount}/10`;
-                    subtotalEl.innerText = `Suma: ${subtotal} zł (${largeGroupCount} os.)`;
-                } else {
-                    countEl.innerText = `🟢 ${largeGroupCount}/10`;
-                    subtotalEl.innerText = `Sub: ${subtotal} PLN (${largeGroupCount} applied)`;
-                }
-            }
-        }
 
         function calculatePrice() {
             const baseType = parseFloat(document.getElementById('calc-type').value);
@@ -1137,93 +912,39 @@
         function toggleTheme() {
             const htmlEl = document.documentElement;
             const themeIcon = document.getElementById('theme-icon');
-            const themeLabel = document.getElementById('theme-label');
 
             if (htmlEl.classList.contains('dark')) {
                 htmlEl.classList.remove('dark');
                 themeIcon.innerText = '🌙';
-                themeLabel.setAttribute('data-en', 'Light');
-                themeLabel.setAttribute('data-pl', 'Jasny');
             } else {
                 htmlEl.classList.add('dark');
                 themeIcon.innerText = '☀️';
-                themeLabel.setAttribute('data-en', 'Dark');
-                themeLabel.setAttribute('data-pl', 'Ciemny');
             }
-
-            themeLabel.innerText = currentLang === 'pl' ? themeLabel.getAttribute('data-pl') : themeLabel.getAttribute('data-en');
         }
 
         function toggleDropdown() {
-            const menu = document.getElementById('lang-dropdown-menu');
-            menu.classList.toggle('hidden');
+            document.getElementById('lang-dropdown-menu').classList.toggle('hidden');
         }
-
-        window.addEventListener('click', function(e) {
-            const btn = document.getElementById('lang-dropdown-btn');
-            const menu = document.getElementById('lang-dropdown-menu');
-            if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
-                menu.classList.add('hidden');
-            }
-        });
 
         function selectLanguage(lang) {
             currentLang = lang;
-            const ukFlagBtn = document.getElementById('selected-uk-flag');
-            const plFlagBtn = document.getElementById('selected-pl-flag');
-            const currentLangText = document.getElementById('current-lang-text');
-            const checkEn = document.getElementById('check-en');
-            const checkPl = document.getElementById('check-pl');
-            const privacyEn = document.getElementById('privacy-content-en');
-            const privacyPl = document.getElementById('privacy-content-pl');
-
-            if (lang === 'pl') {
-                ukFlagBtn.classList.add('hidden');
-                plFlagBtn.classList.remove('hidden');
-                currentLangText.innerText = 'PL';
-                checkEn.classList.add('hidden');
-                checkPl.classList.remove('hidden');
-                if(privacyEn) privacyEn.classList.add('hidden');
-                if(privacyPl) privacyPl.classList.remove('hidden');
-            } else {
-                plFlagBtn.classList.add('hidden');
-                ukFlagBtn.classList.remove('hidden');
-                currentLangText.innerText = 'EN';
-                checkPl.classList.add('hidden');
-                checkEn.classList.remove('hidden');
-                if(privacyEn) privacyEn.classList.remove('hidden');
-                if(privacyPl) privacyPl.classList.add('hidden');
-            }
-
+            document.getElementById('current-lang-text').innerText = lang.toUpperCase();
             document.getElementById('lang-dropdown-menu').classList.add('hidden');
-
-            const translatableElements = document.querySelectorAll('[data-en][data-pl]');
-            translatableElements.forEach(el => {
-                if (currentLang === 'pl') {
-                    el.innerText = el.getAttribute('data-pl');
-                } else {
-                    el.innerText = el.getAttribute('data-en');
-                }
+            
+            document.querySelectorAll('[data-en][data-pl]').forEach(el => {
+                el.innerText = el.getAttribute('data-' + lang);
             });
-
-            updateGroupUI();
             calculatePrice();
         }
 
         function openModal(id) {
-            const modalEl = document.getElementById(id);
-            if(modalEl) {
-                modalEl.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal(id) {
-            const modalEl = document.getElementById(id);
-            if(modalEl) {
-                modalEl.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
     </script>
 </body>
