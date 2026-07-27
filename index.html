@@ -48,6 +48,16 @@
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
         }
 
+        @keyframes vipPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.25), inset 0 0 15px rgba(212, 175, 55, 0.1); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.5), inset 0 0 25px rgba(212, 175, 55, 0.2); }
+        }
+
+        .vip-card-effect {
+            animation: vipPulse 3s infinite ease-in-out;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(19, 21, 28, 0.95) 50%, rgba(212, 175, 55, 0.08) 100%);
+        }
+
         .gold-gradient-text {
             background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #AA820A 100%);
             -webkit-background-clip: text;
@@ -703,7 +713,7 @@
 
             <div class="max-w-4xl mx-auto p-5 rounded-2xl glass-card bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/40 text-center space-y-3 shadow-xl">
                 <h3 class="text-lg md:text-xl font-extrabold text-slate-900 dark:text-white" data-en="Ready to secure your lessons with Daniel Carrington?" data-pl="Gotowy, aby zarezerwować lekcje z Danielem Carringtonem?">Ready to secure your lessons with Daniel Carrington?</h3>
-                <p class="text-xs text-slate-600 dark:text-zinc-300 max-w-xl mx-auto" data-en="If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly." data-pl="Jeśli podoba Ci się to, co widzisz, i chcesz pominąć proces konsultacji, kliknij poniżej, aby wybrać pakiet i bezpośrednio wskazać preferowane daty i godziny zajęć przez Calendly.">
+                <p class="text-xs text-slate-600 dark:text-zinc-300 max-w-xl mx-auto" data-en="If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly." data-pl="If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly.">
                     If you are happy with what you see and want to skip the consultation process, click below to choose your package and select your preferred dates and times directly via Calendly.
                 </p>
                 <div class="pt-1">
@@ -931,6 +941,19 @@
             document.getElementById('current-lang-text').innerText = lang.toUpperCase();
             document.getElementById('lang-dropdown-menu').classList.add('hidden');
             
+            // Toggle correct flag visibility and checkmark state based on chosen language
+            if (lang === 'en') {
+                document.getElementById('selected-uk-flag').classList.remove('hidden');
+                document.getElementById('selected-pl-flag').classList.add('hidden');
+                document.getElementById('check-en').classList.remove('hidden');
+                document.getElementById('check-pl').classList.add('hidden');
+            } else {
+                document.getElementById('selected-uk-flag').classList.add('hidden');
+                document.getElementById('selected-pl-flag').classList.remove('hidden');
+                document.getElementById('check-en').classList.add('hidden');
+                document.getElementById('check-pl').classList.remove('hidden');
+            }
+
             document.querySelectorAll('[data-en][data-pl]').forEach(el => {
                 el.innerText = el.getAttribute('data-' + lang);
             });
