@@ -208,7 +208,7 @@
 
                 <button id="theme-toggle" onclick="toggleTheme()" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2.5 py-1.5 rounded-xl text-xs transition flex items-center gap-1 cursor-pointer shadow-sm">
                     <span id="theme-icon">🌙</span>
-                    <span id="theme-label" data-en="Dark" data-pl="Ciemny">Dark</span>
+                    <span id="theme-label" data-en="Dark" data-pl="Ciemny" data-active-en="Dark" data-active-pl="Ciemny" data-inactive-en="Light" data-inactive-pl="Jasny">Dark</span>
                 </button>
 
                 <a href="https://calendly.com/anondan45" target="_blank" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 dark:from-accentGold dark:to-accentGoldHover text-slate-950 font-extrabold px-3 py-2 rounded-xl text-xs tracking-wide transition shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1 cursor-pointer">
@@ -380,7 +380,7 @@
     <section id="calculator" class="px-4 py-12 bg-slate-100 dark:bg-cardBgDark/50 border-y border-slate-200 dark:border-cardBorderDark">
         <div class="max-w-4xl mx-auto space-y-6">
             <div class="text-center max-w-2xl mx-auto">
-                <div class="text-amber-700 dark:text-accentGold text-xs font-extrabold uppercase tracking-widest mb-1.5" data-en="Instant Rate & Package Calculator" data-pl="Kalkulator Ceny i Pakietów">Instant Rate & Package Calculator</div>
+                <div class="text-amber-700 dark:text-accentGold text-xs font-extrabold uppercase tracking-widest" data-en="Instant Rate & Package Calculator" data-pl="Kalkulator Ceny i Pakietów">Instant Rate & Package Calculator</div>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-en="🧮 Estimate Your Monthly Investment" data-pl="🧮 Oblicz Koszt Swoich Lekcji">🧮 Estimate Your Monthly Investment</h2>
                 <p class="text-slate-600 dark:text-zinc-400 text-xs mt-1" data-en="Select your preferred format to see live pricing." data-pl="Wybierz format, aby zobaczyć cenę na żywo.">Select your preferred format to see live pricing.</p>
             </div>
@@ -925,18 +925,18 @@
             const themeLabel = document.getElementById('theme-label');
 
             if (htmlEl.classList.contains('dark')) {
-                // Currently in dark mode, switch to light mode
+                // Currently in dark mode -> switch to light mode
                 htmlEl.classList.remove('dark');
                 themeIcon.innerText = '☀️';
-                themeLabel.setAttribute('data-en', 'Light');
-                themeLabel.setAttribute('data-pl', 'Jasny');
+                themeLabel.setAttribute('data-active-en', 'Light');
+                themeLabel.setAttribute('data-active-pl', 'Jasny');
                 themeLabel.innerText = currentLang === 'pl' ? 'Jasny' : 'Light';
             } else {
-                // Currently in light mode, switch to dark mode
+                // Currently in light mode -> switch to dark mode
                 htmlEl.classList.add('dark');
                 themeIcon.innerText = '🌙';
-                themeLabel.setAttribute('data-en', 'Dark');
-                themeLabel.setAttribute('data-pl', 'Ciemny');
+                themeLabel.setAttribute('data-active-en', 'Dark');
+                themeLabel.setAttribute('data-active-pl', 'Ciemny');
                 themeLabel.innerText = currentLang === 'pl' ? 'Ciemny' : 'Dark';
             }
         }
@@ -971,12 +971,8 @@
             const htmlEl = document.documentElement;
             const themeLabel = document.getElementById('theme-label');
             if (htmlEl.classList.contains('dark')) {
-                themeLabel.setAttribute('data-en', 'Dark');
-                themeLabel.setAttribute('data-pl', 'Ciemny');
                 themeLabel.innerText = lang === 'pl' ? 'Ciemny' : 'Dark';
             } else {
-                themeLabel.setAttribute('data-en', 'Light');
-                themeLabel.setAttribute('data-pl', 'Jasny');
                 themeLabel.innerText = lang === 'pl' ? 'Jasny' : 'Light';
             }
 
