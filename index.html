@@ -633,7 +633,7 @@
         </div>
     </section>
 
-    <!-- PRICING SECTION (MATCHING THE REFERENCE LAYOUT & INCLUDING SMALL GROUP) -->
+    <!-- PRICING SECTION -->
     <section id="pricing" class="px-4 py-12 md:py-16 bg-slate-100 dark:bg-cardBgDark/50 border-y border-slate-200 dark:border-cardBorderDark">
         <div class="max-w-7xl mx-auto space-y-8">
             <div class="text-center max-w-3xl mx-auto">
@@ -718,7 +718,7 @@
                     </div>
                 </div>
 
-                <!-- 6. NEW: Small Group (3-4 people) -->
+                <!-- 6. Small Group (3-4 people) -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-amber-500/50 dark:border-accentGold/50 relative">
                     <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="3-4 PEOPLE" data-pl="3-4 OSOBY">3-4 PEOPLE</div>
                     <div class="space-y-2 mt-1">
@@ -923,14 +923,14 @@
         <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-lg w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left">
             <button onclick="closeModal('modal-quiz')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 text-xl font-bold bg-slate-200 dark:bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
             <div class="space-y-2">
-                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase">Interactive Diagnostic</div>
-                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">5-Step Fluency Goal Quiz</h3>
-                <p class="text-xs text-slate-600 dark:text-zinc-300">What is your main hurdle when speaking English?</p>
+                <div class="text-amber-700 dark:text-accentGold text-xs font-bold uppercase" data-en="Interactive Diagnostic" data-pl="Diagnostyka Interaktywna">Interactive Diagnostic</div>
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white" data-en="5-Step Fluency Goal Quiz" data-pl="Quiz Celów Płynności (5 kroków)">5-Step Fluency Goal Quiz</h3>
+                <p class="text-xs text-slate-600 dark:text-zinc-300" data-en="What is your main hurdle when speaking English?" data-pl="Jaka jest Twoja główna trudność podczas mówienia po angielsku?">What is your main hurdle when speaking English?</p>
             </div>
             <div class="space-y-2 text-xs font-semibold">
-                <button onclick="alert('Based on your answer, the Corporate/Adult Fluent track is ideal for you!')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition">1. Hesitation & translating in my head</button>
-                <button onclick="alert('Based on your answer, the Corporate Comm. package is recommended!')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition">2. Stakeholder meetings & pronunciation</button>
-                <button onclick="alert('Based on your answer, the Interview Prep package is recommended!')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition">3. Upcoming job interviews in English</button>
+                <button onclick="handleQuizAnswer('hesitation')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition" data-en="1. Hesitation & translating in my head" data-pl="1. Wahanie i tłumaczenie w głowie">1. Hesitation & translating in my head</button>
+                <button onclick="handleQuizAnswer('stakeholder')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition" data-en="2. Stakeholder meetings & pronunciation" data-pl="2. Spotkania z interesariuszami i wymowa">2. Stakeholder meetings & pronunciation</button>
+                <button onclick="handleQuizAnswer('interview')" class="w-full text-left p-3 rounded-xl bg-slate-100 dark:bg-zinc-800 hover:bg-amber-500/10 border border-slate-200 dark:border-zinc-700 transition" data-en="3. Upcoming job interviews in English" data-pl="3. Nadchodzące rozmowy kwalifikacyjne po angielsku">3. Upcoming job interviews in English</button>
             </div>
         </div>
     </div>
@@ -939,58 +939,58 @@
     <div id="modal-kids" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
             <button onclick="closeModal('modal-kids')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
-            <h3 class="text-2xl font-extrabold">Young Explorers (Kids 5–10)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)</p>
-            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Gamified immersion, storytelling, songs, and role-playing in 45-min blocks tailored specifically for children aged 5 to 10 to learn English naturally without pressure.</p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
+            <h3 class="text-2xl font-extrabold" data-en="Young Explorers (Kids 5–10)" data-pl="Young Explorers (Dzieci 5–10)">Young Explorers (Kids 5–10)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide" data-en="24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)" data-pl="Plan 24-tygodniowy (140 zł/lekcja) • Stawka miesięczna: 1 120 zł (8 lekcji)">24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300" data-en="Gamified immersion, storytelling, songs, and role-playing in 45-min blocks tailored specifically for children aged 5 to 10 to learn English naturally without pressure." data-pl="Immersja oparta na grywalizacji, opowiadanie historii, piosenki i odgrywanie ról w 45-minutowych blokach dostosowanych specjalnie dla dzieci w wieku od 5 do 10 lat, aby uczyć się angielskiego naturalnie i bez presji.">Gamified immersion, storytelling, songs, and role-playing in 45-min blocks tailored specifically for children aged 5 to 10 to learn English naturally without pressure.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-teens" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
             <button onclick="closeModal('modal-teens')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
-            <h3 class="text-2xl font-extrabold">Fluent Futures (Teens 11–18)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)</p>
-            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Eliminating hesitation, building travel readiness, school support, and social confidence for teenagers through engaging conversational practice.</p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
+            <h3 class="text-2xl font-extrabold" data-en="Fluent Futures (Teens 11–18)" data-pl="Fluent Futures (Młodzież 11–18)">Fluent Futures (Teens 11–18)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide" data-en="24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)" data-pl="Plan 24-tygodniowy (140 zł/lekcja) • Stawka miesięczna: 1 120 zł (8 lekcji)">24-Week Plan (140 PLN/lesson) • Monthly Rate: 1,120 PLN (8 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300" data-en="Eliminating hesitation, building travel readiness, school support, and social confidence for teenagers through engaging conversational practice." data-pl="Eliminowanie wahania, budowanie gotowości do podróży, wsparcie szkolne i pewność społeczna dla nastolatków poprzez angażującą praktykę konwersacyjną.">Eliminating hesitation, building travel readiness, school support, and social confidence for teenagers through engaging conversational practice.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-adults" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
             <button onclick="closeModal('modal-adults')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
-            <h3 class="text-2xl font-extrabold">Speak Like a Native (Adults)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">24-Week Plan (150 PLN/lesson) • Monthly Rate: 1,200 PLN (8 lessons)</p>
-            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Removing mental translation and mastering conversational small talk, sports, shows, and real-life banter to help adults speak naturally and fluently.</p>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
+            <h3 class="text-2xl font-extrabold" data-en="Speak Like a Native (Adults)" data-pl="Mów Jak Native (Dorośli)">Speak Like a Native (Adults)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide" data-en="24-Week Plan (150 PLN/lesson) • Monthly Rate: 1,200 PLN (8 lessons)" data-pl="Plan 24-tygodniowy (150 zł/lekcja) • Stawka miesięczna: 1 200 zł (8 lekcji)">24-Week Plan (150 PLN/lesson) • Monthly Rate: 1,200 PLN (8 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300" data-en="Removing mental translation and mastering conversational small talk, sports, shows, and real-life banter to help adults speak naturally and fluently." data-pl="Usuwanie mentalnego tłumaczenia i opanowanie konwersacyjnego small talku, sportu, seriali oraz codziennych rozmów, aby pomóc dorosłym mówić naturalnie i płynnie.">Removing mental translation and mastering conversational small talk, sports, shows, and real-life banter to help adults speak naturally and fluently.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-comm" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 relative text-left">
             <button onclick="closeModal('modal-comm')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
-            <h3 class="text-2xl font-extrabold">✨ Corporate Communication & Fluency Booster</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">3x / Week (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)</p>
-            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Focuses heavily on mastering difficult pronunciation phrases, building effective communication strategies for clients and stakeholders, and breaking the ice to eliminate the hesitation of using English in professional settings.</p>
+            <h3 class="text-2xl font-extrabold" data-en="✨ Corporate Communication & Fluency Booster" data-pl="✨ Komunikacja Korporacyjna i Booster Płynności">✨ Corporate Communication & Fluency Booster</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide" data-en="3x / Week (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)" data-pl="3x w tygodniu (160 zł/lekcja) • Stawka miesięczna: 1 920 zł (12 lekcji)">3x / Week (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300" data-en="Focuses heavily on mastering difficult pronunciation phrases, building effective communication strategies for clients and stakeholders, and breaking the ice to eliminate the hesitation of using English in professional settings." data-pl="Skupia się mocno na opanowaniu trudnych zwrotów wymagających precyzyjnej wymowy, budowaniu skutecznych strategii komunikacyjnych dla klientów i interesariuszy oraz przełamywaniu barier w środowisku zawodowym.">Focuses heavily on mastering difficult pronunciation phrases, building effective communication strategies for clients and stakeholders, and breaking the ice to eliminate the hesitation of using English in professional settings.</p>
             <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-slate-900 dark:text-white space-y-1">
-                <div>• Total for 1 Month (12 lessons): 1,920 PLN</div>
-                <div>• Total for 3 Months (36 lessons): 5,760 PLN</div>
+                <div data-en="• Total for 1 Month (12 lessons): 1,920 PLN" data-pl="• Łącznie za 1 miesiąc (12 lekcji): 1 920 zł">• Total for 1 Month (12 lessons): 1,920 PLN</div>
+                <div data-en="• Total for 3 Months (36 lessons): 5,760 PLN" data-pl="• Łącznie za 3 miesiące (36 lekcji): 5 760 zł">• Total for 3 Months (36 lessons): 5,760 PLN</div>
             </div>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</a>
         </div>
     </div>
 
     <div id="modal-interview" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-6 relative text-left">
             <button onclick="closeModal('modal-interview')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
-            <h3 class="text-2xl font-extrabold">✨ Corporate English Interview Prep (Intensive)</h3>
-            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide">Premium 3x/wk (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)</p>
-            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300">Rigorous mock interviews, STAR method breakdowns, executive body language, and high-stakes Q&A training tailored at 3 sessions per week to secure your dream role fast.</p>
+            <h3 class="text-2xl font-extrabold" data-en="✨ Corporate English Interview Prep (Intensive)" data-pl="✨ Przygotowanie do Rozmów Kwalifikacyjnych po Angielsku (Intensywne)">✨ Corporate English Interview Prep (Intensive)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide" data-en="Premium 3x/wk (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)" data-pl="Premium 3x/tydz. (160 zł/lekcja) • Stawka miesięczna: 1 920 zł (12 lekcji)">Premium 3x/wk (160 PLN/lesson) • Monthly Rate: 1,920 PLN (12 lessons)</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300" data-en="Rigorous mock interviews, STAR method breakdowns, executive body language, and high-stakes Q&A training tailored at 3 sessions per week to secure your dream role fast." data-pl="Rygorystyczne symulacje rozmów kwalifikacyjnych, omówienie metody STAR, mowa ciała kadry menedżerskiej oraz trening pytań i odpowiedzi (Q&A) prowadzony 3 razy w tygodniu, aby szybko zdobyć wymarzoną pracę.">Rigorous mock interviews, STAR method breakdowns, executive body language, and high-stakes Q&A training tailored at 3 sessions per week to secure your dream role fast.</p>
             <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs font-bold text-slate-900 dark:text-white space-y-1">
-                <div>• Total for 1 Month (12 lessons): 1,920 PLN</div>
-                <div>• Total for 3 Months (36 lessons): 5,760 PLN</div>
+                <div data-en="• Total for 1 Month (12 lessons): 1,920 PLN" data-pl="• Łącznie za 1 miesiąc (12 lekcji): 1 920 zł">• Total for 1 Month (12 lessons): 1,920 PLN</div>
+                <div data-en="• Total for 3 Months (36 lessons): 5,760 PLN" data-pl="• Łącznie za 3 miesiące (36 lekcji): 5 760 zł">• Total for 3 Months (36 lessons): 5,760 PLN</div>
             </div>
-            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center">Book via Calendly</a>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</a>
         </div>
     </div>
 
@@ -1080,6 +1080,26 @@
             }
 
             calculatePrice();
+        }
+
+        function handleQuizAnswer(type) {
+            if (currentLang === 'pl') {
+                if (type === 'hesitation') {
+                    alert('Na podstawie Twojej odpowiedzi idealny będzie tor dla dorosłych / kurs nastawiony na płynność!');
+                } else if (type === 'stakeholder') {
+                    alert('Na podstawie Twojej odpowiedzi polecamy pakiet Komunikacji Korporacyjnej!');
+                } else {
+                    alert('Na podstawie Twojej odpowiedzi polecamy pakiet Przygotowania do Rozmów Kwalifikacyjnych!');
+                }
+            } else {
+                if (type === 'hesitation') {
+                    alert('Based on your answer, the Corporate/Adult Fluent track is ideal for you!');
+                } else if (type === 'stakeholder') {
+                    alert('Based on your answer, the Corporate Comm. package is recommended!');
+                } else {
+                    alert('Based on your answer, the Interview Prep package is recommended!');
+                }
+            }
         }
 
         function openModal(id) {
