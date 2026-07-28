@@ -151,8 +151,9 @@
             </nav>
 
             <div class="flex items-center gap-2 shrink-0">
+                <!-- LANGUAGE DROPDOWN -->
                 <div class="relative">
-                    <button id="lang-dropdown-btn" onclick="toggleDropdown()" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2 py-1.5 rounded-xl text-xs transition flex items-center gap-1.5 cursor-pointer shadow-sm">
+                    <button id="lang-dropdown-btn" onclick="toggleDropdown('lang')" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2 py-1.5 rounded-xl text-xs transition flex items-center gap-1.5 cursor-pointer shadow-sm">
                         <span id="current-flag" class="inline-flex items-center">
                             <svg id="selected-uk-flag" class="w-4 h-3 rounded-sm shadow-sm" viewBox="0 0 60 30">
                                 <clipPath id="s_current"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
@@ -206,10 +207,30 @@
                     </div>
                 </div>
 
-                <button id="theme-toggle" onclick="toggleTheme()" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2.5 py-1.5 rounded-xl text-xs transition flex items-center gap-1 cursor-pointer shadow-sm">
-                    <span id="theme-icon">🌙</span>
-                    <span id="theme-label" data-en="Dark" data-pl="Ciemny">Dark</span>
-                </button>
+                <!-- THEME DROPDOWN -->
+                <div class="relative">
+                    <button id="theme-dropdown-btn" onclick="toggleDropdown('theme')" class="glass-card bg-slate-100 dark:bg-zinc-800/90 border border-amber-500/40 text-slate-900 dark:text-accentGold hover:bg-amber-500/10 font-bold px-2 py-1.5 rounded-xl text-xs transition flex items-center gap-1.5 cursor-pointer shadow-sm">
+                        <span id="theme-icon">🌙</span>
+                        <span id="theme-label" data-en="Dark" data-pl="Ciemny">Dark</span>
+                        <span class="text-[9px] text-slate-500 dark:text-zinc-400">▼</span>
+                    </button>
+
+                    <div id="theme-dropdown-menu" class="hidden absolute right-0 mt-2 w-32 glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark rounded-xl shadow-2xl overflow-hidden z-50">
+                        <button onclick="setTheme('light')" class="w-full px-3 py-2 text-xs font-semibold text-left text-slate-800 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-amber-600 dark:hover:text-accentGold flex items-center justify-between transition cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                ☀️ <span data-en="Light" data-pl="Jasny">Light</span>
+                            </span>
+                            <span id="check-theme-light" class="text-amber-600 dark:text-accentGold hidden">✓</span>
+                        </button>
+
+                        <button onclick="setTheme('dark')" class="w-full px-3 py-2 text-xs font-semibold text-left text-slate-800 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-amber-600 dark:hover:text-accentGold flex items-center justify-between transition border-t border-slate-200 dark:border-cardBorderDark cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                🌙 <span data-en="Dark" data-pl="Ciemny">Dark</span>
+                            </span>
+                            <span id="check-theme-dark" class="text-amber-600 dark:text-accentGold">✓</span>
+                        </button>
+                    </div>
+                </div>
 
                 <a href="https://calendly.com/anondan45" target="_blank" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 dark:from-accentGold dark:to-accentGoldHover text-slate-950 font-extrabold px-3 py-2 rounded-xl text-xs tracking-wide transition shadow-lg transform hover:-translate-y-0.5 flex items-center gap-1 cursor-pointer">
                     ✨ <span data-en="Book" data-pl="Rezerwuj">Book</span>
@@ -348,7 +369,7 @@
                 </h2>
                 <p class="text-slate-700 dark:text-zinc-300 leading-relaxed text-xs md:text-sm font-medium" 
                    data-en="My name is Daniel Carrington. I have lived in Poland for over 7 years and bring extensive experience from corporate backgrounds, including working as a recruiter where I conducted over 50 interviews for various positions. Because of this background, I possess an insider’s perspective on how interviews are conducted, what interviewers look for, and what they seek to avoid. Combined with a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English—moving from overanalyzing grammatical structures to experiencing hesitation in live discussions—I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. I help people of all ages from kids, teenagers, and adults, and I am here to help you take your English to the next level." 
-                   data-pl="Nazywam się Daniel Carrington. Mieszkam w Polsce od ponad 7 lat i mam duże doświadczenie w środowisku korporacyjnym, w tym pracę jako rekruter, gdzie przeprowadziłem ponad 50 rozmów kwalifikacyjnych na różne stanowiska. Dzięki temu posiadam perspektywę "od środka" na to, jak wyglądają rozmowy rekrutacyjne, czego szukają rekruterzy i czego starają się unikać. W połączeniu z głębokim zrozumieniem barier komunikacyjnych, z jakimi mierzą się polscy profesjonaliści posługujący się językiem angielskim – od nadmiernej analizy gramatyki po wahanie w żywych dyskusjach – założyłem BritDiscourse, aby rozwijać autentyczną, naturalną płynność konwersacyjną i znacząco podnosić pewność siebie w biznesie. Pomagam osobom w każdym wieku: dzieciom, nastolatkom i dorosłym, i jestem tutaj, aby pomóc Ci wnieść Twój angielski na wyższy poziom.">
+                   data-pl="Nazywam się Daniel Carrington. Mieszkam w Polsce od ponad 7 lat i mam duże doświadczenie w środowisku korporacyjnym, w tym pracę jako rekruter, gdzie przeprowadziłem ponad 50 rozmów kwalifikacyjnych na różne stanowiska. Dzięki temu posiadam perspektywę od środka na to, jak wyglądają rozmowy rekrutacyjne, czego szukają rekruterzy i czego starają się unikać. W połączeniu z głębokim zrozumieniem barier komunikacyjnych, z jakimi mierzą się polscy profesjonaliści posługujący się językiem angielskim – od nadmiernej analizy gramatyki po wahanie w żywych dyskusjach – założyłem BritDiscourse, aby rozwijać autentyczną, naturalną płynność konwersacyjną i znacząco podnosić pewność siebie w biznesie. Pomagam osobom w każdym wieku: dzieciom, nastolatkom i dorosłym, i jestem tutaj, aby pomóc Ci wnieść Twój angielski na wyższy poziom.">
                     My name is Daniel Carrington. I have lived in Poland for over 7 years and bring extensive experience from corporate backgrounds, including working as a recruiter where I conducted over 50 interviews for various positions. Because of this background, I possess an insider’s perspective on how interviews are conducted, what interviewers look for, and what they seek to avoid. Combined with a comprehensive understanding of the precise communication barriers Polish professionals encounter when engaging in English—moving from overanalyzing grammatical structures to experiencing hesitation in live discussions—I established BritDiscourse to cultivate authentic, real-world conversational fluency and significantly elevate professional confidence. I help people of all ages from kids, teenagers, and adults, and I am here to help you take your English to the next level.
                 </p>
                 <div class="p-3 rounded-xl glass-card border-l-4 border-l-amber-500 text-xs text-slate-600 dark:text-zinc-300 font-normal">
@@ -397,7 +418,7 @@
                             <option value="160" data-en="Corporate Communication & Fluency / Interview Prep (160 PLN / 45-min)" data-pl="Komunikacja Korporacyjna / Rozmowy Kwalifikacyjne (160 zł / 45 min)">Corporate Communication & Fluency / Interview Prep (160 PLN / 45-min)</option>
                             <option value="250" data-en="Home Visit / 1-on-1 at Yours (250 PLN / 1 hour)" data-pl="Dojazd do domu (250 zł / 1 godzina)">Home Visit / 1-on-1 at Yours (250 PLN / 1 hour)</option>
                             <option value="180" data-en="Online Duo / Pair (180 PLN total / 45-min)" data-pl="Online w Parze (180 zł łącznie / 45 min)">Online Duo / Pair (180 PLN total / 45-min)</option>
-                            <option value="80" data-en="Small Group (Max 4 pers.) (80 PLN/pers / 45-min)" data-pl="Mała Grupa (Max 4 os.) (80 zł/os. / 45 min)">Small Group (Max 4 pers.) (80 PLN/pers / 45-min)</option>
+                            <option value="80" data-en="Small Group (3-4 pers.) (80 PLN/pers / 45-min)" data-pl="Mała Grupa (3-4 os.) (80 zł/os. / 45 min)">Small Group (3-4 pers.) (80 PLN/pers / 45-min)</option>
                             <option value="60" data-en="Large Group (5+ pers.) (60 PLN/pers / 45-min)" data-pl="Duża Grupa (5+ os.) (60 zł/os. / 45 min)">Large Group (5+ pers.) (60 PLN/pers / 45-min)</option>
                             <option value="220" data-en="Executive Corporate (B2B) (220 PLN/pers / 45-min)" data-pl="Executive Corporate (B2B) (220 zł/os. / 45 min)">Executive Corporate (B2B) (220 PLN/pers / 45-min)</option>
                         </select>
@@ -438,7 +459,7 @@
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 pt-2">
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
                     <span class="text-2xl">⚡</span>
-                    <div class="font-bold text-xs text-slate-900 dark:text-white">PayU / BLIK</div>
+                    <div class="font-bold text-xs text-slate-900 dark:text-white">PayU / Przelewy24</div>
                     <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Instant Polish online banking & BLIK" data-pl="Szybkie przelewy i BLIK">Instant Polish online banking & BLIK</div>
                 </div>
 
@@ -455,13 +476,13 @@
                 </div>
 
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-200 dark:border-zinc-700 flex flex-col items-center justify-center space-y-2">
-                    <span class="text-2xl">💳</span>
-                    <div class="font-bold text-xs text-slate-900 dark:text-white">Cards (Stripe)</div>
-                    <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Global Visa & Mastercard support" data-pl="Obsługa kart Visa i Mastercard">Global Visa & Mastercard support</div>
+                    <span class="text-2xl">📄</span>
+                    <div class="font-bold text-xs text-slate-900 dark:text-white">Fakturownia</div>
+                    <div class="text-[10px] text-slate-500 dark:text-zinc-400" data-en="Automated tax-compliant invoicing" data-pl="Automatyczne i zgodne z prawem fakturowanie">Automated tax-compliant invoicing</div>
                 </div>
             </div>
 
-            <p class="text-[11px] text-slate-500 dark:text-zinc-400" data-en="* Invoices / rachunki are issued automatically upon successful checkout." data-pl="* Faktury / rachunki wystawiane są automatycznie po pomyślnym opłaceniu zamówienia.">* Invoices / rachunki are issued automatically upon successful checkout.</p>
+            <p class="text-[11px] text-slate-500 dark:text-zinc-400" data-en="* Invoices / rachunki are issued automatically via Fakturownia upon successful checkout." data-pl="* Faktury / rachunki wystawiane są automatycznie przez Fakturownię po pomyślnym opłaceniu zamówienia.">* Invoices / rachunki are issued automatically via Fakturownia upon successful checkout.</p>
         </div>
     </section>
 
@@ -612,15 +633,16 @@
         </div>
     </section>
 
-    <!-- PRICING SECTION (HOME VISIT HIGHLIGHTED & UNIFORM) -->
+    <!-- PRICING SECTION (MATCHING THE REFERENCE LAYOUT & INCLUDING SMALL GROUP) -->
     <section id="pricing" class="px-4 py-12 md:py-16 bg-slate-100 dark:bg-cardBgDark/50 border-y border-slate-200 dark:border-cardBorderDark">
-        <div class="max-w-6xl mx-auto space-y-8">
+        <div class="max-w-7xl mx-auto space-y-8">
             <div class="text-center max-w-3xl mx-auto">
                 <h2 class="text-2xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2" data-en="Online Rates & Investment" data-pl="Cennik Lekcji">Online Rates & Investment</h2>
                 <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium" data-en="Transparent pricing for sessions (45-min virtual, 1-hour home visits), home visits, and group live trackers." data-pl="Przejrzysty cennik zajęć (45 min online, 1 godzina dojazdy do domu) oraz aktywny licznik grup.">Transparent pricing for sessions (45-min virtual, 1-hour home visits), home visits, and group live trackers.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-4 pt-2">
+            <div class="grid md:grid-cols-2 lg:grid-cols-7 gap-4 pt-2">
+                <!-- 1. 1-on-1 Online -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
                     <div class="space-y-2">
                         <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="1-on-1 Online (Kids, Teens & Adults)" data-pl="Online 1-na-1 (Dzieci, Młodzież i Dorośli)">1-on-1 Online (Kids, Teens & Adults)</h3>
@@ -635,6 +657,7 @@
                     </div>
                 </div>
 
+                <!-- 2. Speak Like a Native -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
                     <div class="space-y-2">
                         <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Speak Like a Native" data-pl="Mów Jak Native">Speak Like a Native</h3>
@@ -648,6 +671,7 @@
                     </div>
                 </div>
 
+                <!-- 3. Corporate Comm. / Interview -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
                     <div class="space-y-2">
                         <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Corporate Comm. / Interview" data-pl="Komunikacja / Rozmowy">Corporate Comm. / Interview</h3>
@@ -661,7 +685,7 @@
                     </div>
                 </div>
 
-                <!-- HIGHLIGHTED HOME VISIT PACKAGE (ULTRA PREMIUM WITH PULSING VIP EFFECT) -->
+                <!-- 4. HIGHLIGHTED HOME VISIT PACKAGE (VIP) -->
                 <div class="glass-card vip-card-effect p-3.5 rounded-2xl flex flex-col justify-between border-4 border-amber-500 dark:border-accentGold relative shadow-2xl transform md:-translate-y-3">
                     <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 text-[9px] font-black px-3.5 py-1 rounded-full uppercase shadow-xl tracking-wider animate-bounce" data-en="👑 VIP Home Visit" data-pl="👑 VIP Dojazd do Domu">👑 VIP Home Visit</div>
                     <div class="space-y-2 mt-1">
@@ -677,6 +701,7 @@
                     </div>
                 </div>
 
+                <!-- 5. Online Duo -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark">
                     <div class="space-y-2">
                         <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Online Duo (Kids, Teens & Adults)" data-pl="Online w Parze (Dzieci, Młodzież i Dorośli)">Online Duo (Kids, Teens & Adults)</h3>
@@ -693,6 +718,27 @@
                     </div>
                 </div>
 
+                <!-- 6. NEW: Small Group (3-4 people) -->
+                <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-amber-500/50 dark:border-accentGold/50 relative">
+                    <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="3-4 PEOPLE" data-pl="3-4 OSOBY">3-4 PEOPLE</div>
+                    <div class="space-y-2 mt-1">
+                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Small Group (3–4)" data-pl="Mała Grupa (3–4)">Small Group (3–4)</h3>
+                        <div class="text-base font-black text-amber-600 dark:text-accentGold">80 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ pers / 45m" data-pl="/ osoba / 45m">/ pers / 45m</span></div>
+                        
+                        <div class="p-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-amber-700 dark:text-accentGold space-y-0.5">
+                            <div class="flex items-center justify-between">
+                                <span data-en="🟢 3/4" data-pl="🟢 3/4">🟢 3/4</span>
+                                <span class="text-amber-600 font-extrabold" data-en="ACTIVE" data-pl="AKTYWNA">ACTIVE</span>
+                            </div>
+                            <div class="text-slate-600 dark:text-zinc-300 font-normal" data-en="Interactive group dynamic" data-pl="Interaktywna dynamika grupowa">Interactive group dynamic</div>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1.5 rounded-xl text-[10px] cursor-pointer text-center block shadow-md" data-en="Book Small Group" data-pl="Zarezerwuj Małą Grupę">Book Small Group</a>
+                    </div>
+                </div>
+
+                <!-- 7. Large Group (5+) -->
                 <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark relative">
                     <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="5+ People" data-pl="5+ Osób">5+ People</div>
                     <div class="space-y-2 mt-1">
@@ -759,7 +805,7 @@
             <div class="text-center space-y-2">
                 <div class="text-amber-700 dark:text-accentGold text-xs font-extrabold uppercase tracking-widest" data-en="Get in Touch" data-pl="Skontaktuj się">Get in Touch</div>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-en="Send Daniel a Message" data-pl="Wyślij Wiadomość do Daniela">Send Daniel a Message</h2>
-                <p class="text-slate-600 dark:text-zinc-400 text-xs" data-en="Fill out the form below and it will be sent directly to my inbox." data-pl="Wypełnij poniższy formularz, a wiadomość zostanie przesłana bezpośrednio na moją skrzynkę e-mail.">Fill out the form below and it will be sent directly to my inbox.</p>
+                <p class="text-slate-600 dark:text-zinc-400 text-xs" data-en="Fill out the form below and it will be sent directly to my inbox via Web3Forms." data-pl="Wypełnij poniższy formularz, a wiadomość zostanie przesłana bezpośrednio na moją skrzynkę e-mail za pośrednictwem Web3Forms.">Fill out the form below and it will be sent directly to my inbox via Web3Forms.</p>
             </div>
 
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-xs">
@@ -787,8 +833,8 @@
                     Send Message
                 </button>
 
-                <p class="text-[11px] text-slate-500 dark:text-zinc-400 text-center leading-relaxed px-2 mt-3" data-en="By submitting this form, you agree that your details will be used by Daniel Carrington solely to respond to your inquiry. Your data is secure and will never be shared with third parties." data-pl="Wysyłając ten formularz, wyrażasz zgodę na przetwarzanie Twoich danych przez Daniela Carringtona wyłącznie w celu obsługi zapytania. Twoje dane są bezpieczne i nigdy nie będą udostępniane osobom trzecim.">
-                    By submitting this form, you agree that your details will be used by Daniel Carrington solely to respond to your inquiry. Your data is secure and will never be shared with third parties.
+                <p class="text-[11px] text-slate-500 dark:text-zinc-400 text-center leading-relaxed px-2 mt-3" data-en="By submitting this form, you consent under GDPR Article 6(1)(a) (RODO Art. 6 ust. 1 lit. a) to the processing of your personal data by Daniel Carrington. Your message is securely transmitted via Web3Forms and used solely to respond to your inquiry in compliance with the Polish Personal Data Protection Act (Ustawa o ochronie danych osobowych). Your data is secure and will never be shared with unauthorized third parties." data-pl="Wysyłając ten formularz, wyrażasz zgodę zgodnie z art. 6 ust. 1 lit. a RODO (GDPR) na przetwarzanie Twoich danych osobowych przez Daniela Carringtona. Twoja wiadomość jest bezpiecznie przesyłana przez Web3Forms i wykorzystywana wyłącznie w celu odpowiedzi na zapytanie zgodnie z Ustawą o ochronie danych osobowych. Twoje dane są bezpieczne i nigdy nie będą udostępniane nieuprawnionym osobom trzecim.">
+                    By submitting this form, you consent under GDPR Article 6(1)(a) (RODO Art. 6 ust. 1 lit. a) to the processing of your personal data by Daniel Carrington. Your message is securely transmitted via Web3Forms and used solely to respond to your inquiry in compliance with the Polish Personal Data Protection Act (Ustawa o ochronie danych osobowych). Your data is secure and will never be shared with unauthorized third parties.
                 </p>
             </form>
         </div>
@@ -803,7 +849,7 @@
                 </a>
             </div>
             <div class="text-[11px] text-slate-500 dark:text-zinc-500 pt-4 space-y-1">
-                <p>© 2026 BritDiscourse English Coaching by Daniel Carrington. All rights reserved.</p>
+                <p data-en="© 2026 BritDiscourse English Coaching by Daniel Carrington. All rights reserved." data-pl="© 2026 BritDiscourse English Coaching by Daniel Carrington. Wszelkie prawa zastrzeżone.">© 2026 BritDiscourse English Coaching by Daniel Carrington. All rights reserved.</p>
                 <p>
                     <button onclick="openModal('modal-privacy')" class="hover:text-amber-600 dark:hover:text-accentGold underline transition cursor-pointer bg-transparent border-none text-[11px] text-slate-500 dark:text-zinc-500" data-en="Privacy Policy & Terms" data-pl="Polityka Prywatności i Regulamin">Privacy Policy & Terms</button>
                 </p>
@@ -826,8 +872,48 @@
     <div id="modal-privacy" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
         <div class="glass-card bg-white dark:bg-cardBgDark border border-slate-200 dark:border-cardBorderDark max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 my-8 relative text-left max-h-[85vh] overflow-y-auto">
             <button onclick="closeModal('modal-privacy')" class="absolute top-5 right-5 text-slate-500 dark:text-zinc-400 hover:text-slate-900 text-xl font-bold bg-slate-200 dark:bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center">✕</button>
-            <div class="space-y-4" id="privacy-content-en">
-                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Privacy Policy & Terms of Service</h3>
+            <div class="space-y-4">
+                <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white" data-en="Privacy Policy, Roles & Legal Compliance" data-pl="Polityka Prywatności, Role i Zgodność Prawna">Privacy Policy, Roles & Legal Compliance</h3>
+                <div class="text-xs text-slate-700 dark:text-zinc-300 space-y-3 leading-relaxed">
+                    <p data-en="Welcome to BritDiscourse. This Privacy Policy outlines data handling practices pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR / RODO) and the Polish Personal Data Protection Act of 10 May 2018 (Ustawa o ochronie danych osobowych)." data-pl="Witaj w BritDiscourse. Niniejsza Polityka Prywatności określa zasady przetwarzania danych zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO / GDPR) oraz Ustawą o ochronie danych osobowych z dnia 10 maja 2018 r.">
+                        Welcome to BritDiscourse. This Privacy Policy outlines data handling practices pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR / RODO) and the Polish Personal Data Protection Act of 10 May 2018 (Ustawa o ochronie danych osobowych).
+                    </p>
+                    
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="1. Legal Roles & GDPR Article 4(7) Governance" data-pl="1. Role Prawne i Zarządzanie wg Art. 4 pkt 7 RODO">1. Legal Roles & GDPR Article 4(7) Governance</h4>
+                    <p data-en="Pursuant to Article 4(7) of Regulation (EU) 2016/679 (GDPR), Daniel Carrington acts as the Data Controller (Administrator Danych Osobowych) determining the purposes and means of processing personal data. Third-party providers integrated into this platform—specifically Calendly (for appointment scheduling under GDPR Art. 6(1)(b)), Web3Forms (for contact form data routing), PayU / Przelewy24 (for financial processing under Polish Accounting Act / Ustawa o rachunkowości), Fakturownia (for automated invoicing), and Google Meet/Microsoft Teams (for interactive virtual coaching sessions)—act as independent Data Controllers or Data Processors." data-pl="Zgodnie z art. 4 pkt 7 Rozporządzenia (UE) 2016/679 (RODO), Daniel Carrington występuje jako Administrator Danych Osobowych decydujący o celach i sposobach przetwarzania. Dostawcy zewnętrzni zintegrowani z platformą – w szczególności Calendly (rezerwacja terminów na podstawie art. 6 ust. 1 lit. b RODO), Web3Forms (przesyłanie wiadomości z formularza), PayU / Przelewy24 (przetwarzanie płatności zgodnie z Ustawą o rachunkowości), Fakturownia (automatyczne fakturowanie) oraz Google Meet/Microsoft Teams (interaktywne sesje online) – działają jako niezależni Administratorzy lub Podmioty Przetwarzające.">
+                        Pursuant to Article 4(7) of Regulation (EU) 2016/679 (GDPR), Daniel Carrington acts as the Data Controller (Administrator Danych Osobowych) determining the purposes and means of processing personal data. Third-party providers integrated into this platform—specifically Calendly (for appointment scheduling under GDPR Art. 6(1)(b)), Web3Forms (for contact form data routing), PayU / Przelewy24 (for financial processing under Polish Accounting Act / Ustawa o rachunkowości), Fakturownia (for automated invoicing), and Google Meet/Microsoft Teams (for interactive virtual coaching sessions)—act as independent Data Controllers or Data Processors.
+                    </p>
+
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="2. Information Collected & Legal Basis (GDPR Article 6)" data-pl="2. Zbierane Informacje i Podstawa Prawna (Art. 6 RODO)">2. Information Collected & Legal Basis (GDPR Article 6)</h4>
+                    <p data-en="In accordance with GDPR Article 6(1)(a) (consent) and Article 6(1)(b) (performance of a contract), we collect basic information provided voluntarily, including full names, email addresses, and scheduling inquiries submitted via Calendly and contact forms." data-pl="Zgodnie z art. 6 ust. 1 lit. a (zgoda) oraz art. 6 ust. 1 lit. b (wykonanie umowy) RODO, zbieramy podstawowe informacje podawane dobrowolnie, w tym imiona i nazwiska, adresy e-mail oraz zapytania dotyczące harmonogramu przesyłane przez Calendly i formularze.">
+                        In accordance with GDPR Article 6(1)(a) (consent) and Article 6(1)(b) (performance of a contract), we collect basic information provided voluntarily, including full names, email addresses, and scheduling inquiries submitted via Calendly and contact forms.
+                    </p>
+
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="3. Data Usage, Retention & Polish Accounting Law" data-pl="3. Wykorzystanie Danych, Okres Przechowywania i Polskie Prawo Księgowe">3. Data Usage, Retention & Polish Accounting Law</h4>
+                    <p data-en="Data is processed strictly to provide coaching services and issue automated invoices/rachunki via Fakturownia pursuant to the Polish Accounting Act of 1994 (Ustawa o rachunkowości), which mandates financial document retention for 5 years. Transaction data via PayU / Przelewy24 and scheduling data via Calendly are stored securely in compliance with respective legal retention schedules." data-pl="Dane są przetwarzane wyłącznie w celu świadczenia usług coachingowych oraz wystawiania faktur/rachunków przez Fakturownię zgodnie z Ustawą o rachunkowości z dnia 29 września 1994 r., która nakazuje przechowywanie dokumentacji finansowej przez okres 5 lat. Dane transakcyjne przez PayU / Przelewy24 oraz harmonogramy przez Calendly są przechowywane zgodnie z prawem.">
+                        Data is processed strictly to provide coaching services and issue automated invoices/rachunki via Fakturownia pursuant to the Polish Accounting Act of 1994 (Ustawa o rachunkowości), which mandates financial document retention for 5 years. Transaction data via PayU / Przelewy24 and scheduling data via Calendly are stored securely in compliance with respective legal retention schedules.
+                    </p>
+
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="4. Web3Forms & Calendly Disclaimer & Security" data-pl="4. Zastrzeżenie Web3Forms i Calendly oraz Bezpieczeństwo">4. Web3Forms & Calendly Disclaimer & Security</h4>
+                    <p data-en="In compliance with technical security mandates under GDPR Article 32, contact messages transmitted through Web3Forms and appointments coordinated through Calendly use encrypted transmission protocols (SSL/TLS). Data is never commercialized or transferred to unauthorized third parties." data-pl="Zgodnie z wymogami bezpieczeństwa technicznego wynikającymi z art. 32 RODO, wiadomości kontaktowe przesyłane przez Web3Forms oraz spotkania koordynowane przez Calendly wykorzystują szyfrowane protokoły transmisji (SSL/TLS). Dane nigdy nie są sprzedawane ani przekazywane nieuprawnionym podmiotom.">
+                        In compliance with technical security mandates under GDPR Article 32, contact messages transmitted through Web3Forms and appointments coordinated through Calendly use encrypted transmission protocols (SSL/TLS). Data is never commercialized or transferred to unauthorized third parties.
+                    </p>
+
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="5. User Rights under GDPR Chapter III (Articles 15–22)" data-pl="5. Prawa Użytkownika wg Rozdziału III RODO (Art. 15–22)">5. User Rights under GDPR Chapter III (Articles 15–22)</h4>
+                    <p data-en="Under Chapter III of the GDPR (Articles 15–22), data subjects have the absolute right to access, rectify, erase ('right to be forgotten'), restrict processing, and data portability regarding their personal information stored by Daniel Carrington." data-pl="Zgodnie z Rozdziałem III RODO (art. 15–22), osoby, których dane dotyczą, mają prawo dostępu do swoich danych, ich sprostowania, usunięcia („prawo do bycia zapomnianym”), ograniczenia przetwarzania oraz przenoszenia danych przechowywanych przez Daniela Carringtona.">
+                        Under Chapter III of the GDPR (Articles 15–22), data subjects have the absolute right to access, rectify, erase ('right to be forgotten'), restrict processing, and data portability regarding their personal information stored by Daniel Carrington.
+                    </p>
+
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="6. Lesson Flexibility & Rescheduling Terms" data-pl="6. Elastyczność Lekcji i Zasady Zmiany Terminów">6. Lesson Flexibility & Rescheduling Terms</h4>
+                    <p data-en="In accordance with agreed mutual service terms, scheduling is fully flexible via Calendly, provided any session adjustments or cancellations occur at least 24 hours prior to the reserved slot." data-pl="Zgodnie z uzgodnionymi warunkami świadczenia usług, harmonogram jest w pełni elastyczny przez Calendly, pod warunkiem zgłoszenia zmiany lub odwołania sesji co najmniej 24 godziny przed zarezerwowanym terminem.">
+                        In accordance with agreed mutual service terms, scheduling is fully flexible via Calendly, provided any session adjustments or cancellations occur at least 24 hours prior to the reserved slot.
+                    </p>
+
+                    <h4 class="font-bold text-slate-900 dark:text-white mt-2" data-en="7. Supervisory Authority (UODO)" data-pl="7. Organ Nadzorczy (UODO)">7. Supervisory Authority (UODO)</h4>
+                    <p data-en="You have the right to lodge a complaint with a supervisory authority, specifically the President of the Personal Data Protection Office (Prezes Urzędu Ochrony Danych Osobowych - UODO) in Poland, if you consider that the processing of your personal data infringes GDPR." data-pl="Przysługuje Ci prawo wniesienia skargi do organu nadzorczego, tj. Prezesa Urzędu Ochrony Danych Osobowych (UODO) w Polsce, jeśli uznasz, że przetwarzanie Twoich danych osobowych narusza przepisy RODO.">
+                        You have the right to lodge a complaint with a supervisory authority, specifically the President of the Personal Data Protection Office (Prezes Urzędu Ochrony Danych Osobowych - UODO) in Poland, if you consider that the processing of your personal data infringes GDPR.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -921,26 +1007,46 @@
             document.getElementById('calc-total').innerText = Math.round(fullMonthlyPrice) + ' PLN / ' + (currentLang === 'pl' ? 'miesiąc' : 'month') + ' (' + monthlyLessons + ' ' + (currentLang === 'pl' ? 'lekcji' : 'lessons') + ')';
         }
 
-        function toggleTheme() {
-            const htmlEl = document.documentElement;
-            const themeIcon = document.getElementById('theme-icon');
-            const themeLabel = document.getElementById('theme-label');
+        function toggleDropdown(type) {
+            const langMenu = document.getElementById('lang-dropdown-menu');
+            const themeMenu = document.getElementById('theme-dropdown-menu');
 
-            if (htmlEl.classList.contains('dark')) {
-                // Currently in dark mode -> switch to light mode
-                htmlEl.classList.remove('dark');
-                themeIcon.innerText = '☀️';
-                themeLabel.innerText = currentLang === 'pl' ? 'Jasny' : 'Light';
+            if (type === 'lang') {
+                langMenu.classList.toggle('hidden');
+                themeMenu.classList.add('hidden');
             } else {
-                // Currently in light mode -> switch to dark mode
-                htmlEl.classList.add('dark');
-                themeIcon.innerText = '🌙';
-                themeLabel.innerText = currentLang === 'pl' ? 'Ciemny' : 'Dark';
+                themeMenu.classList.toggle('hidden');
+                langMenu.classList.add('hidden');
             }
         }
 
-        function toggleDropdown() {
-            document.getElementById('lang-dropdown-menu').classList.toggle('hidden');
+        function setTheme(mode) {
+            const htmlEl = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeLabel = document.getElementById('theme-label');
+            const checkLight = document.getElementById('check-theme-light');
+            const checkDark = document.getElementById('check-theme-dark');
+            const themeMenu = document.getElementById('theme-dropdown-menu');
+
+            themeMenu.classList.add('hidden');
+
+            if (mode === 'light') {
+                htmlEl.classList.remove('dark');
+                themeIcon.innerText = '☀️';
+                themeLabel.setAttribute('data-en', 'Light');
+                themeLabel.setAttribute('data-pl', 'Jasny');
+                themeLabel.innerText = currentLang === 'pl' ? 'Jasny' : 'Light';
+                checkLight.classList.remove('hidden');
+                checkDark.classList.add('hidden');
+            } else {
+                htmlEl.classList.add('dark');
+                themeIcon.innerText = '🌙';
+                themeLabel.setAttribute('data-en', 'Dark');
+                themeLabel.setAttribute('data-pl', 'Ciemny');
+                themeLabel.innerText = currentLang === 'pl' ? 'Ciemny' : 'Dark';
+                checkLight.classList.add('hidden');
+                checkDark.classList.remove('hidden');
+            }
         }
 
         function selectLanguage(lang) {
@@ -948,7 +1054,6 @@
             document.getElementById('current-lang-text').innerText = lang.toUpperCase();
             document.getElementById('lang-dropdown-menu').classList.add('hidden');
             
-            // Toggle correct flag visibility and checkmark state based on chosen language
             if (lang === 'en') {
                 document.getElementById('selected-uk-flag').classList.remove('hidden');
                 document.getElementById('selected-pl-flag').classList.add('hidden');
@@ -986,6 +1091,16 @@
             document.getElementById(id).classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
+
+        // Close dropdowns when clicking outside
+        window.addEventListener('click', function(e) {
+            if (!e.target.closest('#lang-dropdown-btn') && !e.target.closest('#lang-dropdown-menu')) {
+                document.getElementById('lang-dropdown-menu').classList.add('hidden');
+            }
+            if (!e.target.closest('#theme-dropdown-btn') && !e.target.closest('#theme-dropdown-menu')) {
+                document.getElementById('theme-dropdown-menu').classList.add('hidden');
+            }
+        });
     </script>
 </body>
 </html>
