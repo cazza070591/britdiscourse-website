@@ -239,10 +239,17 @@
         </div>
     </header>
 
-    <!-- LIVE AVAILABILITY BANNER -->
-    <div class="bg-amber-500/10 border-b border-amber-500/30 py-2 px-4 text-center text-xs font-bold text-amber-700 dark:text-accentGold flex items-center justify-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span data-en="🟢 Limited Availability: 3 coaching slots open for this month's cohort" data-pl="🟢 Ograniczona dostępność: 3 wolne miejsca na lekcje w tym miesiącu">🟢 Limited Availability: 3 coaching slots open for this month's cohort</span>
+    <!-- LIVE AVAILABILITY & SATURDAY BANNER -->
+    <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-slate-950 border-b border-amber-400 py-3 px-4 text-center text-xs font-extrabold tracking-wide flex flex-col sm:flex-row items-center justify-center gap-3 shadow-md">
+        <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-950 animate-ping"></span>
+            <span data-en="🟢 Limited Availability: 3 coaching slots open for this month's cohort" data-pl="🟢 Ograniczona dostępność: 3 wolne miejsca na lekcje w tym miesiącu">🟢 Limited Availability: 3 coaching slots open for this month's cohort</span>
+        </div>
+        <span class="hidden sm:inline opacity-40">|</span>
+        <div class="flex items-center gap-1.5 uppercase bg-slate-950 text-amber-400 px-3 py-1 rounded-lg text-[11px] shadow">
+            <span>🔥</span>
+            <span data-en="SATURDAYS 9AM–1PM: LIMITED SLOTS AVAILABLE!" data-pl="🔥 SOBOTY 9:00–13:00: OGRANICZONA LICZBA MIEJSC!">SATURDAYS 9AM–1PM: LIMITED SLOTS AVAILABLE!</span>
+        </div>
     </div>
 
     <!-- HERO SECTION -->
@@ -304,6 +311,27 @@
 
             <div class="p-3 glass-card rounded-xl flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500/10 to-transparent border-amber-500/40 text-slate-900 dark:text-white shadow-sm">
                 🏠 <span data-en="Home Visits Available" data-pl="Dojazd do Domu">Home Visits Available</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SATURDAYS POP-OUT HIGHLIGHT BANNER -->
+    <section class="px-4 py-8 max-w-5xl mx-auto">
+        <div class="glass-card vip-card-effect p-6 md:p-8 rounded-3xl border-4 border-amber-500 dark:border-accentGold text-center space-y-4 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-amber-500/10 dark:text-accentGold/10 font-black text-9xl pointer-events-none select-none">🗓️</div>
+            <div class="inline-block bg-amber-500 text-slate-950 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-md">
+                🔥 <span data-en="Limited Weekend Slots" data-pl="Ograniczone Miejsca Weekendowe">Limited Weekend Slots</span>
+            </div>
+            <h2 class="text-xl md:text-3xl font-black text-slate-900 dark:text-white" data-en="Need Saturday Coaching Sessions?" data-pl="Potrzebujesz Lekcji w Soboty?">
+                Need Saturday Coaching Sessions?
+            </h2>
+            <p class="text-xs md:text-sm text-slate-700 dark:text-zinc-300 font-medium max-w-2xl mx-auto leading-relaxed" data-en="We offer limited availability on Saturdays from 9:00 AM to 1:00 PM (9am–13pm). Because these weekend slots fill up fast, advance booking via Calendly is highly recommended!" data-pl="Oferujemy ograniczoną dostępność w soboty w godzinach 9:00–13:00. Ponieważ te weekendowe terminy szybko się zapełniają, gorąco zalecamy wcześniejszą rezerwację przez Calendly!">
+                We offer limited availability on Saturdays from 9:00 AM to 1:00 PM (9am–13pm). Because these weekend slots fill up fast, advance booking via Calendly is highly recommended!
+            </p>
+            <div class="pt-2">
+                <a href="https://calendly.com/anondan45" target="_blank" class="inline-block bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black px-8 py-3.5 rounded-xl text-xs md:text-sm transition shadow-xl transform hover:scale-105 cursor-pointer">
+                    <span data-en="🚀 Secure Your Saturday Slot Now" data-pl="🚀 Zarezerwuj Sobotni Termin Już Teraz">🚀 Secure Your Saturday Slot Now</span>
+                </a>
             </div>
         </div>
     </section>
@@ -511,7 +539,7 @@
             <p class="text-slate-600 dark:text-zinc-400 text-xs md:text-sm font-medium" data-en="Choose a standard framework or our new intensive corporate communication & interview packages." data-pl="Wybierz standardowy program lub nasze nowe intensywne pakiety komunikacji korporacyjnej i rozmów kwalifikacyjnych.">Choose a standard framework or our new intensive corporate communication & interview packages.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-4 pt-2">
+        <div class="grid md:grid-cols-2 lg:grid-cols-7 gap-4 pt-2">
             <!-- Course 1 (Kids 5-10) -->
             <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-slate-200 dark:border-cardBorderDark hover:border-amber-500/50 transition">
                 <div class="space-y-1.5">
@@ -619,6 +647,28 @@
                 </div>
             </div>
 
+            <!-- NEW PACKAGE 3: Small Group (3-4 People) - EXCLUSIVE & POPPING -->
+            <div class="glass-card vip-card-effect p-3.5 rounded-2xl flex flex-col justify-between border-4 border-amber-500 dark:border-accentGold relative shadow-xl transform hover:-translate-y-1 transition">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 text-[8px] font-black px-3 py-1 rounded-full uppercase shadow-lg tracking-wider animate-bounce" data-en="🌟 EXCLUSIVE OFFER" data-pl="🌟 OFERTA SPECJALNA">🌟 EXCLUSIVE OFFER</div>
+                <div class="space-y-1.5 mt-1">
+                    <div class="text-amber-700 dark:text-accentGold text-[9px] font-extrabold uppercase" data-en="BEST VALUE GROUP" data-pl="NAJLEPSZA CENA GRUPOWA">BEST VALUE GROUP</div>
+                    <h4 class="text-xs font-black text-slate-900 dark:text-white" data-en="Small Group (3–4 People)" data-pl="Mała Grupa (3–4 Osoby)">Small Group (3–4 People)</h4>
+                    <p class="text-slate-600 dark:text-zinc-300 text-[10px] leading-snug font-medium" data-en="Intimate live interaction at an unbeatable rate." data-pl="Kameralna interakcja na żywo w bezkonkurencyjnej cenie.">Intimate live interaction at an unbeatable rate.</p>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                    <div class="p-1.5 rounded-lg bg-amber-500/20 border border-amber-500/50 text-[9px] font-bold text-slate-900 dark:text-white space-y-0 text-center">
+                        <div class="text-amber-700 dark:text-accentGold uppercase tracking-wider text-[8px]" data-en="Special Rate" data-pl="Stawka Specjalna">Special Rate</div>
+                        <div class="text-xs text-amber-600 dark:text-accentGold font-black">80 PLN <span class="text-[8px] font-normal text-slate-500" data-en="/ person / 45m" data-pl="/ osoba / 45 min">/ person / 45m</span></div>
+                        <div class="text-[8px] text-amber-600 dark:text-accentGold font-extrabold" data-en="🔥 Exclusive Deal!" data-pl="🔥 Oferta Ekskluzywna!">🔥 Exclusive Deal!</div>
+                    </div>
+                    <div class="space-y-1">
+                        <button onclick="openModal('modal-small-group')" class="w-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 text-amber-700 dark:text-accentGold border border-amber-500/30 font-semibold py-1 rounded-lg text-[10px] transition cursor-pointer" data-en="Details" data-pl="Szczegóły">Details</button>
+                        <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-slate-950 font-black py-1 rounded-lg text-[10px] cursor-pointer shadow-md text-center block" data-en="Book Small Group" data-pl="Zarezerwuj Małą Grupę">Book Small Group</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Generic placeholder card -->
             <div class="glass-card bg-slate-50 dark:bg-cardBgDark/40 p-3.5 rounded-2xl flex flex-col justify-between border border-dashed border-slate-300 dark:border-zinc-700 text-center">
                 <div class="space-y-1.5">
@@ -718,19 +768,16 @@
                     </div>
                 </div>
 
-                <!-- 6. Small Group (3-4 people) -->
-                <div class="glass-card bg-white dark:bg-cardBgDark p-3.5 rounded-2xl flex flex-col justify-between border border-amber-500/50 dark:border-accentGold/50 relative">
-                    <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[8px] font-black px-2 py-0.5 rounded-full uppercase" data-en="3-4 PEOPLE" data-pl="3-4 OSOBY">3-4 PEOPLE</div>
+                <!-- 6. Small Group (3-4 people) - EXCLUSIVE & POPPING IN PRICING TABLE -->
+                <div class="glass-card vip-card-effect p-3.5 rounded-2xl flex flex-col justify-between border-4 border-amber-500 dark:border-accentGold relative shadow-xl">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 text-[8px] font-black px-3 py-1 rounded-full uppercase shadow-lg tracking-wider animate-pulse" data-en="🌟 EXCLUSIVE OFFER" data-pl="🌟 OFERTA SPECJALNA">🌟 EXCLUSIVE OFFER</div>
                     <div class="space-y-2 mt-1">
-                        <h3 class="text-xs font-bold text-slate-900 dark:text-white" data-en="Small Group (3–4)" data-pl="Mała Grupa (3–4)">Small Group (3–4)</h3>
+                        <h3 class="text-xs font-black text-slate-900 dark:text-white" data-en="Small Group (3–4)" data-pl="Mała Grupa (3–4)">Small Group (3–4)</h3>
                         <div class="text-base font-black text-amber-600 dark:text-accentGold">80 PLN <span class="text-[9px] text-slate-500 font-normal" data-en="/ pers / 45m" data-pl="/ osoba / 45m">/ pers / 45m</span></div>
                         
-                        <div class="p-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-[9px] font-bold text-amber-700 dark:text-accentGold space-y-0.5">
-                            <div class="flex items-center justify-between">
-                                <span data-en="🟢 3/4" data-pl="🟢 3/4">🟢 3/4</span>
-                                <span class="text-amber-600 font-extrabold" data-en="ACTIVE" data-pl="AKTYWNA">ACTIVE</span>
-                            </div>
-                            <div class="text-slate-600 dark:text-zinc-300 font-normal" data-en="Interactive group dynamic" data-pl="Interaktywna dynamika grupowa">Interactive group dynamic</div>
+                        <div class="p-1.5 rounded-md bg-amber-500/20 border border-amber-500/50 text-[9px] font-bold text-amber-700 dark:text-accentGold space-y-0.5 text-center">
+                            <div class="font-extrabold uppercase" data-en="🔥 Special Deal" data-pl="🔥 Super Okazja">🔥 Special Deal</div>
+                            <div class="text-slate-700 dark:text-zinc-200 font-medium" data-en="3–4 People Max" data-pl="Maks. 3–4 osoby">3–4 People Max</div>
                         </div>
                     </div>
                     <div class="pt-3">
@@ -994,6 +1041,16 @@
         </div>
     </div>
 
+    <div id="modal-small-group" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+        <div class="glass-card bg-white dark:bg-cardBgDark border max-w-xl w-full rounded-3xl p-6 md:p-8 space-y-4 relative text-left">
+            <button onclick="closeModal('modal-small-group')" class="absolute top-5 right-5 text-xl font-bold">✕</button>
+            <h3 class="text-2xl font-extrabold" data-en="Small Group (3–4 People)" data-pl="Mała Grupa (3–4 Osoby)">Small Group (3–4 People)</h3>
+            <p class="text-xs font-semibold text-amber-600 dark:text-accentGold uppercase tracking-wide" data-en="Exclusive Offer • 80 PLN per person / 45-min" data-pl="Oferta specjalna • 80 zł za osobę / 45 min">Exclusive Offer • 80 PLN per person / 45-min</p>
+            <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300" data-en="Join an intimate group of 3 to 4 participants for interactive conversational practice, dynamic discussions, and shared peer learning at an exclusive special rate." data-pl="Dołącz do kameralnej grupy liczącej od 3 do 4 uczestników, aby brać udział w interaktywnych konwersacjach, dynamicznych dyskusjach i wspólnej nauce w specjalnej cenie.">Join an intimate group of 3 to 4 participants for interactive conversational practice, dynamic discussions, and shared peer learning at an exclusive special rate.</p>
+            <a href="https://calendly.com/anondan45" target="_blank" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl text-xs block text-center" data-en="Book via Calendly" data-pl="Zarezerwuj przez Calendly">Book via Calendly</a>
+        </div>
+    </div>
+
     <script>
         let currentLang = 'en';
 
@@ -1063,7 +1120,7 @@
                 document.getElementById('selected-uk-flag').classList.add('hidden');
                 document.getElementById('selected-pl-flag').classList.remove('hidden');
                 document.getElementById('check-en').classList.add('hidden');
-                document.getElementById('check-pl').classList.remove('hidden');
+                document.getElementById('check-pl').classList.add('hidden');
             }
 
             document.querySelectorAll('[data-en][data-pl]').forEach(el => {
